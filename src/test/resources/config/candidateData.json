@@ -1,0 +1,15 @@
+{
+  "login": {
+    "username": "Admin",
+    "password": "admin123"
+  },
+  "candidate": {
+    "firstName": "Rahul",
+    "lastName": "Sharma",
+    "email": "rahul.sharma@testmail.com",
+    "phone": "9876543210",
+    "vacancy": "Senior QA Lead",
+    "resumePath": "C:/Users/Ashvamegha/Downloads/Demofile.pdf",
+    "keywords": "Automation"
+  }
+}
