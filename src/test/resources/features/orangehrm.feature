@@ -35,3 +35,12 @@ Feature: OrangeHRM Recruitment Candidate Management
     Given user is on Recruitment Candidates page
     When user searches candidate by name or email
     Then candidate search results should be displayed
+
+    # ----------------------------
+# Scenario 5: View Candidate Details
+# ----------------------------
+  Scenario: View candidate details
+    Given user is on Recruitment Candidates page
+    And user selects a candidate from candidate list
+    When user opens candidate details
+    Then candidate detail page should be displayed

@@ -7,16 +7,16 @@ import pages.RecruitmentPage;
 import pages.AddCandidatePage;
 import pages.CandidateListPage;
 import utils.PlaywrightFactory;
+
 import static org.junit.Assert.assertTrue;
+
 import utils.CandidateDataReader;
 import utils.LocatorReader;
 import utils.WaitUtil;
 
-
-
 public class OrangeHRMSteps {
 
-    //  get Page
+    // get Page
     private Page page = PlaywrightFactory.getPage();
 
     private LoginPage loginPage = new LoginPage(page);
@@ -24,14 +24,11 @@ public class OrangeHRMSteps {
     private AddCandidatePage addCandidatePage = new AddCandidatePage(page);
     private CandidateListPage candidateListPage = new CandidateListPage(page);
 
-
-    //  NO navigation here (handled in PlaywrightFactory)
     @Given("user launches OrangeHRM application")
     public void userLaunchesOrangeHRMApplication() {
         // intentionally empty
     }
 
-    // Login logic added
     @And("user logs in with valid credentials")
     public void userLogsInWithValidCredentials() {
         loginPage.login(
@@ -40,17 +37,13 @@ public class OrangeHRMSteps {
         );
     }
 
-    //  validation
     @Then("dashboard should be displayed")
     public void dashboardShouldBeDisplayed() {
 
         String dashboardHeader =
                 LocatorReader.get("dashboardPage", "dashboardHeader");
 
-        // Explicit wait added
         WaitUtil.waitForVisible(page, dashboardHeader);
-
-        // Assertion AFTER wait
         assertTrue(page.isVisible(dashboardHeader));
     }
 
@@ -58,11 +51,11 @@ public class OrangeHRMSteps {
     public void userNavigatesToRecruitmentCandidatesPage() {
         recruitmentPage.navigateToCandidatesPage();
     }
+
     @Then("candidates page should be displayed")
     public void candidatesPageShouldBeDisplayed() {
         assertTrue(recruitmentPage.isCandidatesPageDisplayed());
     }
-
 
     @Given("user is on Recruitment Candidates page")
     public void userIsOnRecruitmentCandidatesPage() {
@@ -86,7 +79,7 @@ public class OrangeHRMSteps {
 
     @And("user enters candidate email")
     public void userEntersCandidateEmail() {
-        addCandidatePage.enterEmail() ;
+        addCandidatePage.enterEmail();
     }
 
     @And("user enters candidate phone number")
@@ -102,8 +95,8 @@ public class OrangeHRMSteps {
     @And("user uploads candidate resume")
     public void userUploadsCandidateResume() {
         addCandidatePage.uploadResume();
-
     }
+
     @And("user enters Keywords")
     public void userEntersKeywords() {
         addCandidatePage.enterKeywords();
@@ -119,17 +112,40 @@ public class OrangeHRMSteps {
         addCandidatePage.verifySuccessMessage();
     }
 
-
     @When("user searches candidate by name or email")
     public void userSearchesCandidateByNameOrEmail() {
-        candidateListPage.searchCandidate();
+        candidateListPage.searchCandidateByName();
     }
 
     @Then("candidate search results should be displayed")
     public void candidateSearchResultsShouldBeDisplayed() {
         assertTrue(
-                "Candidate search result not displayed",
-                candidateListPage.isSearchResultDisplayed()
+                "Candidate search result not displayed by name",
+                candidateListPage.isSearchResultDisplayedByName()
+        );
+    }
+
+    @And("user selects a candidate from candidate list")
+    public void userSelectsACandidateFromCandidateList() {
+        candidateListPage.selectCandidateFromList();
+    }
+
+    @When("user opens candidate details")
+    public void userOpensCandidateDetails() {
+        candidateListPage.openCandidateDetails();
+    }
+
+    @Then("candidate detail page should be displayed")
+    public void candidateDetailPageShouldBeDisplayed() {
+
+        String candidateHeader =
+                LocatorReader.get("candidateDetailsPage", "candidateHeader");
+
+        WaitUtil.waitForVisible(page, candidateHeader);
+
+        assertTrue(
+                "Candidate detail page not displayed",
+                page.isVisible(candidateHeader)
         );
     }
 }
