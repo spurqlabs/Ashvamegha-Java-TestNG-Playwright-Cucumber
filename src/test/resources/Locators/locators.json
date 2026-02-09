@@ -1,0 +1,39 @@
+{
+  "login": {
+    "username": "input[name='username']",
+    "password": "input[name='password']",
+    "loginBtn": "button[type='submit']"
+  },
+  "dashboardPage": {
+    "dashboardHeader": "h6:has-text('Dashboard')"
+  },
+  "recruitmentPage": {
+    "recruitmentMenu": "a[href='/web/index.php/recruitment/viewRecruitmentModule']",
+    "candidatesHeader": "h5:has-text('Candidates')",
+    "addCandidateBtn": "button:has-text('Add')",
+    "searchName": "input[placeholder='Type for hints...']",
+    "candidateSuggestion": "div[role='option']:has-text('{NAME}')",
+    "searchButton": "button:has-text('Search')",
+    "tableRow": ".oxd-table-row",
+    "candidateName": "div.oxd-table-cell"
+  },
+
+  "addCandidatePage": {
+    "addButton": "button:has-text('Add')",
+    "addCandidateHeader": "h6:has-text('Add Candidate')",
+    "firstName": "input[name='firstName']",
+    "lastName": "input[name='lastName']",
+    "email": "input[placeholder='Type here'] >> nth=0",
+    "phone": "input[placeholder='Type here'] >> nth=1",
+    "vacancyDropdown": "div.oxd-select-text",
+    "vacancyOption": "div[role='option']:has-text('{VACANCY}')",
+    "resumeUpload": "input[type='file']",
+    "keywords": "input[placeholder*='comma']",
+    "saveButton": "button[type='submit'].oxd-button",
+    "successToast": ".oxd-toast--success"
+  }
+}
+}
+
+
+}
