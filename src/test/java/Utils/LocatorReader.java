@@ -7,7 +7,7 @@ import java.io.File;
 
 public class LocatorReader {
 
-    private static JsonNode locators;
+    private static final JsonNode locators;
 
     static {
         try {
@@ -31,14 +31,31 @@ public class LocatorReader {
      * LocatorReader.get("addCandidate.saveBtn")
      */
     public static String get(String key) {
-        JsonNode node = locators;
-        for (String k : key.split("\\.")) {
-            node = node.get(k);
-            // Check if node is null and throw meaningful error
-            if (node == null) {
-                throw new RuntimeException("Locator key not found: " + key + ". Check locators.json file.");
-            }
+        if (key == null || key.isEmpty()) {
+            throw new RuntimeException("Locator key cannot be null or empty");
         }
+
+        JsonNode node = locators;
+        String[] keys = key.split("\\.");
+
+        for (int i = 0; i < keys.length; i++) {
+            String k = keys[i];
+            if (node == null) {
+                throw new RuntimeException(
+                        "Locator key not found: " + key + ". "
+                                + "Path failed at: " + String.join(".", java.util.Arrays.copyOf(keys, i))
+                                + ". Check locators.json file."
+                );
+            }
+            node = node.get(k);
+        }
+
+        if (node == null) {
+            throw new RuntimeException(
+                    "Locator key not found: " + key + ". Check locators.json file."
+            );
+        }
+
         return node.asText();
     }
 }

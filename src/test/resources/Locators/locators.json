@@ -4,18 +4,28 @@
     "password": "input[name='password']",
     "loginBtn": "button[type='submit']"
   },
+
   "dashboardPage": {
-    "dashboardHeader": "h6:has-text('Dashboard')"
+    "dashboardHeader": "//h6[text()='Dashboard']"
   },
+
   "recruitmentPage": {
     "recruitmentMenu": "a[href='/web/index.php/recruitment/viewRecruitmentModule']",
     "candidatesHeader": "h5:has-text('Candidates')",
-    "addCandidateBtn": "button:has-text('Add')",
-    "searchName": "input[placeholder='Type for hints...']",
-    "candidateSuggestion": "div[role='option']:has-text('{NAME}')",
-    "searchButton": "button:has-text('Search')",
-    "tableRow": ".oxd-table-row",
-    "candidateName": "div.oxd-table-cell"
+    "addCandidateBtn": "button:has-text('Add')"
+  },
+
+  "searchPage": {
+    "candidateNameInput": "//label[text()='Candidate Name']/following::input[1]",
+    "candidateSuggestions": "//div[@role='listbox']//span",
+    "searchButton": "//button[normalize-space()='Search']",
+    "resultCandidateName": "//div[contains(@class,'oxd-table-row')][1]//div[@class='oxd-table-cell oxd-padding-cell'][2]"
+  },
+
+  "candidatesPage": {
+    "tableRows": "//div[contains(@class,'oxd-table-row')]",
+    "rowByCandidateName": "//div[contains(@class,'oxd-table-row')]//div[contains(text(),'{CANDIDATE_NAME}')]/ancestor::div[contains(@class,'oxd-table-row')]",
+    "viewButtonInRow": "button"
   },
 
   "addCandidatePage": {
@@ -31,9 +41,94 @@
     "keywords": "input[placeholder*='comma']",
     "saveButton": "button[type='submit'].oxd-button",
     "successToast": ".oxd-toast--success"
+  },
+
+  "candidateDetailsPage": {
+    "candidateNameHeader": "h6.orangehrm-main-title",
+    "candidateStatus": "p.orangehrm-recruitment-status",
+    "shortlistButton": "button:has-text('Shortlist')",
+    "scheduleInterviewButton": "button:has-text('Schedule Interview')"
+  },
+
+  "shortlistPage": {
+    "shortlistNotes": "textarea[placeholder='Type here']",
+    "saveButton": "button[type='submit']"
+  },
+
+  "scheduleInterviewPage": {
+    "interviewTitle": "input[placeholder='Enter Interview Title']",
+    "interviewerInput": "input[placeholder='Type for hints...']",
+    "interviewerSuggestion": "div[role='option']",
+    "interviewDate": "input[placeholder='yyyy-mm-dd']",
+    "interviewTime": "input[placeholder='hh:mm']",
+    "interviewNotes": "textarea[placeholder='Type here']",
+    "saveButton": "button[type='submit']"
+  },
+
+  "dashboard": {
+    "userDropdown": "span.oxd-userdropdown-tab",
+    "logoutButton": "a:has-text('Logout')"
+  },
+
+  "timePage": {
+    "timeMenu": "a[href='/web/index.php/time/viewTimeModule']",
+    "timesheetsDropdown": "span.oxd-topbar-body-nav-tab-item",
+    "myTimesheetsOption": "ul[role='menu'] a.oxd-topbar-body-nav-tab-link:has-text('My Timesheets')"
+  },
+
+  "myTimesheetPage": {
+    "pageHeader": "h6:has-text('My Timesheet')",
+    "editButton": "//button[normalize-space()='Edit']",
+    "statusLabel": "p:has-text('Status')",
+    "tableRows": "div.oxd-table-row"
+  },
+
+  "timesheetPage": {
+    "projectInput": "input[placeholder='Type for hints...']",
+    "projectSuggestion": "div[role='option']",
+
+    "activityDropdown": "div.oxd-select-text",
+    "activityOption": "div[role='option']:has-text('{ACTIVITY}')",
+
+    "dayCells": "td.--duration-input",
+    "mondayInput": "//table//tbody/tr[1]/td[3]//input",
+    "tuesdayInput": "//table//tbody/tr[1]/td[4]//input",
+    "wednesdayInput": "//table//tbody/tr[1]/td[5]//input",
+    "thursdayInput": "//table//tbody/tr[1]/td[6]//input",
+    "fridayInput": "//table//tbody/tr[1]/td[7]//input",
+    "saturdayInput": "//table//tbody/tr[1]/td[8]//input",
+    "sundayInput": "//table//tbody/tr[1]/td[9]//input",
+
+
+
+    "saveButton": "button:has-text('Save')",
+    "successToast": ".oxd-toast--success",
+    "totalCell": "div.oxd-table-footer"
+  },
+
+  "leaveMenuPage": {
+    "leaveMenu": "a:has-text('Leave')",
+    "leaveListTab": "a.oxd-topbar-body-nav-tab-item:has-text('Leave List')",
+    "applyLeaveTab": "a.oxd-topbar-body-nav-tab-item:has-text('Apply')"
+  },
+
+
+
+"applyLeavePage": {
+    "leaveTypeDropdown": "div.oxd-select-text",
+    "leaveTypeOption": "div[role='option']:has-text('{LEAVE_TYPE}')",
+    "fromDate": "input[placeholder='yyyy-mm-dd'] >> nth=0",
+    "toDate": "input[placeholder='yyyy-mm-dd'] >> nth=1",
+    "comment": "textarea",
+    "applyButton": "button[type='submit']",
+    "successToast": ".oxd-toast--success"
+  },
+
+  "myLeavePage": {
+    "fromDateFilter": "input[placeholder='yyyy-mm-dd'] >> nth=0",
+    "toDateFilter": "input[placeholder='yyyy-mm-dd'] >> nth=1",
+    "searchButton": "button:has-text('Search')",
+    "leaveTableRow": ".oxd-table-row",
+    "leaveStatusCell": ".oxd-table-cell >> nth=5"
   }
-}
-}
-
-
 }

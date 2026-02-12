@@ -1,4 +1,6 @@
 {
   "baseUrl": "https://opensource-demo.orangehrmlive.com",
-  "browser": "chromium"
+  "browser": "chrome",
+  "headless": "false"
+
 }

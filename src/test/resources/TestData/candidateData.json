@@ -1,8 +1,4 @@
 {
-  "login": {
-    "username": "Admin",
-    "password": "admin123"
-  },
   "candidate": {
     "firstName": "Rocky",
     "lastName": "Sharma",
@@ -11,5 +7,15 @@
     "vacancy": "Payroll Administrator",
     "resumePath": "C:/Users/Ashvamegha/Downloads/Demofile.pdf",
     "keywords": "Automation"
+  },
+  "shortlist": {
+    "notes": "Shortlisted profile"
+  },
+  "interview": {
+    "title": "HR Interview",
+    "interviewer": "Ranga Akunuri",
+    "date": "2026-11-02",
+    "time": "10:30",
+    "notes": "Initial HR round scheduled"
   }
 }

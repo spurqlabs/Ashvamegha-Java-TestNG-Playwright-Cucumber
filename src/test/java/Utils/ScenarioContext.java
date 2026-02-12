@@ -2,31 +2,48 @@ package Utils;
 
 import io.cucumber.java.Scenario;
 
-/**
- * Scenario context holder for use across step definitions
- */
+import java.util.HashMap;
+import java.util.Map;
+
 public class ScenarioContext {
 
-    private static ThreadLocal<Scenario> scenarioThreadLocal = new ThreadLocal<>();
+    // ✅ One context per thread (scenario)
+    private static final ThreadLocal<Map<String, Object>> context =
+            ThreadLocal.withInitial(HashMap::new);
 
-    /**
-     * Set the scenario for current thread
-     */
-    public static void setScenario(Scenario scenario) {
-        scenarioThreadLocal.set(scenario);
+    private static final ThreadLocal<Scenario> scenario =
+            new ThreadLocal<>();
+
+    // ================= DATA =================
+    public static void set(String key, Object value) {
+        context.get().put(key, value);
     }
 
-    /**
-     * Get the scenario for current thread
-     */
+    public static void put(String key, Object value) {
+        context.get().put(key, value);
+    }
+
+    public static String get(String key) {
+        Object value = context.get().get(key);
+        return value != null ? value.toString() : null;
+    }
+
+    public static Object getObject(String key) {
+        return context.get().get(key);
+    }
+
+    // ================= SCENARIO =================
+    public static void setScenario(Scenario sc) {
+        scenario.set(sc);
+    }
+
     public static Scenario getScenario() {
-        return scenarioThreadLocal.get();
+        return scenario.get();
     }
 
-    /**
-     * Clear scenario from thread local
-     */
+    // ================= CLEANUP =================
     public static void clear() {
-        scenarioThreadLocal.remove();
+        context.remove();
+        scenario.remove();
     }
 }

@@ -15,85 +15,74 @@ import java.nio.file.Paths;
 
 public class Hooks {
 
-    private static final Logger log = LoggerFactory.getLogger(Hooks.class);
-    private static boolean isLoggedIn = false;
+    private static final Logger log =
+            LoggerFactory.getLogger(Hooks.class);
 
-    // Public zero-argument constructor required by Cucumber
+    // Required zero-arg constructor
     public Hooks() {
     }
 
     @Before
     public void setUp(Scenario scenario) {
-        log.info("========== Starting Scenario: {} ==========", scenario.getName());
 
-        // Store scenario in context for use in step definitions
+        log.info("========== Starting Scenario: {} ==========",
+                scenario.getName());
+
+        // Thread-local scenario binding
         ScenarioContext.setScenario(scenario);
 
-        // Initialize browser only once, not for every scenario
-        if (!isLoggedIn) {
-            PlaywrightFactory.initBrowser();
-            log.info("Browser initialized");
-        }
+        // One browser per scenario (parallel safe)
+        PlaywrightFactory.initBrowser();
+        log.info("Browser initialized for scenario");
     }
 
     @After
     public void tearDown(Scenario scenario) {
+
         log.info("========== Finishing Scenario: {} | Status: {} ==========",
                 scenario.getName(),
                 scenario.getStatus());
 
-        // Capture screenshot for all scenarios (both pass and fail)
         try {
-            if (PlaywrightFactory.getPage() != null) {
+            if (PlaywrightFactory.getPage() != null && scenario != null) {
+
                 String screenshotPath = null;
 
                 if (scenario.isFailed()) {
-                    // Capture failure screenshot
-                    screenshotPath = ScreenshotUtil.captureFailureScreenshot(
-                            PlaywrightFactory.getPage(),
-                            scenario.getName()
-                    );
-                    log.error("Scenario FAILED - Screenshot captured: {}", scenario.getName());
+                    screenshotPath =
+                            ScreenshotUtil.captureFailureScreenshot(
+                                    PlaywrightFactory.getPage(),
+                                    scenario.getName()
+                            );
+                    log.error("Scenario FAILED - Screenshot captured");
                 } else {
-                    // Capture success screenshot
-                    screenshotPath = ScreenshotUtil.captureSuccessScreenshot(
-                            PlaywrightFactory.getPage(),
-                            "Final State - " + scenario.getName()
-                    );
-                    log.info("Scenario PASSED - Final screenshot captured: {}", scenario.getName());
+                    screenshotPath =
+                            ScreenshotUtil.captureSuccessScreenshot(
+                                    PlaywrightFactory.getPage(),
+                                    scenario.getName()
+                            );
+                    log.info("Scenario PASSED - Screenshot captured");
                 }
 
-                // Embed screenshot in Cucumber HTML Report
-                if (screenshotPath != null && !screenshotPath.isEmpty()) {
-                    try {
-                        Path path = Paths.get(screenshotPath);
-                        byte[] imageBytes = Files.readAllBytes(path);
-                        scenario.attach(
-                                imageBytes,
-                                "image/png",
-                                scenario.getStatus() + "_screenshot"
-                        );
-                        log.info("Screenshot embedded in Cucumber report");
-                    } catch (Exception e) {
-                        log.error("Error embedding screenshot in report: {}", e.getMessage());
-                    }
+                // Attach only if file exists
+                if (screenshotPath != null && Files.exists(Paths.get(screenshotPath))) {
+                    Path path = Paths.get(screenshotPath);
+                    byte[] imageBytes = Files.readAllBytes(path);
+                    scenario.attach(
+                            imageBytes,
+                            "image/png",
+                            "Screenshot"
+                    );
                 }
             }
         } catch (Exception e) {
-            log.error("Error capturing screenshot in tearDown: {}", e.getMessage());
+            log.warn("Screenshot attachment skipped: {}", e.getMessage());
+        } finally {
+            // ✅ Close browser FIRST
+            PlaywrightFactory.closeBrowser();
+
+            // ✅ Then clear scenario data
+            ScenarioContext.clear();
         }
-
-        // Mark as logged in after first successful login
-        isLoggedIn = true;
-
-        // Clear scenario context
-        ScenarioContext.clear();
-
-        // Close browser only after all scenarios complete
-        // For now, keep it open - will be closed after test suite ends
     }
 }
-
-
-
-

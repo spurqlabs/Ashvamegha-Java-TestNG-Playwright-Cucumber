@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class ScreenshotUtil {
-
     private static final Logger log = LoggerFactory.getLogger(ScreenshotUtil.class);
     private static final DateTimeFormatter dateTimeFormatter =
             DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss-SSS");
@@ -43,24 +42,31 @@ public class ScreenshotUtil {
             Path screenshotPath = screenshotDir.resolve(fileName);
 
             // Capture screenshot
-            page.screenshot(
-                    new Page.ScreenshotOptions()
-                            .setPath(screenshotPath)
-                            .setFullPage(true)
-            );
-
-            // Attach to Allure Report
-            try (FileInputStream is = new FileInputStream(screenshotPath.toFile())) {
-                Allure.addAttachment(
-                        "Step Screenshot: " + stepName,
-                        "image/png",
-                        is,
-                        ".png"
+            try {
+                page.screenshot(
+                        new Page.ScreenshotOptions()
+                                .setPath(screenshotPath)
+                                .setFullPage(true)
+                                .setTimeout(10000)  // 10 second timeout
                 );
-            }
 
-            log.info("Screenshot captured for step: {} -> {}", stepName, screenshotPath);
-            return screenshotPath.toString();
+                // Attach to Allure Report
+                try (FileInputStream is = new FileInputStream(screenshotPath.toFile())) {
+                    Allure.addAttachment(
+                            "Step Screenshot: " + stepName,
+                            "image/png",
+                            is,
+                            ".png"
+                    );
+                }
+
+                log.info("Screenshot captured for step: {} -> {}", stepName, screenshotPath);
+                return screenshotPath.toString();
+
+            } catch (Exception e) {
+                log.warn("Screenshot capture timed out or failed for step: {}", stepName);
+                return null;
+            }
 
         } catch (FileNotFoundException e) {
             log.error("Screenshot file not found after capture: {}", e.getMessage());
@@ -94,31 +100,35 @@ public class ScreenshotUtil {
 
             Path screenshotPath = screenshotDir.resolve(fileName);
 
-            // Capture screenshot
-            page.screenshot(
-                    new Page.ScreenshotOptions()
-                            .setPath(screenshotPath)
-                            .setFullPage(true)
-            );
-
-            // Attach to Allure Report as failure evidence
-            try (FileInputStream is = new FileInputStream(screenshotPath.toFile())) {
-                Allure.addAttachment(
-                        "Failure Screenshot: " + scenarioName,
-                        "image/png",
-                        is,
-                        ".png"
+            // Capture screenshot with timeout
+            try {
+                page.screenshot(
+                        new Page.ScreenshotOptions()
+                                .setPath(screenshotPath)
+                                .setFullPage(true)
+                                .setTimeout(10000)  // 10 second timeout for screenshot
                 );
+
+                // Attach to Allure Report as failure evidence
+                try (FileInputStream is = new FileInputStream(screenshotPath.toFile())) {
+                    Allure.addAttachment(
+                            "Failure Screenshot: " + scenarioName,
+                            "image/png",
+                            is,
+                            ".png"
+                    );
+                }
+
+                log.info("Failure screenshot captured for scenario: {} -> {}", scenarioName, screenshotPath);
+                return screenshotPath.toString();
+
+            } catch (Exception screenshotException) {
+                log.warn("Screenshot capture timed out or failed for scenario: {}, continuing without screenshot", scenarioName);
+                return null;
             }
 
-            log.info("Failure screenshot captured for scenario: {} -> {}", scenarioName, screenshotPath);
-            return screenshotPath.toString();
-
-        } catch (FileNotFoundException e) {
-            log.error("Failure screenshot file not found after capture: {}", e.getMessage());
-            return null;
         } catch (Exception e) {
-            log.error("Failed to capture failure screenshot: {}", e.getMessage(), e);
+            log.error("Failed to capture failure screenshot: {}", e.getMessage());
             return null;
         }
     }
@@ -135,12 +145,13 @@ public class ScreenshotUtil {
     }
 
     /**
-     * Capture screenshot on step failure
+     * Capture screenshot on error and save to screenshots/errors folder
      *
      * @param page - Playwright Page object
      * @param stepName - Name of the step
      * @param errorMessage - Error message
      */
+    @SuppressWarnings("unused")
     public static void captureErrorScreenshot(Page page, String stepName, String errorMessage) {
         try {
             String timestamp = LocalDateTime.now().format(dateTimeFormatter);

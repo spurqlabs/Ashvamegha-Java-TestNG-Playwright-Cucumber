@@ -6,15 +6,12 @@ Feature: Candidate Management
     When user enters valid username and password
     And user clicks on the login button
     Then dashboard page should be displayed
+
+  @smoke @regression
+  Scenario: Add and search candidate successfully
     When user navigates to Recruitment Candidates page
     Then candidates page header should be displayed
 
-  @smoke @login
-  Scenario: Login with valid credentials and navigate to recruitment
-    # Covered by Background
-
-  @smoke @regression
-  Scenario: Add new candidate with required details
     When user clicks on Add Candidate button
     And user enters candidate details from json
       | firstName |
@@ -27,12 +24,34 @@ Feature: Candidate Management
     And user saves the candidate
     Then candidate should be saved successfully
 
+    When user searches candidate
+    Then candidate record should be displayed
+
+
+  @smoke @recruitment
+  Scenario: Shortlist candidate and schedule interview
+    When user navigates to Recruitment Candidates page
+    Then candidates page header should be displayed
+
+    When user searches candidate
+    Then candidate record should be displayed
+
+    When user clicks on View button for the candidate
+    Then candidate details page should be displayed
+
+    When user clicks on Shortlist button
+    And user enters shortlist details from json
+    And user clicks on Save button
+    Then candidate status should be updated to "Shortlisted"
+
+    When user clicks on Schedule Interview button
+    And user enters interview details from json
+    And user clicks on Save button
+    Then interview should be scheduled successfully
+    And candidate status should be updated to "Interview Scheduled"
+
   @smoke
-  Scenario: Search candidate by name
-    When user enters candidate name in search field
-    And user tap on suggestion candidate name dropdown
-    And user clicks on Search button
-    Then candidate should appear in the candidates list
-
-
-
+  Scenario: Logout and session validation
+    When user logs out from the application
+    Then login page should be displayed
+    And user session should be terminated

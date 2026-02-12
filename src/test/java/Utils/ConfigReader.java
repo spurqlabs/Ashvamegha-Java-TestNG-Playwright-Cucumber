@@ -7,7 +7,7 @@ import java.io.File;
 
 public class ConfigReader {
 
-    private static JsonNode config;
+    private static final JsonNode config;
 
     static {
         try {
@@ -20,10 +20,22 @@ public class ConfigReader {
         }
     }
 
+    // 🔥 SYSTEM PROPERTY > CONFIG FILE
     public static String get(String key) {
+
+        // 1️⃣ Check Maven / JVM system property
+        String sysProp = System.getProperty(key);
+        if (sysProp != null && !sysProp.isBlank()) {
+            return sysProp;
+        }
+
+        // 2️⃣ Fallback to config.json
         JsonNode node = config.get(key);
         if (node == null) {
-            throw new RuntimeException("Config key not found: " + key + ". Check config.json file.");
+            throw new RuntimeException(
+                    "Config key not found: " + key +
+                            ". Check config.json or system property."
+            );
         }
         return node.asText();
     }

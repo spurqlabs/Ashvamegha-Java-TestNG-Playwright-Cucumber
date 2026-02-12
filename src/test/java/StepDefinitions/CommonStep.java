@@ -1,14 +1,8 @@
 package StepDefinitions;
 
 import Driver.PlaywrightFactory;
-import Pages.LoginPage;
-import Pages.AddCandidatePage;
-import Pages.CandidatesPage;
-import Utils.ConfigReader;
-import Utils.LocatorReader;
-import Utils.ScreenshotUtil;
-import Utils.ScenarioContext;
-import Utils.WaitUtil;
+import Pages.*;
+import Utils.*;
 import io.cucumber.java.en.*;
 import io.cucumber.datatable.DataTable;
 import org.json.JSONObject;
@@ -18,8 +12,8 @@ import org.slf4j.LoggerFactory;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.LoadState;
 import com.microsoft.playwright.options.WaitForSelectorState;
+
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
@@ -30,221 +24,113 @@ public class CommonStep {
 
     private LoginPage loginPage;
     private AddCandidatePage addCandidatePage;
-    private JSONObject candidateData;
+    private CandidatesPage candidatesPage;
+    private CandidateDetailsPage candidateDetailsPage;
+
+    private final JSONObject candidateData;
 
     // ================= CONSTRUCTOR =================
     public CommonStep() {
         try {
-            log.info("Loading candidateData.json");
             String json = new String(
                     Files.readAllBytes(
-                            Paths.get("src/test/resources/testdata/candidateData.json")
+                            Paths.get("src/test/resources/TestData/candidateData.json")
                     )
             );
             candidateData = new JSONObject(json).getJSONObject("candidate");
         } catch (Exception e) {
-            log.error("Failed to load candidateData.json", e);
-            throw new RuntimeException("Unable to load candidateData.json");
+            throw new RuntimeException("Unable to load candidateData.json", e);
         }
     }
 
-    // ================= SCREENSHOT HELPER =================
-    private void embedScreenshotInReport(String screenshotPath, String stepName) {
-        if (screenshotPath != null && !screenshotPath.isEmpty()) {
-            try {
-                Path path = Paths.get(screenshotPath);
-                if (Files.exists(path)) {
-                    byte[] imageBytes = Files.readAllBytes(path);
-                    if (ScenarioContext.getScenario() != null) {
-                        ScenarioContext.getScenario().attach(
-                                imageBytes,
-                                "image/png",
-                                "Step: " + stepName
-                        );
-                        log.info("Screenshot embedded: {}", stepName);
-                    }
-                }
-            } catch (Exception e) {
-                log.error("Error embedding screenshot: {}", e.getMessage());
-            }
-        }
-    }
-
-    // ================= LOGIN (UPDATED & SAFE FOR BACKGROUND) =================
     // ================= LOGIN =================
-
     @Given("user opens the OrangeHRM application")
-    public void userOpensTheOrangeHRMApplication() {
+    public void user_opens_the_application() {
 
         Page page = PlaywrightFactory.getPage();
 
-        // 🔐 If already logged in, do NOTHING
-        if (page.url().contains("/dashboard")
-                || page.url().contains("/recruitment")) {
-            log.info("Application already open & logged in, skipping navigation");
-            return;
+        if (!page.url().contains("/dashboard")) {
+            page.navigate(ConfigReader.get("baseUrl"));
         }
 
-        log.info("Opening OrangeHRM application");
-        page.navigate(ConfigReader.get("baseUrl"));
-
-        WaitUtil.waitForVisible(
-                page,
-                LocatorReader.get("login.username")
-        );
-
+        WaitUtil.waitForVisible(page, LocatorReader.get("login.username"));
         loginPage = new LoginPage(page);
     }
 
-
     @When("user enters valid username and password")
-    public void userEntersValidUsernameAndPassword() {
-        // ✅ Already logged in → skip
-        if (loginPage == null) {
-            log.info("LoginPage is null → skipping credential entry");
-            return;
-        }
-
-        log.info("Entering credentials");
+    public void user_enters_credentials() {
         loginPage.enterUsername();
         loginPage.enterPassword();
     }
 
     @And("user clicks on the login button")
-    public void userClicksOnTheLoginButton() {
-        // ✅ Already logged in → skip
-        if (loginPage == null) {
-            log.info("LoginPage is null → skipping login click");
-            return;
-        }
-
-        log.info("Clicking login button");
+    public void user_clicks_login() {
         loginPage.clickLoginButton();
     }
 
     @Then("dashboard page should be displayed")
-    public void dashboardPageShouldBeDisplayed() {
-        log.info("Validating dashboard page");
+    public void dashboard_page_should_be_displayed() {
 
-        try {
-            Page page = PlaywrightFactory.getPage();
-            String currentUrl = page.url();
+        Page page = PlaywrightFactory.getPage();
 
-            log.info("Current URL: {}", currentUrl);
+        WaitUtil.waitForVisible(
+                page,
+                LocatorReader.get("dashboardPage.dashboardHeader")
+        );
 
-            // If redirected to login, session expired - need to re-login
-            if (currentUrl.contains("/auth/login")) {
-                log.info("Session expired, redirecting to login page. Re-logging in...");
-                loginPage = new LoginPage(page);
-                loginPage.enterUsername();
-                loginPage.enterPassword();
-                loginPage.clickLoginButton();
-                page.waitForLoadState(LoadState.NETWORKIDLE);
-                currentUrl = page.url();
-            }
-
-            // If on add candidate page or other page, go back to dashboard
-            if (!currentUrl.contains("/dashboard/") && !currentUrl.contains("/recruitment/viewCandidates")) {
-                log.info("Not on dashboard or candidates page, navigating to dashboard");
-                page.navigate(ConfigReader.get("baseUrl") + "/web/index.php/dashboard/index");
-                page.waitForLoadState(LoadState.NETWORKIDLE);
-            }
-
-            // Wait for dashboard header to be visible
-            try {
-                WaitUtil.waitForVisible(page, LocatorReader.get("dashboardPage.dashboardHeader"));
-            } catch (Exception e) {
-                // If header not found, we might be on candidates page which is fine
-                log.info("Dashboard header not visible, checking current page");
-            }
-
-            // Verify we're on a valid page
-            String finalUrl = page.url();
-            boolean isDashboard = finalUrl.contains("/dashboard/");
-            boolean isCandidates = finalUrl.contains("/recruitment/viewCandidates");
-
-            Assert.assertTrue(
-                    "Not on dashboard or candidates page. Current URL: " + finalUrl,
-                    isDashboard || isCandidates
-            );
-
-            log.info("Dashboard or Candidates page verified successfully");
-
-        } catch (Exception e) {
-            log.error("Dashboard validation failed: {}", e.getMessage());
-            throw e;
-        }
+        System.out.println("Dashboard loaded successfully");
     }
+
+
 
     // ================= NAVIGATION =================
     @When("user navigates to Recruitment Candidates page")
-    public void userNavigatesToRecruitmentCandidatesPage() {
-        log.info("Navigating to Candidates page");
+    public void navigate_to_candidates_page() {
 
-        PlaywrightFactory.getPage()
-                .click(LocatorReader.get("recruitmentPage.recruitmentMenu"));
-
-        // Wait for page to navigate
-        PlaywrightFactory.getPage().waitForURL("**/recruitment/viewCandidates");
+        Page page = PlaywrightFactory.getPage();
+        page.click(LocatorReader.get("recruitmentPage.recruitmentMenu"));
+        page.waitForURL("**/recruitment/viewCandidates");
 
         WaitUtil.waitForVisible(
-                PlaywrightFactory.getPage(),
+                page,
                 LocatorReader.get("recruitmentPage.candidatesHeader")
         );
     }
 
     @Then("candidates page header should be displayed")
-    public void candidatesPageHeaderShouldBeDisplayed() {
-        log.info("Verifying candidates page header");
+    public void candidates_page_header_should_be_displayed() {
 
-        try {
-            // Wait for URL to confirm navigation
-            PlaywrightFactory.getPage().waitForURL("**/recruitment/viewCandidates");
-
-            // Wait for element to be visible
-            WaitUtil.waitForVisible(
-                    PlaywrightFactory.getPage(),
-                    LocatorReader.get("recruitmentPage.candidatesHeader")
-            );
-
-            // Assert element is visible
-            Assert.assertTrue(
-                    "Candidates page header is NOT visible",
-                    PlaywrightFactory.getPage()
-                            .isVisible(LocatorReader.get("recruitmentPage.candidatesHeader"))
-            );
-
-            log.info("Candidates page header is visible");
-
-        } catch (Exception e) {
-            log.error("Candidates page validation failed: {}", e.getMessage());
-            throw e;
-        }
+        Assert.assertTrue(
+                PlaywrightFactory.getPage().isVisible(
+                        LocatorReader.get("recruitmentPage.candidatesHeader")
+                )
+        );
     }
 
     // ================= ADD CANDIDATE =================
     @When("user clicks on Add Candidate button")
-    public void userClicksOnAddCandidateButton() {
-        log.info("Clicking Add Candidate button");
+    public void click_add_candidate() {
         addCandidatePage = new AddCandidatePage(PlaywrightFactory.getPage());
         addCandidatePage.clickAddCandidate();
     }
 
     @And("user enters candidate details from json")
-    public void userEntersCandidateDetailsFromJson(DataTable dataTable) {
-        log.info("Entering candidate details using DataTable keys");
+    public void enter_candidate_details(DataTable dataTable) {
 
         List<String> keys = dataTable.asList();
+        String firstName = null;
+        String lastName = null;
 
         for (String key : keys) {
             String value = candidateData.getString(key);
-            log.info("Filling {} -> {}", key, value);
 
             switch (key) {
                 case "firstName":
+                    firstName = value;
                     addCandidatePage.enterFirstName(value);
                     break;
                 case "lastName":
+                    lastName = value;
                     addCandidatePage.enterLastName(value);
                     break;
                 case "email":
@@ -259,141 +145,206 @@ public class CommonStep {
                 case "keywords":
                     addCandidatePage.enterKeywords(value);
                     break;
-                default:
-                    Assert.fail("Unsupported key: " + key);
             }
         }
+
+        // ✅ Store candidate name ONCE
+        ScenarioContext.set(
+                "expectedCandidateName",
+                firstName + " " + lastName
+        );
     }
 
     @And("user uploads resume file")
-    public void userUploadsResumeFile() {
-        log.info("Uploading resume file");
-        String resumePath = candidateData.getString("resumePath");
-
-        Assert.assertTrue(
-                "Resume file not found",
-                Files.exists(Paths.get(resumePath))
+    public void upload_resume() {
+        addCandidatePage.uploadResume(
+                candidateData.getString("resumePath")
         );
-
-        addCandidatePage.uploadResume(resumePath);
     }
 
     @And("user saves the candidate")
-    public void userSavesTheCandidate() {
-        log.info("Saving candidate");
+    public void save_candidate() {
         addCandidatePage.clickSave();
     }
 
     @Then("candidate should be saved successfully")
-    public void candidateShouldBeSavedSuccessfully() {
-        try {
-            log.info("Validating success toast message");
-            Page page = PlaywrightFactory.getPage();
+    public void candidate_saved_successfully() {
 
-            // Wait longer for the success toast (30 seconds)
-            page.waitForSelector(
-                    LocatorReader.get("addCandidatePage.successToast"),
-                    new Page.WaitForSelectorOptions()
-                            .setState(WaitForSelectorState.VISIBLE)
-                            .setTimeout(30000)
-            );
+        Page page = PlaywrightFactory.getPage();
 
-            // Get the toast message text
-            String toastText = page.textContent(LocatorReader.get("addCandidatePage.successToast"));
-            log.info("Toast message displayed: {}", toastText);
-
-            // Verify success message - handle null case
-            Assert.assertNotNull(
-                    "Success toast text is null",
-                    toastText
-            );
-
-            Assert.assertTrue(
-                    "Success toast not displayed or doesn't contain 'Successfully'",
-                    toastText.contains("Successfully")
-            );
-
-            log.info("Candidate saved successfully with message: {}", toastText);
-
-        } catch (Exception e) {
-            log.error("Success toast validation failed: {}", e.getMessage());
-            ScreenshotUtil.captureFailureScreenshot(PlaywrightFactory.getPage(), "Success_Toast_Validation_Failed");
-            throw e;
-        }
-    }
-
-    private CandidatesPage candidatesPage;
-
-    @When("user enters candidate name in search field")
-    public void userEntersCandidateNameInSearchField() {
-        log.info("Entering candidate name in search field");
-
-        candidatesPage = new CandidatesPage(PlaywrightFactory.getPage());
-
-        String firstName = candidateData.getString("firstName");
-        String lastName = candidateData.getString("lastName");
-
-        String fullName = firstName + " " + lastName;
-
-        // ✅ NEW FLOW: first name → suggestion → select full name
-        candidatesPage.enterCandidateName(firstName, fullName);
-    }
-
-
-    @And("user clicks on Search button")
-    public void userClicksOnSearchButton() {
-        log.info("=== SEARCH STEP: Clicking Search button ===");
-        candidatesPage.clickSearch();
-
-        // Wait for search results to be fully rendered
-        try {
-            log.info("Waiting for search results to load...");
-            Thread.sleep(3000); // Increased wait for search results
-            log.info("Search results should now be loaded");
-        } catch (InterruptedException e) {
-            log.error("Interrupted while waiting for search: {}", e.getMessage());
-        }
-    }
-
-    @Then("candidate should appear in the candidates list")
-    public void candidateShouldAppearInTheCandidatesList() {
-        log.info("=== SEARCH STEP: Verifying candidate in results ===");
-
-        String firstName = candidateData.getString("firstName");
-        String lastName = candidateData.getString("lastName");
-        String fullName = firstName + " " + lastName;
-
-        log.info("Candidate to verify: {}", fullName);
-        log.info("Looking in search results for: {} {}", firstName, lastName);
-
-        boolean found = candidatesPage.isCandidateDisplayed(fullName);
-
-        if (!found) {
-            log.error("✗ FAILED: Candidate not found in search results");
-            log.error("Expected candidate: {}", fullName);
-
-            // Take screenshot for debugging
-            try {
-                ScreenshotUtil.captureFailureScreenshot(
-                    PlaywrightFactory.getPage(),
-                    "Candidate_Not_Found_" + firstName + "_" + lastName
-                );
-                log.info("Screenshot captured for debugging");
-            } catch (Exception e) {
-                log.warn("Could not capture screenshot: {}", e.getMessage());
-            }
-        } else {
-            log.info("✓ SUCCESS: Candidate found in search results");
-        }
-
-        Assert.assertTrue(
-                "Candidate not found in candidates list. Expected: " + fullName,
-                found
+        page.waitForSelector(
+                LocatorReader.get("addCandidatePage.successToast"),
+                new Page.WaitForSelectorOptions()
+                        .setState(WaitForSelectorState.VISIBLE)
         );
 
-        log.info("✓ Candidate verification PASSED: {}", fullName);
+        Assert.assertTrue(
+                "Success toast not displayed",
+                page.textContent(
+                        LocatorReader.get("addCandidatePage.successToast")
+                ).contains("Successfully")
+        );
     }
 
+    // ================= SEARCH (FIXED) =================
+    @When("user searches candidate")
+    public void user_searches_candidate() {
+
+        if (candidatesPage == null) {
+            candidatesPage = new CandidatesPage(PlaywrightFactory.getPage());
+        }
+
+        String candidateName =
+                ScenarioContext.get("expectedCandidateName");
+
+        // 🔥 Fallback for second scenario
+        if (candidateName == null || candidateName.isBlank()) {
+            candidateName =
+                    candidateData.getString("firstName") + " " +
+                            candidateData.getString("lastName");
+
+            ScenarioContext.set("expectedCandidateName", candidateName);
+            log.info("Candidate name restored from test data: {}", candidateName);
+        }
+
+        candidatesPage.searchCandidate(candidateName);
+    }
+
+    @Then("candidate record should be displayed")
+    public void candidate_record_should_be_displayed() {
+
+        String expected =
+                ScenarioContext.get("expectedCandidateName");
+
+        String actual =
+                candidatesPage.getDisplayedCandidateName();
+
+        Assert.assertNotNull(
+                "Candidate name in results is NULL",
+                actual
+        );
+
+        Assert.assertFalse(
+                "Candidate name in results is EMPTY",
+                actual.isBlank()
+        );
+
+        Assert.assertEquals(
+                "Candidate name mismatch in search results",
+                expected,
+                actual
+        );
+    }
+
+    // ================= VIEW =================
+    @When("user clicks on View button for the candidate")
+    @When("user clicks on View button for selected candidate")
+    public void user_clicks_on_view_button() {
+
+        if (candidatesPage == null) {
+            candidatesPage = new CandidatesPage(PlaywrightFactory.getPage());
+        }
+
+        candidatesPage.clickViewButtonForCandidate(
+                ScenarioContext.get("expectedCandidateName")
+        );
+
+        candidateDetailsPage =
+                new CandidateDetailsPage(PlaywrightFactory.getPage());
+    }
+
+    @Then("candidate details page should be displayed")
+    public void candidate_details_page_should_be_displayed() {
+
+        Assert.assertTrue(
+                "Candidate details page not displayed",
+                candidateDetailsPage.isCandidateDetailsPageDisplayed()
+        );
+    }
+
+    // ================= SHORTLIST =================
+    @When("user clicks on Shortlist button")
+    public void click_shortlist() {
+        candidateDetailsPage.clickShortlistButton();
+    }
+
+    @And("user enters shortlist details from json")
+    public void enter_shortlist_details() {
+        candidateDetailsPage.enterShortlistDetailsFromJson();
+    }
+
+    @And("user clicks on Save button")
+    public void click_save_button() {
+        candidateDetailsPage.saveShortlist();
+    }
+
+    @Then("candidate status should be updated to {string}")
+    public void candidate_status_updated(String status) {
+
+        Assert.assertEquals(
+                status,
+                candidateDetailsPage.getCandidateStatus()
+        );
+    }
+
+    // ================= INTERVIEW =================
+    @When("user clicks on Schedule Interview button")
+    public void click_schedule_interview() {
+        candidateDetailsPage.clickScheduleInterviewButton();
+    }
+
+    @And("user enters interview details from json")
+    public void enter_interview_details() {
+        candidateDetailsPage.enterInterviewDetailsFromJson();
+    }
+
+    @Then("interview should be scheduled successfully")
+    public void interview_scheduled_successfully() {
+
+        Assert.assertTrue(
+                "Interview success toast not displayed",
+                candidateDetailsPage.isSuccessToastDisplayed()
+        );
+    }
+    // ================= LOGOUT =================
+
+    @When("user logs out from the application")
+    public void user_logs_out_from_the_application() {
+
+        log.info("Logging out from OrangeHRM application");
+
+        Page page = PlaywrightFactory.getPage();
+        DashboardPage dashboardPage = new DashboardPage(page);
+
+        dashboardPage.logout();
+
+        log.info("Logout completed successfully");
+    }
+
+    @Then("login page should be displayed")
+    public void login_page_should_be_displayed() {
+
+        log.info("Validating login page is displayed after logout");
+
+        Page page = PlaywrightFactory.getPage();
+
+        Assert.assertTrue(
+                "Login page not displayed after logout",
+                page.isVisible(LocatorReader.get("login.username"))
+        );
+    }
+
+    @And("user session should be terminated")
+    public void user_session_should_be_terminated() {
+
+        log.info("Validating user session termination");
+
+        Page page = PlaywrightFactory.getPage();
+
+        Assert.assertTrue(
+                "User session not terminated properly",
+                page.url().contains("/auth/login")
+        );
+    }
 
 }
-

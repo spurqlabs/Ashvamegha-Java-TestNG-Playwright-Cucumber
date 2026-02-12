@@ -1,35 +1,69 @@
 package Pages;
 import com.microsoft.playwright.Page;
-import Utils.CandidateDataReader;
+import Utils.TestDataReader;
 import Utils.LocatorReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LoginPage {
 
-    private Page page;
+    private final Page page;
+    private static final Logger log = LoggerFactory.getLogger(LoginPage.class);
 
     public LoginPage(Page page) {
         this.page = page;
     }
 
     public void enterUsername() {
-        page.fill(
-                LocatorReader.get("login.username"),
-                CandidateDataReader.get("login.username")
-        );
+        try {
+            String username = TestDataReader.get("login.username");
+            log.info("Entering username: {}", username);
+            page.fill(
+                    LocatorReader.get("login.username"),
+                    username
+            );
+            log.info("Username entered successfully");
+        } catch (Exception e) {
+            log.error("Error entering username: {}", e.getMessage());
+            throw e;
+        }
     }
 
     public void enterPassword() {
-        page.fill(
-                LocatorReader.get("login.password"),
-                CandidateDataReader.get("login.password")
-        );
+        try {
+            String password = TestDataReader.get("login.password");
+            log.info("Entering password");
+            page.fill(
+                    LocatorReader.get("login.password"),
+                    password
+            );
+            log.info("Password entered successfully");
+        } catch (Exception e) {
+            log.error("Error entering password: {}", e.getMessage());
+            throw e;
+        }
     }
 
     public void clickLoginButton() {
-        page.click(LocatorReader.get("login.loginBtn"));
+        try {
+            log.info("Clicking login button");
+            page.click(LocatorReader.get("login.loginBtn"));
+            log.info("Login button clicked successfully");
+        } catch (Exception e) {
+            log.error("Error clicking login button: {}", e.getMessage());
+            throw e;
+        }
     }
 
+    @SuppressWarnings("unused")
     public boolean isDashboardDisplayed() {
-        return page.isVisible(LocatorReader.get("dashboardPage.dashboardHeader"));
+        try {
+            boolean isDisplayed = page.isVisible(LocatorReader.get("dashboardPage.dashboardHeader"));
+            log.info("Dashboard displayed check: {}", isDisplayed);
+            return isDisplayed;
+        } catch (Exception e) {
+            log.error("Error checking if dashboard is displayed: {}", e.getMessage());
+            return false;
+        }
     }
 }
