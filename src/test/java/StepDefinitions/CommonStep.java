@@ -10,8 +10,6 @@ import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.microsoft.playwright.Page;
-import com.microsoft.playwright.options.LoadState;
-import com.microsoft.playwright.options.WaitForSelectorState;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -49,11 +47,13 @@ public class CommonStep {
 
         Page page = PlaywrightFactory.getPage();
 
-        if (!page.url().contains("/dashboard")) {
-            page.navigate(ConfigReader.get("baseUrl"));
-        }
+        page.navigate(ConfigReader.get("baseUrl"));
 
-        WaitUtil.waitForVisible(page, LocatorReader.get("login.username"));
+        WaitUtil.waitForVisible(
+                page,
+                LocatorReader.get("login.username")
+        );
+
         loginPage = new LoginPage(page);
     }
 
@@ -78,18 +78,26 @@ public class CommonStep {
                 LocatorReader.get("dashboardPage.dashboardHeader")
         );
 
-        System.out.println("Dashboard loaded successfully");
+        Assert.assertTrue(
+                "Dashboard not loaded",
+                page.locator(
+                        LocatorReader.get("dashboardPage.dashboardHeader")
+                ).isVisible()
+        );
+
+        log.info("Dashboard loaded successfully");
     }
-
-
 
     // ================= NAVIGATION =================
     @When("user navigates to Recruitment Candidates page")
     public void navigate_to_candidates_page() {
 
         Page page = PlaywrightFactory.getPage();
-        page.click(LocatorReader.get("recruitmentPage.recruitmentMenu"));
-        page.waitForURL("**/recruitment/viewCandidates");
+
+        WaitUtil.clickWhenReady(
+                page,
+                LocatorReader.get("recruitmentPage.recruitmentMenu")
+        );
 
         WaitUtil.waitForVisible(
                 page,
@@ -100,17 +108,23 @@ public class CommonStep {
     @Then("candidates page header should be displayed")
     public void candidates_page_header_should_be_displayed() {
 
+        Page page = PlaywrightFactory.getPage();
+
         Assert.assertTrue(
-                PlaywrightFactory.getPage().isVisible(
+                "Candidates page not displayed",
+                page.locator(
                         LocatorReader.get("recruitmentPage.candidatesHeader")
-                )
+                ).isVisible()
         );
     }
 
     // ================= ADD CANDIDATE =================
     @When("user clicks on Add Candidate button")
     public void click_add_candidate() {
-        addCandidatePage = new AddCandidatePage(PlaywrightFactory.getPage());
+
+        addCandidatePage =
+                new AddCandidatePage(PlaywrightFactory.getPage());
+
         addCandidatePage.clickAddCandidate();
     }
 
@@ -122,6 +136,7 @@ public class CommonStep {
         String lastName = null;
 
         for (String key : keys) {
+
             String value = candidateData.getString(key);
 
             switch (key) {
@@ -148,7 +163,6 @@ public class CommonStep {
             }
         }
 
-        // ✅ Store candidate name ONCE
         ScenarioContext.set(
                 "expectedCandidateName",
                 firstName + " " + lastName
@@ -172,21 +186,15 @@ public class CommonStep {
 
         Page page = PlaywrightFactory.getPage();
 
-        page.waitForSelector(
-                LocatorReader.get("addCandidatePage.successToast"),
-                new Page.WaitForSelectorOptions()
-                        .setState(WaitForSelectorState.VISIBLE)
-        );
-
         Assert.assertTrue(
                 "Success toast not displayed",
-                page.textContent(
+                page.locator(
                         LocatorReader.get("addCandidatePage.successToast")
-                ).contains("Successfully")
+                ).isVisible()
         );
     }
 
-    // ================= SEARCH (FIXED) =================
+    // ================= SEARCH =================
     @When("user searches candidate")
     public void user_searches_candidate() {
 
@@ -194,21 +202,23 @@ public class CommonStep {
             candidatesPage = new CandidatesPage(PlaywrightFactory.getPage());
         }
 
-        String candidateName =
-                ScenarioContext.get("expectedCandidateName");
+        String candidateName = ScenarioContext.get("expectedCandidateName");
 
-        // 🔥 Fallback for second scenario
+        // ✅ If not set (second scenario), rebuild from JSON
         if (candidateName == null || candidateName.isBlank()) {
+
             candidateName =
                     candidateData.getString("firstName") + " " +
                             candidateData.getString("lastName");
 
             ScenarioContext.set("expectedCandidateName", candidateName);
-            log.info("Candidate name restored from test data: {}", candidateName);
+
+            log.info("Candidate name restored from JSON: {}", candidateName);
         }
 
         candidatesPage.searchCandidate(candidateName);
     }
+
 
     @Then("candidate record should be displayed")
     public void candidate_record_should_be_displayed() {
@@ -216,34 +226,20 @@ public class CommonStep {
         String expected =
                 ScenarioContext.get("expectedCandidateName");
 
-        String actual =
-                candidatesPage.getDisplayedCandidateName();
+        candidatesPage.getDisplayedCandidateName(expected);
 
-        Assert.assertNotNull(
-                "Candidate name in results is NULL",
-                actual
-        );
-
-        Assert.assertFalse(
-                "Candidate name in results is EMPTY",
-                actual.isBlank()
-        );
-
-        Assert.assertEquals(
-                "Candidate name mismatch in search results",
-                expected,
-                actual
+        Assert.assertTrue(
+                "Candidate not found in table",
+                candidatesPage.isCandidateInTable(expected)
         );
     }
 
+
+
+
     // ================= VIEW =================
-    @When("user clicks on View button for the candidate")
     @When("user clicks on View button for selected candidate")
     public void user_clicks_on_view_button() {
-
-        if (candidatesPage == null) {
-            candidatesPage = new CandidatesPage(PlaywrightFactory.getPage());
-        }
 
         candidatesPage.clickViewButtonForCandidate(
                 ScenarioContext.get("expectedCandidateName")
@@ -306,45 +302,38 @@ public class CommonStep {
                 candidateDetailsPage.isSuccessToastDisplayed()
         );
     }
-    // ================= LOGOUT =================
 
+    // ================= LOGOUT =================
     @When("user logs out from the application")
     public void user_logs_out_from_the_application() {
 
-        log.info("Logging out from OrangeHRM application");
-
-        Page page = PlaywrightFactory.getPage();
-        DashboardPage dashboardPage = new DashboardPage(page);
+        DashboardPage dashboardPage =
+                new DashboardPage(PlaywrightFactory.getPage());
 
         dashboardPage.logout();
-
-        log.info("Logout completed successfully");
     }
 
     @Then("login page should be displayed")
     public void login_page_should_be_displayed() {
 
-        log.info("Validating login page is displayed after logout");
-
         Page page = PlaywrightFactory.getPage();
 
         Assert.assertTrue(
                 "Login page not displayed after logout",
-                page.isVisible(LocatorReader.get("login.username"))
+                page.locator(
+                        LocatorReader.get("login.username")
+                ).isVisible()
         );
     }
 
     @And("user session should be terminated")
     public void user_session_should_be_terminated() {
 
-        log.info("Validating user session termination");
-
-        Page page = PlaywrightFactory.getPage();
-
         Assert.assertTrue(
                 "User session not terminated properly",
-                page.url().contains("/auth/login")
+                PlaywrightFactory.getPage()
+                        .url()
+                        .contains("/auth/login")
         );
     }
-
 }

@@ -2,13 +2,10 @@ package Pages;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.ElementHandle;
 import Utils.LocatorReader;
 import Utils.WaitUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.List;
 
 public class CandidatesPage {
 
@@ -24,84 +21,71 @@ public class CandidatesPage {
     public void searchCandidate(String candidateName) {
 
         if (candidateName == null || candidateName.isBlank()) {
-            throw new AssertionError(
-                    "candidateName is NULL or empty. Check ScenarioContext setup."
-            );
+            throw new AssertionError("candidateName is NULL or empty.");
         }
 
         log.info("Searching candidate: {}", candidateName);
 
-        // 🔴 FORCE NAVIGATION TO CANDIDATES PAGE
-        if (!page.url().contains("/recruitment/viewCandidates")) {
-            log.info("Navigating to Candidates page before search");
-            page.navigate(
-                    page.url().split("/web/")[0]
-                            + "/web/index.php/recruitment/viewCandidates"
-            );
+        // Always navigate (SPA safe)
+        page.click(LocatorReader.get("recruitmentPage.recruitmentMenu"));
 
-            WaitUtil.waitForPageLoad(page);
+        WaitUtil.waitForVisible(
+                page,
+                LocatorReader.get("recruitmentPage.candidatesHeader")
+        );
 
-
-            WaitUtil.waitForVisible(
-                    page,
-                    LocatorReader.get("recruitmentPage.candidatesHeader")
-            );
-        }
-
-        // Now search safely
         WaitUtil.waitForVisible(
                 page,
                 LocatorReader.get("searchPage.candidateNameInput")
         );
 
-        page.fill(
-                LocatorReader.get("searchPage.candidateNameInput"),
-                candidateName
-        );
+        String firstName = candidateName.split(" ")[0];
 
-        // Auto-suggestion (optional)
-        try {
-            WaitUtil.waitForVisibleLong(
-                    page,
-                    LocatorReader.get("searchPage.candidateSuggestions")
-            );
-
-            for (ElementHandle option :
-                    page.querySelectorAll(
-                            LocatorReader.get("searchPage.candidateSuggestions")
-                    )) {
-
-                if (option.innerText().trim()
-                        .equalsIgnoreCase(candidateName)) {
-                    option.click();
-                    break;
-                }
-            }
-        } catch (Exception e) {
-            log.info("Suggestion dropdown not visible, continuing");
-        }
-
-        page.click(
-                LocatorReader.get("searchPage.searchButton")
-        );
-
-        WaitUtil.waitForResultsToLoad(page);
-    }
-    // ================= RESULT =================
-    public String getDisplayedCandidateName() {
-
-        WaitUtil.waitForResultsToLoad(page);
+        page.fill(LocatorReader.get("searchPage.candidateNameInput"), "");
+        page.fill(LocatorReader.get("searchPage.candidateNameInput"), firstName);
 
         WaitUtil.waitForVisibleLong(
                 page,
-                LocatorReader.get("searchPage.resultCandidateName")
+                LocatorReader.get("searchPage.candidateSuggestions")
         );
 
-        String name = page.textContent(
-                LocatorReader.get("searchPage.resultCandidateName")
-        );
+        page.locator(LocatorReader.get("searchPage.candidateSuggestions"))
+                .filter(new Locator.FilterOptions()
+                        .setHasText(candidateName))
+                .first()
+                .click();
 
-        return name != null ? name.trim() : "";
+        page.click(LocatorReader.get("searchPage.searchButton"));
+
+        WaitUtil.waitForResultsToLoad(page);
+
+        page.mouse().wheel(0, 1000);
+
+        log.info("Candidate search completed successfully");
+    }
+
+    // ================= RESULT =================
+    public String getDisplayedCandidateName(String candidateName) {
+
+        WaitUtil.waitForResultsToLoad(page);
+
+        String rowLocator =
+                LocatorReader.get("candidatesPage.rowByCandidateName")
+                        .replace("{CANDIDATE_NAME}", candidateName);
+
+        Locator row = page.locator("xpath=" + rowLocator);
+
+        // First check count
+        if (row.count() == 0) {
+            throw new AssertionError("Candidate not found in table: " + candidateName);
+        }
+
+        row.first().scrollIntoViewIfNeeded();
+        row.first().waitFor();
+
+        log.info("Candidate found in table: {}", candidateName);
+
+        return candidateName;
     }
 
     // ================= VIEW =================
@@ -115,20 +99,28 @@ public class CandidatesPage {
                 LocatorReader.get("candidatesPage.rowByCandidateName")
                         .replace("{CANDIDATE_NAME}", candidateName);
 
-        Locator candidateRow = page.locator(rowLocator);
+        Locator candidateRow = page.locator("xpath=" + rowLocator);
 
         if (candidateRow.count() == 0) {
             throw new AssertionError(
-                    "Candidate '" + candidateName + "' not found in table"
+                    "Candidate '" + candidateName + "' not found in results table"
             );
         }
 
+        candidateRow.first().scrollIntoViewIfNeeded();
+
         candidateRow.first()
-                .locator(
-                        LocatorReader.get("candidatesPage.viewButtonInRow")
-                )
+                .locator("button.oxd-icon-button")
                 .first()
                 .click();
+
+        // Proper wait for candidate details page
+        WaitUtil.waitForVisible(
+                page,
+                LocatorReader.get("candidateDetailsPage.candidateNameHeader")
+        );
+
+        log.info("Navigated to Candidate Details page successfully");
     }
 
     // ================= UTIL =================
@@ -140,6 +132,6 @@ public class CandidatesPage {
                 LocatorReader.get("candidatesPage.rowByCandidateName")
                         .replace("{CANDIDATE_NAME}", candidateName);
 
-        return page.locator(rowLocator).count() > 0;
+        return page.locator("xpath=" + rowLocator).count() > 0;
     }
 }

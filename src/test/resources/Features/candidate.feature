@@ -1,4 +1,4 @@
-@smoke
+@candidate @smoke
 Feature: Candidate Management
 
   Background:
@@ -36,7 +36,7 @@ Feature: Candidate Management
     When user searches candidate
     Then candidate record should be displayed
 
-    When user clicks on View button for the candidate
+    When user clicks on View button for selected candidate
     Then candidate details page should be displayed
 
     When user clicks on Shortlist button

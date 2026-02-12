@@ -24,7 +24,7 @@ import static io.cucumber.junit.platform.engine.Constants.*;
 
 @ConfigurationParameter(
         key = FILTER_TAGS_PROPERTY_NAME,
-        value = "@timesheet"
+        value = "@candidate"
 )
 
 // ================= CUCUMBER PARALLEL EXECUTION =================

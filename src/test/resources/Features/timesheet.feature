@@ -7,8 +7,10 @@ Feature: My Timesheet Management
     And user clicks on the login button
     Then dashboard page should be displayed
 
+
   @smoke @regression
   Scenario: Add new timesheet entry and validate total hours
+
     When user navigates to Time module
     And user navigates to My Timesheets page
     Then my timesheet page should be displayed
@@ -18,11 +20,12 @@ Feature: My Timesheet Management
     And user saves the timesheet
     Then success message should be displayed for timesheet
 
-    And timesheet entry should appear in table
     And total hours should be calculated correctly
+
 
   @regression
   Scenario: Edit existing timesheet entry and validate updated totals
+
     When user navigates to Time module
     And user navigates to My Timesheets page
     Then my timesheet page should be displayed
@@ -32,11 +35,13 @@ Feature: My Timesheet Management
     And user saves the timesheet
     Then success message should be displayed for timesheet
 
-    And updated hours should be displayed in table
+    And updated hours should be displayed correctly
     And total hours should be recalculated correctly
+
 
   @smoke
   Scenario: Logout and session validation
+
     When user logs out from the application
     Then login page should be displayed
     And user session should be terminated

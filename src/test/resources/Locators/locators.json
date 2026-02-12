@@ -18,13 +18,12 @@
   "searchPage": {
     "candidateNameInput": "//label[text()='Candidate Name']/following::input[1]",
     "candidateSuggestions": "//div[@role='listbox']//span",
-    "searchButton": "//button[normalize-space()='Search']",
-    "resultCandidateName": "//div[contains(@class,'oxd-table-row')][1]//div[@class='oxd-table-cell oxd-padding-cell'][2]"
+    "searchButton": "//button[normalize-space()='Search']"
   },
 
   "candidatesPage": {
     "tableRows": "//div[contains(@class,'oxd-table-row')]",
-    "rowByCandidateName": "//div[contains(@class,'oxd-table-row')]//div[contains(text(),'{CANDIDATE_NAME}')]/ancestor::div[contains(@class,'oxd-table-row')]",
+    "rowByCandidateName": "//div[contains(@class,'oxd-table-row')]//div[contains(normalize-space(),'{CANDIDATE_NAME}')]/ancestor::div[contains(@class,'oxd-table-row')]",
     "viewButtonInRow": "button"
   },
 
@@ -86,11 +85,8 @@
   "timesheetPage": {
     "projectInput": "input[placeholder='Type for hints...']",
     "projectSuggestion": "div[role='option']",
-
     "activityDropdown": "div.oxd-select-text",
     "activityOption": "div[role='option']:has-text('{ACTIVITY}')",
-
-    "dayCells": "td.--duration-input",
     "mondayInput": "//table//tbody/tr[1]/td[3]//input",
     "tuesdayInput": "//table//tbody/tr[1]/td[4]//input",
     "wednesdayInput": "//table//tbody/tr[1]/td[5]//input",
@@ -98,37 +94,8 @@
     "fridayInput": "//table//tbody/tr[1]/td[7]//input",
     "saturdayInput": "//table//tbody/tr[1]/td[8]//input",
     "sundayInput": "//table//tbody/tr[1]/td[9]//input",
-
-
-
     "saveButton": "button:has-text('Save')",
     "successToast": ".oxd-toast--success",
-    "totalCell": "div.oxd-table-footer"
-  },
-
-  "leaveMenuPage": {
-    "leaveMenu": "a:has-text('Leave')",
-    "leaveListTab": "a.oxd-topbar-body-nav-tab-item:has-text('Leave List')",
-    "applyLeaveTab": "a.oxd-topbar-body-nav-tab-item:has-text('Apply')"
-  },
-
-
-
-"applyLeavePage": {
-    "leaveTypeDropdown": "div.oxd-select-text",
-    "leaveTypeOption": "div[role='option']:has-text('{LEAVE_TYPE}')",
-    "fromDate": "input[placeholder='yyyy-mm-dd'] >> nth=0",
-    "toDate": "input[placeholder='yyyy-mm-dd'] >> nth=1",
-    "comment": "textarea",
-    "applyButton": "button[type='submit']",
-    "successToast": ".oxd-toast--success"
-  },
-
-  "myLeavePage": {
-    "fromDateFilter": "input[placeholder='yyyy-mm-dd'] >> nth=0",
-    "toDateFilter": "input[placeholder='yyyy-mm-dd'] >> nth=1",
-    "searchButton": "button:has-text('Search')",
-    "leaveTableRow": ".oxd-table-row",
-    "leaveStatusCell": ".oxd-table-cell >> nth=5"
+    "totalCell": "//table//tbody/tr[last()]/td[last()]"
   }
 }

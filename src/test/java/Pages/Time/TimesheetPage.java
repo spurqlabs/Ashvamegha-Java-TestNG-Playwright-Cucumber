@@ -36,21 +36,21 @@ public class TimesheetPage {
 
     private void selectProjectFromJson() {
 
-        String projectInput =
-                LocatorReader.get("timesheetPage.projectInput");
-
         String fullProject =
                 TestDataReader.get("timesheet.project");
 
         String partialProject =
                 fullProject.split(" ")[0];
 
-        WaitUtil.fillWhenReady(page, projectInput, partialProject);
+        WaitUtil.fillWhenReady(
+                page,
+                LocatorReader.get("timesheetPage.projectInput"),
+                partialProject
+        );
 
-        String suggestion =
-                LocatorReader.get("timesheetPage.projectSuggestion");
-
-        page.locator(suggestion)
+        page.locator(
+                        LocatorReader.get("timesheetPage.projectSuggestion")
+                )
                 .filter(new Locator.FilterOptions().setHasText(fullProject))
                 .first()
                 .click();
@@ -68,23 +68,19 @@ public class TimesheetPage {
         String activity =
                 TestDataReader.get("timesheet.activity");
 
-        String option =
+        page.click(
                 LocatorReader.get("timesheetPage.activityOption")
-                        .replace("{ACTIVITY}", activity);
-
-        page.click(option);
+                        .replace("{ACTIVITY}", activity)
+        );
     }
 
     // ================= ROW ACTIVATION =================
 
     private void activateTimesheetRow() {
 
-        Locator cells =
-                page.locator(
-                        LocatorReader.get("timesheetPage.dayCells")
-                );
-
-        cells.first().click();
+        page.locator(
+                LocatorReader.get("timesheetPage.mondayInput")
+        ).click();
     }
 
     // ================= HOURS =================
@@ -94,7 +90,6 @@ public class TimesheetPage {
         Map<String, String> hours =
                 TestDataReader.getMap(jsonPath);
 
-        // 🔥 Wait for Monday input before filling
         WaitUtil.waitForVisible(
                 page,
                 LocatorReader.get("timesheetPage.mondayInput")
@@ -143,7 +138,35 @@ public class TimesheetPage {
                 .isVisible();
     }
 
-    // ================= TOTALS =================
+    // ================= VALIDATIONS =================
+
+    public int getDisplayedTotalHours() {
+
+        WaitUtil.waitForVisible(
+                page,
+                LocatorReader.get("timesheetPage.totalCell")
+        );
+
+        String text =
+                page.locator(
+                        LocatorReader.get("timesheetPage.totalCell")
+                ).textContent().trim();
+
+        return Integer.parseInt(text.replaceAll("[^0-9]", ""));
+    }
+
+    public boolean isUpdatedHoursDisplayed() {
+
+        String expected =
+                TestDataReader.get("timesheet.updatedHours.mon");
+
+        String actual =
+                page.locator(
+                        LocatorReader.get("timesheetPage.mondayInput")
+                ).inputValue();
+
+        return actual.equals(expected);
+    }
 
     public int getExpectedTotalHoursFromJson() {
         return Integer.parseInt(

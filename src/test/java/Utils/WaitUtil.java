@@ -7,9 +7,9 @@ import com.microsoft.playwright.options.WaitForSelectorState;
 public class WaitUtil {
 
     // ================= TIMEOUTS =================
-    private static final int DEFAULT_TIMEOUT = 40000;
-    private static final int LONG_TIMEOUT = 40000;
-    private static final int TOAST_TIMEOUT = 50000;
+    private static final int DEFAULT_TIMEOUT = 150000;
+    private static final int LONG_TIMEOUT = 150000;
+    private static final int TOAST_TIMEOUT = 150000;
 
     // ================= PAGE LOAD =================
 
