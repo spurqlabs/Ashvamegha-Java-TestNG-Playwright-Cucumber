@@ -9,6 +9,7 @@ public class DashboardPage {
     private final Page page;
 
     // ================= CONSTRUCTOR =================
+
     public DashboardPage(Page page) {
         this.page = page;
     }

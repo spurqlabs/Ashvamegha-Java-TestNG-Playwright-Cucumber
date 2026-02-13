@@ -43,8 +43,9 @@
   },
 
   "candidateDetailsPage": {
-    "candidateNameHeader": "h6.orangehrm-main-title",
-    "candidateStatus": "p.orangehrm-recruitment-status",
+    "candidateNameHeader": "h6:has-text('Candidate Profile')",
+    "candidateStatus": "//p[contains(normalize-space(),'Status')]",
+
     "shortlistButton": "button:has-text('Shortlist')",
     "scheduleInterviewButton": "button:has-text('Schedule Interview')"
   },
@@ -55,12 +56,10 @@
   },
 
   "scheduleInterviewPage": {
-    "interviewTitle": "input[placeholder='Enter Interview Title']",
-    "interviewerInput": "input[placeholder='Type for hints...']",
+    "interviewTitle": "//label[text()='Interview Title']/following::input[1]",
+    "interviewerInput": "//label[text()='Interviewer']/following::input[1]",
     "interviewerSuggestion": "div[role='option']",
-    "interviewDate": "input[placeholder='yyyy-mm-dd']",
-    "interviewTime": "input[placeholder='hh:mm']",
-    "interviewNotes": "textarea[placeholder='Type here']",
+    "interviewDate": "//label[text()='Date']/following::input[1]",
     "saveButton": "button[type='submit']"
   },
 
@@ -97,5 +96,46 @@
     "saveButton": "button:has-text('Save')",
     "successToast": ".oxd-toast--success",
     "totalCell": "//table//tbody/tr[last()]/td[last()]"
+  },
+
+  "leavePage": {
+    "leaveMenu": "a[href='/web/index.php/leave/viewLeaveModule']",
+    "applyTab": "a:has-text('Apply')",
+    "myLeaveTab": "a:has-text('My Leave')",
+    "entitlementsTab": "span.oxd-topbar-body-nav-tab-item:has-text('Entitlements')",
+    "addEntitlementOption": "a:has-text('Add Entitlements')",
+    "addLeaveEntitlementHeader": "text=Add Leave Entitlement",
+    "employeeNameInput": "input[placeholder='Type for hints...']",
+    "employeeSuggestion": "div[role='option']",
+    "leaveTypeDropdown": "div.oxd-select-text",
+    "leaveTypeOption": "div[role='option']:has-text('{LEAVE_TYPE}')",
+    "entitlementInput": "//label[normalize-space()='Entitlement']/following::input[1]",
+    "saveEntitlementButton": "button:has-text('Save')",
+    "updatePopup": "div.oxd-dialog-container-default",
+    "confirmButton": "button:has-text('Confirm')",
+    "recordTableRows": "div.oxd-table-row"
+  },
+
+  "applyLeavePage": {
+    "applyHeader": "h6:has-text('Apply Leave')",
+    "leaveTypeDropdown": "div.oxd-select-text",
+    "leaveTypeOption": "div[role='option']:has-text('{LEAVE_TYPE}')",
+    "fromDateInput": "//label[normalize-space()='From Date']/following::input[1]",
+    "toDateInput":"//label[normalize-space()='To Date']/following::input[1]",
+    "applyButton": "button:has-text('Apply')",
+    "successToast": ".oxd-toast--success"
+  },
+
+
+  "myLeavePage": {
+    "myLeaveHeader": "h5:has-text('Leave List')",
+
+    "fromDateInput":"//label[normalize-space()='From Date']/following::input[1]",
+    "toDateInput": "//label[normalize-space()='To Date']/following::input[1]",
+    "searchButton": "button:has-text('Search')",
+
+    "leaveTableRows": "div.oxd-table-row"
   }
+
+
 }

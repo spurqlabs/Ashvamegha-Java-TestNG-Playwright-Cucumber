@@ -29,6 +29,7 @@ public class LoginPage {
         }
     }
 
+
     public void enterPassword() {
         try {
             String password = TestDataReader.get("login.password");

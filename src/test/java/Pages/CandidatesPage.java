@@ -65,7 +65,7 @@ public class CandidatesPage {
     }
 
     // ================= RESULT =================
-    public String getDisplayedCandidateName(String candidateName) {
+    public void getDisplayedCandidateName(String candidateName) {
 
         WaitUtil.waitForResultsToLoad(page);
 
@@ -85,7 +85,7 @@ public class CandidatesPage {
 
         log.info("Candidate found in table: {}", candidateName);
 
-        return candidateName;
+
     }
 
     // ================= VIEW =================
@@ -107,6 +107,7 @@ public class CandidatesPage {
             );
         }
 
+
         candidateRow.first().scrollIntoViewIfNeeded();
 
         candidateRow.first()
@@ -122,6 +123,7 @@ public class CandidatesPage {
 
         log.info("Navigated to Candidate Details page successfully");
     }
+
 
     // ================= UTIL =================
     public boolean isCandidateInTable(String candidateName) {

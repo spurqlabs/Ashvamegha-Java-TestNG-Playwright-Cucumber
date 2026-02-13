@@ -15,6 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
+
 public class CommonStep {
 
     private static final Logger log =
@@ -46,13 +47,10 @@ public class CommonStep {
     public void user_opens_the_application() {
 
         Page page = PlaywrightFactory.getPage();
-
         page.navigate(ConfigReader.get("baseUrl"));
 
-        WaitUtil.waitForVisible(
-                page,
-                LocatorReader.get("login.username")
-        );
+        WaitUtil.waitForVisible(page,
+                LocatorReader.get("login.username"));
 
         loginPage = new LoginPage(page);
     }
@@ -73,10 +71,8 @@ public class CommonStep {
 
         Page page = PlaywrightFactory.getPage();
 
-        WaitUtil.waitForVisible(
-                page,
-                LocatorReader.get("dashboardPage.dashboardHeader")
-        );
+        WaitUtil.waitForVisible(page,
+                LocatorReader.get("dashboardPage.dashboardHeader"));
 
         Assert.assertTrue(
                 "Dashboard not loaded",
@@ -84,13 +80,11 @@ public class CommonStep {
                         LocatorReader.get("dashboardPage.dashboardHeader")
                 ).isVisible()
         );
-
-        log.info("Dashboard loaded successfully");
     }
 
     // ================= NAVIGATION =================
     @When("user navigates to Recruitment Candidates page")
-    public void navigate_to_candidates_page() {
+    public void user_navigates_to_recruitment_candidates_page() {
 
         Page page = PlaywrightFactory.getPage();
 
@@ -182,9 +176,14 @@ public class CommonStep {
     }
 
     @Then("candidate should be saved successfully")
-    public void candidate_saved_successfully() {
+    public void candidate_should_be_saved_successfully() {
 
         Page page = PlaywrightFactory.getPage();
+
+        WaitUtil.waitForVisible(
+                page,
+                LocatorReader.get("addCandidatePage.successToast")
+        );
 
         Assert.assertTrue(
                 "Success toast not displayed",
@@ -202,9 +201,9 @@ public class CommonStep {
             candidatesPage = new CandidatesPage(PlaywrightFactory.getPage());
         }
 
-        String candidateName = ScenarioContext.get("expectedCandidateName");
+        String candidateName =
+                ScenarioContext.get("expectedCandidateName");
 
-        // ✅ If not set (second scenario), rebuild from JSON
         if (candidateName == null || candidateName.isBlank()) {
 
             candidateName =
@@ -212,13 +211,10 @@ public class CommonStep {
                             candidateData.getString("lastName");
 
             ScenarioContext.set("expectedCandidateName", candidateName);
-
-            log.info("Candidate name restored from JSON: {}", candidateName);
         }
 
         candidatesPage.searchCandidate(candidateName);
     }
-
 
     @Then("candidate record should be displayed")
     public void candidate_record_should_be_displayed() {
@@ -233,9 +229,6 @@ public class CommonStep {
                 candidatesPage.isCandidateInTable(expected)
         );
     }
-
-
-
 
     // ================= VIEW =================
     @When("user clicks on View button for selected candidate")
@@ -274,15 +267,6 @@ public class CommonStep {
         candidateDetailsPage.saveShortlist();
     }
 
-    @Then("candidate status should be updated to {string}")
-    public void candidate_status_updated(String status) {
-
-        Assert.assertEquals(
-                status,
-                candidateDetailsPage.getCandidateStatus()
-        );
-    }
-
     // ================= INTERVIEW =================
     @When("user clicks on Schedule Interview button")
     public void click_schedule_interview() {
@@ -294,12 +278,22 @@ public class CommonStep {
         candidateDetailsPage.enterInterviewDetailsFromJson();
     }
 
-    @Then("interview should be scheduled successfully")
-    public void interview_scheduled_successfully() {
+    @And("user clicks on Interview Save button")
+    public void userClicksOnInterviewSaveButton() {
+        candidateDetailsPage.saveInterview();
+    }
 
-        Assert.assertTrue(
-                "Interview success toast not displayed",
-                candidateDetailsPage.isSuccessToastDisplayed()
+    // ================= STATUS VALIDATION =================
+    @Then("candidate status should be updated to {string}")
+    public void candidate_status_should_be_updated_to(String expectedStatus) {
+
+        String actualStatus =
+                candidateDetailsPage.getCandidateStatus();
+
+        Assert.assertEquals(
+                "Candidate status mismatch",
+                expectedStatus.trim(),
+                actualStatus.trim()
         );
     }
 

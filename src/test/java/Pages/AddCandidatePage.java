@@ -16,6 +16,7 @@ public class AddCandidatePage {
         this.page = page;
     }
 
+
     public void clickAddCandidate() {
         log.info("Clicking Add Candidate button");
         page.click(LocatorReader.get("recruitmentPage.addCandidateBtn"));

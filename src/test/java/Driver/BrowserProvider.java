@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 @SuppressWarnings("unused")
 public class BrowserProvider {
 
+
     /**
      * Returns available browsers for testing
      * @return Stream of browser names

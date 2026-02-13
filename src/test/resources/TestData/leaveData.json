@@ -1,15 +1,14 @@
 {
   "leave": {
-    "validLeaveApplication": {
+    "apply": {
       "leaveType": "CAN - FMLA",
-      "fromDate": "2026-02-25",
-      "toDate": "2026-02-26",
-      "comment": "Applying leave for personal reasons",
-      "expectedStatus": "Pending Approval"
+      "fromDate":"2026-17-03",
+      "toDate": "2026-18-03"
     },
-    "dateFilter": {
-      "fromDate": "2026-02-01",
-      "toDate": "2026-02-28"
+    "verify": {
+      "fromDate": "2026-17-03",
+      "toDate": "2026-18-03"
     }
   }
 }
+

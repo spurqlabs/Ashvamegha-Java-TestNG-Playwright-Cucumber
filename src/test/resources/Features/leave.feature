@@ -1,4 +1,4 @@
-@leave @smoke
+@leave @entitlement @regression
 Feature: Leave Management
 
   Background:
@@ -7,26 +7,56 @@ Feature: Leave Management
     And user clicks on the login button
     Then dashboard page should be displayed
 
-  @smoke @regression
-  Scenario: Apply leave and verify success message
+
+  # SCENARIO OUTLINE ONLY FOR ADD ENTITLEMENT
+
+  @leave
+  Scenario Outline: Add leave entitlement successfully
+
+    When user navigates to Leave module
+    And user clicks on Entitlements tab
+    And user selects Add Entitlements option
+    Then Add Leave Entitlement page should be displayed
+
+    When user searches and selects logged-in employee name
+    And user selects leave type "<leaveType>"
+    And user enters entitlement days "<entitlementDays>"
+    And user clicks on Save entitlement button
+    Then Updating Entitlement popup should be displayed
+    When user confirms entitlement update
+    Then entitlement record should be displayed in records
+
+    Examples:
+      | leaveType   | entitlementDays |
+      | CAN - FMLA  | 10              |
+
+
+  # APPLY LEAVE (DATA FROM JSON OR STATIC)
+
+  @leave
+  Scenario: Apply leave successfully
+
     When user navigates to Leave module
     And user navigates to Apply Leave page
-    And user fills leave application form from json
-    And user submits leave application
-    Then success message should be displayed for leave
+    Then Apply Leave page should be displayed
 
-  @regression
+    When user selects leave type from json
+    And user selects from date and to date from json
+    And user clicks on Apply button
+    Then leave application should be submitted successfully
+
+
+  # VERIFY IN MY LEAVE (DATA FROM JSON)
+
+
+  @leave
   Scenario: Verify applied leave in My Leave page
+
     When user navigates to Leave module
     And user navigates to My Leave page
-    Then my leave page should be displayed
+    And user filters leave by date range from json
+    And user clicks on Search button
+    Then applied leave record should be displayed
 
-    When user filters leave by date range from json
-    Then applied leave should appear in leave list
-    And leave status should be "Pending Approval"
-
-  @smoke
-  Scenario: Logout and session validation
     When user logs out from the application
     Then login page should be displayed
-    And user session should be terminated

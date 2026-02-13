@@ -95,26 +95,13 @@ public class TimesheetPage {
                 LocatorReader.get("timesheetPage.mondayInput")
         );
 
-        page.locator(LocatorReader.get("timesheetPage.mondayInput"))
-                .fill(hours.get("mon"));
-
-        page.locator(LocatorReader.get("timesheetPage.tuesdayInput"))
-                .fill(hours.get("tue"));
-
-        page.locator(LocatorReader.get("timesheetPage.wednesdayInput"))
-                .fill(hours.get("wed"));
-
-        page.locator(LocatorReader.get("timesheetPage.thursdayInput"))
-                .fill(hours.get("thu"));
-
-        page.locator(LocatorReader.get("timesheetPage.fridayInput"))
-                .fill(hours.get("fri"));
-
-        page.locator(LocatorReader.get("timesheetPage.saturdayInput"))
-                .fill(hours.get("sat"));
-
-        page.locator(LocatorReader.get("timesheetPage.sundayInput"))
-                .fill(hours.get("sun"));
+        page.locator(LocatorReader.get("timesheetPage.mondayInput")).fill(hours.get("mon"));
+        page.locator(LocatorReader.get("timesheetPage.tuesdayInput")).fill(hours.get("tue"));
+        page.locator(LocatorReader.get("timesheetPage.wednesdayInput")).fill(hours.get("wed"));
+        page.locator(LocatorReader.get("timesheetPage.thursdayInput")).fill(hours.get("thu"));
+        page.locator(LocatorReader.get("timesheetPage.fridayInput")).fill(hours.get("fri"));
+        page.locator(LocatorReader.get("timesheetPage.saturdayInput")).fill(hours.get("sat"));
+        page.locator(LocatorReader.get("timesheetPage.sundayInput")).fill(hours.get("sun"));
     }
 
     // ================= SAVE =================
@@ -138,7 +125,7 @@ public class TimesheetPage {
                 .isVisible();
     }
 
-    // ================= VALIDATIONS =================
+    // ================= FIXED TOTAL VALIDATION =================
 
     public int getDisplayedTotalHours() {
 
@@ -152,7 +139,11 @@ public class TimesheetPage {
                         LocatorReader.get("timesheetPage.totalCell")
                 ).textContent().trim();
 
-        return Integer.parseInt(text.replaceAll("[^0-9]", ""));
+        // 🔥 FIX: Handle decimal correctly (40.00 → 40)
+        double total = Double.parseDouble(text.replaceAll("[^0-9.]", ""));
+
+        return (int) total;
+
     }
 
     public boolean isUpdatedHoursDisplayed() {

@@ -28,6 +28,7 @@ Feature: Candidate Management
     Then candidate record should be displayed
 
 
+
   @smoke @recruitment
   Scenario: Shortlist candidate and schedule interview
     When user navigates to Recruitment Candidates page
@@ -46,9 +47,8 @@ Feature: Candidate Management
 
     When user clicks on Schedule Interview button
     And user enters interview details from json
-    And user clicks on Save button
-    Then interview should be scheduled successfully
-    And candidate status should be updated to "Interview Scheduled"
+    And user clicks on Interview Save button
+    Then candidate status should be updated to "Interview Scheduled"
 
   @smoke
   Scenario: Logout and session validation

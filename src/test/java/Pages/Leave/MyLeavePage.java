@@ -13,64 +13,63 @@ public class MyLeavePage {
         this.page = page;
     }
 
-    // ===== Navigation =====
+    // ================= NAVIGATION =================
+
     public void navigateToMyLeavePage() {
 
-        String leaveMenu =
-                LocatorReader.get("leaveMenuPage.leaveMenu");
-        String myLeaveTab =
-                LocatorReader.get("leaveMenuPage.myLeaveTab");
-
-        WaitUtil.waitForVisible(page, leaveMenu);
-        page.click(leaveMenu);
-
-        WaitUtil.waitForVisible(page, myLeaveTab);
-        page.click(myLeaveTab);
+        WaitUtil.clickWhenReady(
+                page,
+                LocatorReader.get("leavePage.myLeaveTab")
+        );
     }
 
-    // ===== Actions =====
-    public void filterLeaveByDateRangeFromJson() {
+    public boolean isMyLeavePageDisplayed() {
+
+        String header =
+                LocatorReader.get("myLeavePage.myLeaveHeader");
+
+        WaitUtil.waitForVisible(page, header);
+        return page.locator(header).isVisible();
+    }
+
+    // ================= FILTER =================
+
+    public void filterByDateRangeFromJson() {
 
         String fromDate =
-                TestDataReader.get("leave.dateFilter.fromDate");
-        String toDate =
-                TestDataReader.get("leave.dateFilter.toDate");
+                TestDataReader.get("leave.verify.fromDate");
 
-        page.fill(
-                LocatorReader.get("myLeavePage.fromDateFilter"),
+        String toDate =
+                TestDataReader.get("leave.verify.toDate");
+
+        WaitUtil.fillWhenReady(
+                page,
+                LocatorReader.get("myLeavePage.fromDateInput"),
                 fromDate
         );
-        page.fill(
-                LocatorReader.get("myLeavePage.toDateFilter"),
+
+        WaitUtil.fillWhenReady(
+                page,
+                LocatorReader.get("myLeavePage.toDateInput"),
                 toDate
         );
+    }
 
-        String searchBtn =
-                LocatorReader.get("myLeavePage.searchButton");
+    public void clickSearch() {
 
-        WaitUtil.waitForVisible(page, searchBtn);
-        page.click(searchBtn);
+        WaitUtil.clickWhenReady(
+                page,
+                LocatorReader.get("myLeavePage.searchButton")
+        );
     }
 
     public boolean isLeaveRecordDisplayed() {
 
-        String leaveRow =
-                LocatorReader.get("myLeavePage.leaveTableRow");
+        String rows =
+                LocatorReader.get("myLeavePage.leaveTableRows");
 
-        // Wait first
-        WaitUtil.waitForVisible(page, leaveRow);
+        WaitUtil.waitForVisible(page, rows);
 
-        // Then verify visibility
-        return page.isVisible(leaveRow);
+        return page.locator(rows).count() > 0;
     }
-    public String getLeaveStatus() {
-
-        String statusCell =
-                LocatorReader.get("myLeavePage.leaveStatusCell");
-
-        WaitUtil.waitForVisible(page, statusCell);
-        return page.textContent(statusCell).trim();
-    }
-
-
 }

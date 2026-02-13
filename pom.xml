@@ -16,6 +16,7 @@
     </properties>
     <dependencies>
 
+
         <!-- Playwright -->
         <dependency>
             <groupId>com.microsoft.playwright</groupId>

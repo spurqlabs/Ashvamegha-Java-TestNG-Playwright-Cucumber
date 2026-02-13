@@ -13,86 +13,86 @@ public class ApplyLeavePage {
         this.page = page;
     }
 
-    // ===== Navigation =====
-    public void navigateToApplyLeavePage() {
+    // ================= NAVIGATION =================
 
-        String leaveMenu =
-                LocatorReader.get("leaveMenuPage.leaveMenu");
+    public void navigateToApplyPage() {
 
-        String leaveListTab =
-                LocatorReader.get("leaveMenuPage.leaveListTab");
-
-        String applyLeaveTab =
-                LocatorReader.get("leaveMenuPage.applyLeaveTab");
-
-        // Step 1: Click Leave from sidebar
-        WaitUtil.waitForVisible(page, leaveMenu);
-        page.click(leaveMenu);
-
-        // Step 2: Wait until Leave List tab appears (page loaded)
-        WaitUtil.waitForVisible(page, leaveListTab);
-
-        // Step 3: Click Apply tab
-        WaitUtil.waitForVisible(page, applyLeaveTab);
-        page.click(applyLeaveTab);
+        WaitUtil.clickWhenReady(
+                page,
+                LocatorReader.get("leavePage.applyTab")
+        );
     }
 
-    // ===== Actions =====
-    public void fillLeaveApplicationFromJson() {
+    public boolean isApplyPageDisplayed() {
 
-        String leaveType =
-                TestDataReader.get("leave.validLeaveApplication.leaveType");
-        String fromDate =
-                TestDataReader.get("leave.validLeaveApplication.fromDate");
-        String toDate =
-                TestDataReader.get("leave.validLeaveApplication.toDate");
-        String comment =
-                TestDataReader.get("leave.validLeaveApplication.comment");
+        String header =
+                LocatorReader.get("applyLeavePage.applyHeader");
 
-        String leaveTypeDropdown =
-                LocatorReader.get("applyLeavePage.leaveTypeDropdown");
+        WaitUtil.waitForVisible(page, header);
+        return page.locator(header).isVisible();
+    }
 
-        String leaveTypeOption =
+    // ================= FORM =================
+
+    public void selectLeaveType(String leaveType) {
+
+        WaitUtil.clickWhenReady(
+                page,
+                LocatorReader.get("applyLeavePage.leaveTypeDropdown")
+        );
+
+        page.click(
                 LocatorReader.get("applyLeavePage.leaveTypeOption")
-                        .replace("{LEAVE_TYPE}", leaveType);
-
-        // Select Leave Type
-        WaitUtil.waitForVisible(page, leaveTypeDropdown);
-        page.click(leaveTypeDropdown);
-
-        WaitUtil.waitForVisible(page, leaveTypeOption);
-        page.click(leaveTypeOption);
-
-        // Fill dates and comment
-        page.fill(
-                LocatorReader.get("applyLeavePage.fromDate"),
-                fromDate
-        );
-        page.fill(
-                LocatorReader.get("applyLeavePage.toDate"),
-                toDate
-        );
-        page.fill(
-                LocatorReader.get("applyLeavePage.comment"),
-                comment
+                        .replace("{LEAVE_TYPE}", leaveType)
         );
     }
 
-    public void submitLeaveApplication() {
-
-        String applyBtn =
-                LocatorReader.get("applyLeavePage.applyButton");
-
-        WaitUtil.waitForVisible(page, applyBtn);
-        page.click(applyBtn);
+    public void selectLeaveTypeFromJson() {
+        String leaveType = TestDataReader.get("leave.apply.leaveType");
+        selectLeaveType(leaveType);
     }
 
-    public boolean isSuccessMessageDisplayed() {
+    public void selectDates(String fromDate, String toDate) {
 
-        String successToast =
+        String fromDateLocator = LocatorReader.get("applyLeavePage.fromDateInput");
+        String toDateLocator   = LocatorReader.get("applyLeavePage.toDateInput");
+
+        //  Fill From Date
+        WaitUtil.fillWhenReady(page, fromDateLocator, fromDate);
+
+        //  Click To Date field
+
+        WaitUtil.clickWhenReady(page, toDateLocator);
+
+        //  Clear existing value properly
+        page.locator(toDateLocator).press("Control+A");   // Select all
+        page.locator(toDateLocator).press("Delete");      // Delete
+
+        //  Now fill new To Date
+        WaitUtil.fillWhenReady(page, toDateLocator, toDate);
+    }
+
+
+    public void selectDatesFromJson() {
+        String fromDate = TestDataReader.get("leave.apply.fromDate");
+        String toDate = TestDataReader.get("leave.apply.toDate");
+        selectDates(fromDate, toDate);
+    }
+
+    public void clickApply() {
+
+        WaitUtil.clickWhenReady(
+                page,
+                LocatorReader.get("applyLeavePage.applyButton")
+        );
+    }
+
+    public boolean isLeaveAppliedSuccessfully() {
+
+        String toast =
                 LocatorReader.get("applyLeavePage.successToast");
 
-        WaitUtil.waitForVisible(page, successToast);
-        return page.isVisible(successToast);
+        WaitUtil.waitForToast(page, toast);
+        return page.locator(toast).isVisible();
     }
 }

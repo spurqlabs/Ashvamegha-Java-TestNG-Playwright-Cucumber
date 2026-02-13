@@ -84,6 +84,7 @@ public class TimesheetSteps {
         );
     }
 
+
     @And("total hours should be calculated correctly")
     public void total_hours_should_be_calculated_correctly() {
 
