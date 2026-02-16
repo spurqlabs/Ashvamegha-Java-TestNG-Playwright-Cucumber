@@ -16,10 +16,7 @@ public class MyTimesheetsPage {
         this.page = page;
     }
 
-    // ================= NAVIGATION =================
-
     public void navigateToTimeModule() {
-        log.info("Navigating to Time module");
 
         WaitUtil.clickWhenReady(
                 page,
@@ -30,7 +27,6 @@ public class MyTimesheetsPage {
     }
 
     public void openMyTimesheets() {
-        log.info("Opening Timesheets dropdown");
 
         WaitUtil.clickWhenReady(
                 page,
@@ -43,28 +39,30 @@ public class MyTimesheetsPage {
         );
 
         WaitUtil.waitForPageLoad(page);
-        log.info("My Timesheets page opened");
     }
-
-    // ================= ACTIONS =================
 
     public void clickEdit() {
-        log.info("Clicking Edit button on My Timesheets page");
 
-        String editBtn =
-                LocatorReader.get("myTimesheetPage.editButton");
-
-        WaitUtil.clickWhenReady(page, editBtn);
-
-        WaitUtil.waitForVisible(
+        WaitUtil.clickWhenReady(
                 page,
-                LocatorReader.get("timesheetPage.mondayInput")
+                LocatorReader.get("myTimesheetPage.editButton")
         );
 
-        log.info("Edit form loaded successfully");
-    }
+        WaitUtil.waitForPageLoad(page);
 
-    // ================= VALIDATIONS =================
+        // Wait for the table to load and be interactive
+        WaitUtil.waitForVisible(
+                page,
+                LocatorReader.get("timesheetPage.projectInput")
+        );
+
+        // Additional wait to ensure form is fully loaded
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
 
     public boolean isMyTimesheetPageDisplayed() {
 
@@ -75,41 +73,7 @@ public class MyTimesheetsPage {
 
         return page.locator(header).isVisible();
     }
-
-    public boolean isTimesheetEntryPresent() {
-
-        String rows =
-                LocatorReader.get("myTimesheetPage.tableRows");
-
-        page.waitForLoadState();
-
-        int rowCount =
-                page.locator(rows).count();
-
-        return rowCount > 0;
-    }
-
-    public boolean isUpdatedEntryDisplayed() {
-        return isTimesheetEntryPresent();
-    }
-
-    // ================= FIXED TOTAL PARSING =================
-    public int getDisplayedTotalHours() {
-
-        String totalCell =
-                LocatorReader.get("timesheetPage.totalCell");
-
-        WaitUtil.waitForVisible(page, totalCell);
-
-        String text =
-                page.locator(totalCell)
-                        .textContent()
-                        .trim();
-
-        // 🔥 FIX: Handle decimals correctly (40.00 → 40)
-        double total =
-                Double.parseDouble(text.replaceAll("[^0-9.]", ""));
-
-        return (int) total;
-    }
 }
+
+
+

@@ -86,6 +86,7 @@
     "projectSuggestion": "div[role='option']",
     "activityDropdown": "div.oxd-select-text",
     "activityOption": "div[role='option']:has-text('{ACTIVITY}')",
+
     "mondayInput": "//table//tbody/tr[1]/td[3]//input",
     "tuesdayInput": "//table//tbody/tr[1]/td[4]//input",
     "wednesdayInput": "//table//tbody/tr[1]/td[5]//input",
@@ -93,6 +94,7 @@
     "fridayInput": "//table//tbody/tr[1]/td[7]//input",
     "saturdayInput": "//table//tbody/tr[1]/td[8]//input",
     "sundayInput": "//table//tbody/tr[1]/td[9]//input",
+
     "saveButton": "button:has-text('Save')",
     "successToast": ".oxd-toast--success",
     "totalCell": "//table//tbody/tr[last()]/td[last()]"
@@ -103,7 +105,7 @@
     "applyTab": "a:has-text('Apply')",
     "myLeaveTab": "a:has-text('My Leave')",
     "entitlementsTab": "span.oxd-topbar-body-nav-tab-item:has-text('Entitlements')",
-    "addEntitlementOption": "a:has-text('Add Entitlements')",
+    "addEntitlementOption": "//a[normalize-space()='Add Entitlements']",
     "addLeaveEntitlementHeader": "text=Add Leave Entitlement",
     "employeeNameInput": "input[placeholder='Type for hints...']",
     "employeeSuggestion": "div[role='option']",

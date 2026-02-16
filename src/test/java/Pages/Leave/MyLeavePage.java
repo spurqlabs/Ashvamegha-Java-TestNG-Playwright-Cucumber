@@ -16,60 +16,106 @@ public class MyLeavePage {
     // ================= NAVIGATION =================
 
     public void navigateToMyLeavePage() {
+        try {
+            WaitUtil.clickWhenReady(
+                    page,
+                    LocatorReader.get("leavePage.myLeaveTab")
+            );
 
-        WaitUtil.clickWhenReady(
-                page,
-                LocatorReader.get("leavePage.myLeaveTab")
-        );
+            WaitUtil.waitForPageLoad(page);
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to navigate to My Leave page", e);
+        }
     }
 
     public boolean isMyLeavePageDisplayed() {
+        try {
+            String header = LocatorReader.get("myLeavePage.myLeaveHeader");
 
-        String header =
-                LocatorReader.get("myLeavePage.myLeaveHeader");
+            WaitUtil.waitForVisible(page, header);
 
-        WaitUtil.waitForVisible(page, header);
-        return page.locator(header).isVisible();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+
+            return page.locator(header).isVisible();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to verify My Leave page display", e);
+        }
     }
 
     // ================= FILTER =================
 
     public void filterByDateRangeFromJson() {
+        try {
+            String fromDate = TestDataReader.get("leave.verify.fromDate");
+            String toDate = TestDataReader.get("leave.verify.toDate");
 
-        String fromDate =
-                TestDataReader.get("leave.verify.fromDate");
+            String fromDateLocator = LocatorReader.get("myLeavePage.fromDateInput");
+            String toDateLocator = LocatorReader.get("myLeavePage.toDateInput");
 
-        String toDate =
-                TestDataReader.get("leave.verify.toDate");
+            WaitUtil.fillWhenReady(page, fromDateLocator, fromDate);
 
-        WaitUtil.fillWhenReady(
-                page,
-                LocatorReader.get("myLeavePage.fromDateInput"),
-                fromDate
-        );
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
 
-        WaitUtil.fillWhenReady(
-                page,
-                LocatorReader.get("myLeavePage.toDateInput"),
-                toDate
-        );
+            WaitUtil.fillWhenReady(page, toDateLocator, toDate);
+
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to filter by date range from JSON", e);
+        }
     }
 
     public void clickSearch() {
+        try {
+            WaitUtil.clickWhenReady(
+                    page,
+                    LocatorReader.get("myLeavePage.searchButton")
+            );
 
-        WaitUtil.clickWhenReady(
-                page,
-                LocatorReader.get("myLeavePage.searchButton")
-        );
+            WaitUtil.waitForPageLoad(page);
+
+            try {
+                Thread.sleep(1500);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to click Search button", e);
+        }
     }
 
     public boolean isLeaveRecordDisplayed() {
+        try {
+            String rows = LocatorReader.get("myLeavePage.leaveTableRows");
 
-        String rows =
-                LocatorReader.get("myLeavePage.leaveTableRows");
+            WaitUtil.waitForVisible(page, rows);
 
-        WaitUtil.waitForVisible(page, rows);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
 
-        return page.locator(rows).count() > 0;
+            return page.locator(rows).count() > 0;
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to verify leave record display", e);
+        }
     }
 }

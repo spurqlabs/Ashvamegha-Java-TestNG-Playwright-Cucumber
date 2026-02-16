@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.microsoft.playwright.Page;
 
-
 public class Hooks {
 
     private static final Logger log =
@@ -32,6 +31,7 @@ public class Hooks {
     public void captureStepScreenshot(Scenario scenario) {
 
         try {
+
             if (PlaywrightFactory.getPage() != null) {
 
                 byte[] screenshot =
@@ -60,6 +60,7 @@ public class Hooks {
                 scenario.getStatus());
 
         try {
+
             if (PlaywrightFactory.getPage() != null) {
 
                 byte[] screenshot =

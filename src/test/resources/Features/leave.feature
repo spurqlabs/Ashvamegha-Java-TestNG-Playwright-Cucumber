@@ -28,7 +28,7 @@ Feature: Leave Management
 
     Examples:
       | leaveType   | entitlementDays |
-      | CAN - FMLA  | 10              |
+      | CAN - FMLA  | 5              |
 
 
   # APPLY LEAVE (DATA FROM JSON OR STATIC)

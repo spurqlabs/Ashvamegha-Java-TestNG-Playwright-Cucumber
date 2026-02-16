@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
@@ -13,9 +15,10 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <playwright.version>1.56.0</playwright.version>
+        <cucumber.version>7.14.0</cucumber.version>
     </properties>
-    <dependencies>
 
+    <dependencies>
 
         <!-- Playwright -->
         <dependency>
@@ -28,21 +31,20 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>7.14.0</version>
+            <version>${cucumber.version}</version>
         </dependency>
 
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>7.14.0</version>
+            <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- Cucumber PicoContainer for Dependency Injection -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
-            <version>7.14.0</version>
+            <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -54,78 +56,31 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- JSON (Jackson) -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.15.2</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-cucumber7-jvm</artifactId>
-            <version>2.24.0</version>
-        </dependency>
-
-        <!-- Allure Attachments Support -->
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-java-commons</artifactId>
-            <version>2.24.0</version>
-        </dependency>
-
-        <!-- Extent Reports -->
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>5.1.1</version>
-        </dependency>
-
-
-        <!-- Logging -->
-        <!-- SLF4J API -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.13</version>
-        </dependency>
-
-        <!-- Log4j2 Core -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.20.0</version>
-        </dependency>
-
-        <!-- Log4j2 API -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.20.0</version>
-        </dependency>
-
-        <!-- SLF4J to Log4j2 Binding -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j2-impl</artifactId>
-            <version>2.20.0</version>
-        </dependency>
+        <!-- org.json -->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20240303</version>
         </dependency>
 
-        <!-- Cucumber -->
+        <!-- Jackson -->
         <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>7.14.0</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.15.2</version>
+        </dependency>
+
+        <!-- Allure -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>2.24.0</version>
         </dependency>
 
         <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit-platform-engine</artifactId>
-            <version>7.14.0</version>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-java-commons</artifactId>
+            <version>2.24.0</version>
         </dependency>
 
         <!-- JUnit 5 -->
@@ -136,7 +91,12 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- JUnit Platform Suite -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit-platform-engine</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-suite</artifactId>
@@ -144,75 +104,84 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.20.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>2.20.0</version>
+        </dependency>
+
     </dependencies>
+
     <build>
         <plugins>
 
-            <!-- Compiler Plugin -->
+            <!-- Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.12.1</version>
-                <configuration>
-                    <source>21</source>
-                    <target>21</target>
-                </configuration>
             </plugin>
 
-            <!-- Surefire Plugin (Test Runner) -->
+            <!-- Surefire -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
-                    <!-- Enable parallel execution at method level -->
                     <parallel>methods</parallel>
-                    <threadCount>2</threadCount>
-                    <perCoreThreadCount>true</perCoreThreadCount>
-                    <forkCount>1</forkCount>
+                    <threadCount>4</threadCount>
+                    <perCoreThreadCount>false</perCoreThreadCount>
+                    <forkCount>2</forkCount>
                     <reuseForks>true</reuseForks>
-
-                    <!-- JUnit 5 Parallel Execution -->
-                    <properties>
-                        <property>
-                            <name>junit.jupiter.execution.parallel.enabled</name>
-                            <value>true</value>
-                        </property>
-                        <property>
-                            <name>junit.jupiter.execution.parallel.mode.default</name>
-                            <value>concurrent</value>
-                        </property>
-                        <property>
-                            <name>junit.jupiter.execution.parallel.mode.classes.default</name>
-                            <value>concurrent</value>
-                        </property>
-                        <property>
-                            <name>junit.jupiter.execution.parallel.config.strategy</name>
-                            <value>fixed</value>
-                        </property>
-                        <property>
-                            <name>junit.jupiter.execution.parallel.config.fixed.parallelism</name>
-                            <value>2</value>
-                        </property>
-                        <property>
-                            <name>junit.jupiter.execution.parallel.config.fixed.max-pool-size</name>
-                            <value>4</value>
-                        </property>
-                    </properties>
-
-                    <!-- Allure Results Directory -->
                     <systemPropertyVariables>
+                        <cucumber.plugin>
+                            pretty,
+                            json:${project.build.directory}/cucumber-reports/cucumber.json,
+                            html:${project.build.directory}/cucumber-reports/cucumber.html
+                        </cucumber.plugin>
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
 
-
-            <!-- Playwright Browser Installer -->
+            <!-- Cucumber Reporting Plugin -->
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.1.0</version>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>5.7.6</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>OrangeHRMS Test Report</projectName>
+                            <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
+                            <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
+                            <jsonFiles>
+                                <param>**/*.json</param>
+                            </jsonFiles>
+                            <checkBuildResult>false</checkBuildResult>
+                            <enableScreenshots>true</enableScreenshots>
+                            <expandAllSteps>true</expandAllSteps>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
 
             <!-- Allure Maven Plugin -->
@@ -222,267 +191,46 @@
                 <version>2.11.2</version>
                 <configuration>
                     <reportVersion>2.24.0</reportVersion>
-                    <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
-                    <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
                 </configuration>
-            </plugin>
-
-            <!-- Maven Failsafe Plugin for Integration Tests -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.2.5</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>integration-test</goal>
-                            <goal>verify</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
 
         </plugins>
     </build>
 
-    <!-- Profiles for Parallel Execution on Different Browsers -->
+    <!-- Execution Profiles -->
     <profiles>
-        <!-- Chrome Parallel Execution -->
+        <!-- Sequential Execution Profile -->
         <profile>
-            <id>parallel-chrome</id>
-            <properties>
-                <browser>chrome</browser>
-                <headless>true</headless>
-            </properties>
+            <id>sequential</id>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
-                        <version>3.2.5</version>
                         <configuration>
-                            <parallel>methods</parallel>
-                            <threadCount>2</threadCount>
-                            <perCoreThreadCount>true</perCoreThreadCount>
-                            <properties>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.enabled</name>
-                                    <value>true</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.mode.default</name>
-                                    <value>concurrent</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.config.fixed.parallelism</name>
-                                    <value>2</value>
-                                </property>
-                            </properties>
-                            <systemPropertyVariables>
-                                <browser>chrome</browser>
-                            </systemPropertyVariables>
+                            <parallel>none</parallel>
+                            <threadCount>1</threadCount>
+                            <forkCount>1</forkCount>
                         </configuration>
                     </plugin>
                 </plugins>
             </build>
         </profile>
 
-        <!-- Firefox Parallel Execution -->
+        <!-- Parallel Execution Profile -->
         <profile>
-            <id>parallel-firefox</id>
-            <properties>
-                <browser>firefox</browser>
-                <headless>true</headless>
-            </properties>
+            <id>parallel</id>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
-                        <version>3.2.5</version>
                         <configuration>
                             <parallel>methods</parallel>
-                            <threadCount>2</threadCount>
-                            <perCoreThreadCount>true</perCoreThreadCount>
-                            <properties>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.enabled</name>
-                                    <value>true</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.mode.default</name>
-                                    <value>concurrent</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.config.fixed.parallelism</name>
-                                    <value>2</value>
-                                </property>
-                            </properties>
-                            <systemPropertyVariables>
-                                <browser>firefox</browser>
-                            </systemPropertyVariables>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <!-- WebKit Parallel Execution -->
-        <profile>
-            <id>parallel-webkit</id>
-            <properties>
-                <browser>webkit</browser>
-                <headless>true</headless>
-            </properties>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>3.2.5</version>
-                        <configuration>
-                            <parallel>methods</parallel>
-                            <threadCount>2</threadCount>
-                            <perCoreThreadCount>true</perCoreThreadCount>
-                            <properties>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.enabled</name>
-                                    <value>true</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.mode.default</name>
-                                    <value>concurrent</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.config.fixed.parallelism</name>
-                                    <value>2</value>
-                                </property>
-                            </properties>
-                            <systemPropertyVariables>
-                                <browser>webkit</browser>
-                            </systemPropertyVariables>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <!-- Edge Parallel Execution -->
-        <profile>
-            <id>parallel-edge</id>
-            <properties>
-                <browser>edge</browser>
-                <headless>true</headless>
-            </properties>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>3.2.5</version>
-                        <configuration>
-                            <parallel>methods</parallel>
-                            <threadCount>2</threadCount>
-                            <perCoreThreadCount>true</perCoreThreadCount>
-                            <properties>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.enabled</name>
-                                    <value>true</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.mode.default</name>
-                                    <value>concurrent</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.config.fixed.parallelism</name>
-                                    <value>2</value>
-                                </property>
-                            </properties>
-                            <systemPropertyVariables>
-                                <browser>edge</browser>
-                            </systemPropertyVariables>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <!-- Parallel All Browsers Simultaneously (Chrome + Firefox + Edge with 2 threads each = 6 total threads) -->
-        <profile>
-            <id>parallel-all-browsers</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>3.2.5</version>
-                        <configuration>
-                            <parallel>methods</parallel>
-                            <threadCount>6</threadCount>
+                            <threadCount>4</threadCount>
+                            <forkCount>2</forkCount>
                             <perCoreThreadCount>false</perCoreThreadCount>
-                            <properties>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.enabled</name>
-                                    <value>true</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.mode.default</name>
-                                    <value>concurrent</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.config.fixed.parallelism</name>
-                                    <value>6</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.config.fixed.max-pool-size</name>
-                                    <value>6</value>
-                                </property>
-                            </properties>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <!-- Execute Tests on Chrome, Firefox, and Edge SIMULTANEOUSLY (True Parallel Multi-Browser) -->
-        <profile>
-            <id>parallel-multi-browser</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>3.2.5</version>
-                        <configuration>
-                            <parallel>methods</parallel>
-                            <threadCount>6</threadCount>
-                            <perCoreThreadCount>false</perCoreThreadCount>
-                            <properties>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.enabled</name>
-                                    <value>true</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.mode.default</name>
-                                    <value>concurrent</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.mode.classes.default</name>
-                                    <value>concurrent</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.config.strategy</name>
-                                    <value>fixed</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.config.fixed.parallelism</name>
-                                    <value>6</value>
-                                </property>
-                                <property>
-                                    <name>junit.jupiter.execution.parallel.config.fixed.max-pool-size</name>
-                                    <value>6</value>
-                                </property>
-                            </properties>
+                            <reuseForks>true</reuseForks>
                         </configuration>
                     </plugin>
                 </plugins>

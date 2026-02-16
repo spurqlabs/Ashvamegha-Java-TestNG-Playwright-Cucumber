@@ -8,9 +8,9 @@ import com.microsoft.playwright.options.WaitForSelectorState;
 public class WaitUtil {
 
     // ================= TIMEOUTS =================
-    private static final int DEFAULT_TIMEOUT = 150000;
-    private static final int LONG_TIMEOUT = 150000;
-    private static final int TOAST_TIMEOUT = 150000;
+    private static final int DEFAULT_TIMEOUT = 90000;
+    private static final int LONG_TIMEOUT = 90000;
+    private static final int TOAST_TIMEOUT = 90000;
 
     // ================= PAGE LOAD =================
 
@@ -36,6 +36,12 @@ public class WaitUtil {
      * Wait until element is visible
      */
     public static void waitForVisible(Page page, String locator) {
+        // Ensure DOM is loaded before attempting to locate elements
+        try {
+            page.waitForLoadState(LoadState.DOMCONTENTLOADED);
+        } catch (Exception ignored) {
+            // Page might already be loaded or in process
+        }
         page.waitForSelector(
                 locator,
                 new Page.WaitForSelectorOptions()
@@ -48,6 +54,12 @@ public class WaitUtil {
      * Long wait for slow elements
      */
     public static void waitForVisibleLong(Page page, String locator) {
+        // Ensure DOM is loaded before attempting to locate elements
+        try {
+            page.waitForLoadState(LoadState.DOMCONTENTLOADED);
+        } catch (Exception ignored) {
+            // Page might already be loaded or in process
+        }
         page.waitForSelector(
                 locator,
                 new Page.WaitForSelectorOptions()
@@ -78,6 +90,8 @@ public class WaitUtil {
      * Click only when element is ready
      */
     public static void clickWhenReady(Page page, String locator) {
+        // Ensure page is fully loaded before attempting to interact
+        waitForPageLoad(page);
         waitForVisible(page, locator);
         page.click(locator);
     }
@@ -86,6 +100,8 @@ public class WaitUtil {
      * Fill input safely (used for project / employee auto-suggest)
      */
     public static void fillWhenReady(Page page, String locator, String value) {
+        // Ensure page is fully loaded before attempting to interact
+        waitForPageLoad(page);
         waitForVisible(page, locator);
         page.fill(locator, value);
     }
@@ -117,12 +133,55 @@ public class WaitUtil {
      * Wait until element is visible & enabled (clickable)
      */
     public static void waitForClickable(Page page, String locator) {
+        // Ensure DOM is loaded before attempting to locate elements
+        try {
+            page.waitForLoadState(LoadState.DOMCONTENTLOADED);
+        } catch (Exception ignored) {
+            // Page might already be loaded or in process
+        }
         page.waitForSelector(
                 locator,
                 new Page.WaitForSelectorOptions()
                         .setState(WaitForSelectorState.VISIBLE)
                         .setTimeout(DEFAULT_TIMEOUT)
         );
+    }
+
+    /**
+     * Wait for element with retry logic (for very flaky elements)
+     */
+    public static void waitForElementWithRetry(Page page, String locator) {
+        int maxAttempts = 3;
+        int attempt = 0;
+
+        while (attempt < maxAttempts) {
+            try {
+                // Ensure DOM is loaded
+                try {
+                    page.waitForLoadState(LoadState.DOMCONTENTLOADED);
+                } catch (Exception ignored) {
+                }
+
+                // Wait for element
+                page.waitForSelector(
+                        locator,
+                        new Page.WaitForSelectorOptions()
+                                .setState(WaitForSelectorState.VISIBLE)
+                                .setTimeout(45000)  // 45 seconds per attempt
+                );
+                return; // Success
+            } catch (Exception e) {
+                attempt++;
+                if (attempt >= maxAttempts) {
+                    throw e; // Throw on final attempt
+                }
+                // Wait before retrying
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ignored) {
+                }
+            }
+        }
     }
 
 }
