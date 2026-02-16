@@ -75,7 +75,7 @@ public class PlaywrightFactory {
         Browser browser = browserType.launch(launchOptions);
 
         tlBrowser.set(browser);
-        log.info("✅ {} Browser launched successfully on thread: {}",
+        log.info(" {} Browser launched successfully on thread: {}",
                  browserName.toUpperCase(), Thread.currentThread().getName());
 
         // Create isolated context per scenario (parallel safe)
@@ -117,7 +117,7 @@ public class PlaywrightFactory {
 
         String browserName = tlBrowserName.get();
         log.info("========================================");
-        log.info("🛑 CLOSING BROWSER: {}", browserName != null ? browserName.toUpperCase() : "UNKNOWN");
+        log.info(" CLOSING BROWSER: {}", browserName != null ? browserName.toUpperCase() : "UNKNOWN");
         log.info("Thread: {}", Thread.currentThread().getName());
 
         if (tlPage.get() != null) {
@@ -132,7 +132,7 @@ public class PlaywrightFactory {
 
         if (tlBrowser.get() != null) {
             tlBrowser.get().close();
-            log.info("✅ {} Browser closed successfully", browserName != null ? browserName.toUpperCase() : "Browser");
+            log.info(" {} Browser closed successfully", browserName != null ? browserName.toUpperCase() : "Browser");
         }
 
         if (tlPlaywright.get() != null) {
@@ -142,7 +142,7 @@ public class PlaywrightFactory {
 
         log.info("========================================");
 
-        // ✅ VERY IMPORTANT for parallel execution
+        //  VERY IMPORTANT for parallel execution
         tlPage.remove();
         tlContext.remove();
         tlBrowser.remove();
