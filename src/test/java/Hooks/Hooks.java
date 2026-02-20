@@ -1,6 +1,7 @@
 package Hooks;
 
 import Driver.PlaywrightFactory;
+import Utils.ConfigReader;
 import Utils.ScenarioContext;
 import io.cucumber.java.*;
 import org.slf4j.Logger;
@@ -12,37 +13,45 @@ public class Hooks {
     private static final Logger log =
             LoggerFactory.getLogger(Hooks.class);
 
-    public Hooks() {
-    }
-
     // ================= BEFORE =================
+
     @Before
     public void setUp(Scenario scenario) {
 
-        log.info("===== Starting Scenario: {} =====",
-                scenario.getName());
+        log.info("===== Starting Scenario: {} | Thread: {} =====",
+                scenario.getName(),
+                Thread.currentThread().getName());
 
         ScenarioContext.setScenario(scenario);
-        PlaywrightFactory.initBrowser();
+
+        // IMPORTANT: Each thread gets its own browser
+        String browser = ConfigReader.get("browser");
+        PlaywrightFactory.initBrowser(browser);
     }
 
-    // ================= STEP SCREENSHOT =================
+    // ================= AFTER STEP (Screenshot only if failed) =================
+
     @AfterStep
     public void captureStepScreenshot(Scenario scenario) {
 
+        if (!scenario.isFailed()) {
+            return;
+        }
+
         try {
+            Page page = PlaywrightFactory.getPage();
 
-            if (PlaywrightFactory.getPage() != null) {
+            if (page != null && !page.isClosed()) {
 
-                byte[] screenshot =
-                        PlaywrightFactory.getPage()
-                                .screenshot(new Page.ScreenshotOptions()
-                                        .setFullPage(true));
+                byte[] screenshot = page.screenshot(
+                        new Page.ScreenshotOptions()
+                                .setFullPage(true)
+                );
 
                 scenario.attach(
                         screenshot,
                         "image/png",
-                        "Step Screenshot"
+                        "Failed Step Screenshot"
                 );
             }
 
@@ -52,21 +61,24 @@ public class Hooks {
     }
 
     // ================= AFTER =================
+
     @After
     public void tearDown(Scenario scenario) {
 
-        log.info("===== Finished Scenario: {} | Status: {} =====",
+        log.info("===== Finished Scenario: {} | Status: {} | Thread: {} =====",
                 scenario.getName(),
-                scenario.getStatus());
+                scenario.getStatus(),
+                Thread.currentThread().getName());
 
         try {
+            Page page = PlaywrightFactory.getPage();
 
-            if (PlaywrightFactory.getPage() != null) {
+            if (page != null && !page.isClosed()) {
 
-                byte[] screenshot =
-                        PlaywrightFactory.getPage()
-                                .screenshot(new Page.ScreenshotOptions()
-                                        .setFullPage(true));
+                byte[] screenshot = page.screenshot(
+                        new Page.ScreenshotOptions()
+                                .setFullPage(true)
+                );
 
                 scenario.attach(
                         screenshot,
@@ -79,6 +91,7 @@ public class Hooks {
             log.warn("Final screenshot failed: {}", e.getMessage());
         } finally {
 
+            // IMPORTANT: Close only this thread's browser
             PlaywrightFactory.closeBrowser();
             ScenarioContext.clear();
         }

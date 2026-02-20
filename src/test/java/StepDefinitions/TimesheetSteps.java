@@ -3,10 +3,13 @@ package StepDefinitions;
 import Driver.PlaywrightFactory;
 import Pages.Time.MyTimesheetsPage;
 import Pages.Time.TimesheetPage;
+
 import io.cucumber.java.en.*;
-import org.junit.Assert;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TimesheetSteps {
 
@@ -23,6 +26,8 @@ public class TimesheetSteps {
     @When("user navigates to Time module")
     public void user_navigates_to_time_module() {
 
+        log.info("Navigating to Time module");
+
         myTimesheetsPage =
                 new MyTimesheetsPage(PlaywrightFactory.getPage());
 
@@ -32,15 +37,19 @@ public class TimesheetSteps {
     @And("user navigates to My Timesheets page")
     public void user_navigates_to_my_timesheets_page() {
 
+        log.info("Navigating to My Timesheets page");
+
         myTimesheetsPage.openMyTimesheets();
     }
 
     @Then("my timesheet page should be displayed")
     public void my_timesheet_page_should_be_displayed() {
 
-        Assert.assertTrue(
-                "My Timesheet page not displayed",
-                myTimesheetsPage.isMyTimesheetPageDisplayed()
+        log.info("Verifying My Timesheet page display");
+
+        assertTrue(
+                myTimesheetsPage.isMyTimesheetPageDisplayed(),
+                "My Timesheet page not displayed"
         );
     }
 
@@ -51,6 +60,8 @@ public class TimesheetSteps {
     @When("user clicks on Edit button")
     public void user_clicks_on_edit_button() {
 
+        log.info("Clicking Edit button");
+
         myTimesheetsPage.clickEdit();
 
         timesheetPage =
@@ -60,18 +71,24 @@ public class TimesheetSteps {
     @And("user adds new timesheet entry from json")
     public void user_adds_new_timesheet_entry_from_json() {
 
+        log.info("Adding new timesheet entry from JSON");
+
         timesheetPage.addNewEntryFromJson();
     }
 
     @And("user updates existing timesheet entry from json")
     public void user_updates_existing_timesheet_entry_from_json() {
 
-        // Same smart method handles update
+        log.info("Updating existing timesheet entry from JSON");
+
+        // Reusing same smart method
         timesheetPage.addNewEntryFromJson();
     }
 
     @And("user saves the timesheet")
     public void user_saves_the_timesheet() {
+
+        log.info("Saving timesheet");
 
         timesheetPage.saveTimesheet();
     }
@@ -79,9 +96,11 @@ public class TimesheetSteps {
     @Then("success message should be displayed for timesheet")
     public void success_message_should_be_displayed_for_timesheet() {
 
-        Assert.assertTrue(
-                "Success toast not visible",
-                timesheetPage.isSuccessToastDisplayed()
+        log.info("Verifying success toast for timesheet");
+
+        assertTrue(
+                timesheetPage.isSuccessToastDisplayed(),
+                "Success toast not visible"
         );
     }
 
@@ -92,16 +111,15 @@ public class TimesheetSteps {
     @And("total hours should be calculated correctly")
     public void total_hours_should_be_calculated_correctly() {
 
-        int expected =
-                timesheetPage.getExpectedTotalBasedOnRun();
+        log.info("Validating total hours");
 
-        int actual =
-                timesheetPage.getDisplayedTotalHours();
+        int expected = timesheetPage.getExpectedTotalBasedOnRun();
+        int actual = timesheetPage.getDisplayedTotalHours();
 
-        Assert.assertEquals(
-                "Total hours mismatch",
+        assertEquals(
                 expected,
-                actual
+                actual,
+                "Total hours mismatch. Expected: " + expected + ", Actual: " + actual
         );
 
         log.info("Total validated successfully. Expected: {}, Actual: {}", expected, actual);
@@ -110,43 +128,34 @@ public class TimesheetSteps {
     @And("updated hours should be displayed correctly")
     public void updated_hours_should_be_displayed_correctly() {
 
-        // Wait a bit for page to settle after save
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
+        log.info("Validating updated total hours");
 
-        int expected =
-                timesheetPage.getExpectedTotalBasedOnRun();
+        int expected = timesheetPage.getExpectedTotalBasedOnRun();
+        int actual = timesheetPage.getDisplayedTotalHours();
 
-        int actual =
-                timesheetPage.getDisplayedTotalHours();
-
-        Assert.assertEquals(
-                "Updated hours mismatch",
+        assertEquals(
                 expected,
-                actual
+                actual,
+                "Updated hours mismatch. Expected: " + expected + ", Actual: " + actual
         );
 
-        log.info("Updated hours validated successfully");
+        log.info("Updated hours validated successfully. Expected: {}, Actual: {}", expected, actual);
     }
 
     @And("total hours should be recalculated correctly")
     public void total_hours_should_be_recalculated_correctly() {
 
-        int expected =
-                timesheetPage.getExpectedTotalBasedOnRun();
+        log.info("Validating recalculated total hours");
 
-        int actual =
-                timesheetPage.getDisplayedTotalHours();
+        int expected = timesheetPage.getExpectedTotalBasedOnRun();
+        int actual = timesheetPage.getDisplayedTotalHours();
 
-        Assert.assertEquals(
-                "Recalculated total mismatch",
+        assertEquals(
                 expected,
-                actual
+                actual,
+                "Recalculated total mismatch. Expected: " + expected + ", Actual: " + actual
         );
 
-        log.info("Recalculated total validated successfully");
+        log.info("Recalculated total validated successfully. Expected: {}, Actual: {}", expected, actual);
     }
 }

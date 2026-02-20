@@ -63,7 +63,7 @@
     "saveButton": "button[type='submit']"
   },
 
-  "dashboard": {
+  "logout": {
     "userDropdown": "span.oxd-userdropdown-tab",
     "logoutButton": "a:has-text('Logout')"
   },
@@ -131,13 +131,15 @@
 
   "myLeavePage": {
     "myLeaveHeader": "h5:has-text('Leave List')",
-
     "fromDateInput":"//label[normalize-space()='From Date']/following::input[1]",
     "toDateInput": "//label[normalize-space()='To Date']/following::input[1]",
     "searchButton": "button:has-text('Search')",
-
     "leaveTableRows": "div.oxd-table-row"
+  },
+  "sidebar": {
+    "body": "body",
+    "toggleButton": "button.oxd-main-menu-button"
   }
-
-
 }
+
+

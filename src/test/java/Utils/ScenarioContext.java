@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class ScenarioContext {
 
-    // ✅ One context per thread (scenario)
+    // One context per thread (scenario)
     private static final ThreadLocal<Map<String, Object>> context =
             ThreadLocal.withInitial(HashMap::new);
 

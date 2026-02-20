@@ -14,20 +14,12 @@ Feature: Candidate Management
 
     When user clicks on Add Candidate button
     And user enters candidate details from json
-      | firstName |
-      | lastName  |
-      | email     |
-      | phone     |
-      | vacancy   |
-      | keywords  |
     And user uploads resume file
     And user saves the candidate
     Then candidate should be saved successfully
 
     When user searches candidate
     Then candidate record should be displayed
-
-
 
   @smoke @recruitment
   Scenario: Shortlist candidate and schedule interview

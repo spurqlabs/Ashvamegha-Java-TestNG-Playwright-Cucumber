@@ -1,13 +1,15 @@
 package Pages.Leave;
 
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.LoadState;
 import Utils.LocatorReader;
-import Utils.TestDataReader;
 import Utils.WaitUtil;
 
 public class MyLeavePage {
 
     private final Page page;
+
+    // ================= CONSTRUCTOR =================
 
     public MyLeavePage(Page page) {
         this.page = page;
@@ -16,106 +18,66 @@ public class MyLeavePage {
     // ================= NAVIGATION =================
 
     public void navigateToMyLeavePage() {
-        try {
-            WaitUtil.clickWhenReady(
-                    page,
-                    LocatorReader.get("leavePage.myLeaveTab")
-            );
 
-            WaitUtil.waitForPageLoad(page);
+        WaitUtil.clickWhenReady(
+                page,
+                LocatorReader.get("leavePage.myLeaveTab")
+        );
 
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to navigate to My Leave page", e);
-        }
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+
+        WaitUtil.waitForVisible(
+                page,
+                LocatorReader.get("myLeavePage.myLeaveHeader")
+        );
     }
 
     public boolean isMyLeavePageDisplayed() {
-        try {
-            String header = LocatorReader.get("myLeavePage.myLeaveHeader");
 
-            WaitUtil.waitForVisible(page, header);
+        String header =
+                LocatorReader.get("myLeavePage.myLeaveHeader");
 
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
+        WaitUtil.waitForVisible(page, header);
 
-            return page.locator(header).isVisible();
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to verify My Leave page display", e);
-        }
+        return page.locator(header).isVisible();
     }
 
     // ================= FILTER =================
 
-    public void filterByDateRangeFromJson() {
-        try {
-            String fromDate = TestDataReader.get("leave.verify.fromDate");
-            String toDate = TestDataReader.get("leave.verify.toDate");
+    public void filterByDateRange(String fromDate, String toDate) {
 
-            String fromDateLocator = LocatorReader.get("myLeavePage.fromDateInput");
-            String toDateLocator = LocatorReader.get("myLeavePage.toDateInput");
+        String fromDateLocator =
+                LocatorReader.get("myLeavePage.fromDateInput");
 
-            WaitUtil.fillWhenReady(page, fromDateLocator, fromDate);
+        String toDateLocator =
+                LocatorReader.get("myLeavePage.toDateInput");
 
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-
-            WaitUtil.fillWhenReady(page, toDateLocator, toDate);
-
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to filter by date range from JSON", e);
-        }
+        WaitUtil.fillWhenReady(page, fromDateLocator, fromDate);
+        WaitUtil.fillWhenReady(page, toDateLocator, toDate);
     }
 
     public void clickSearch() {
-        try {
-            WaitUtil.clickWhenReady(
-                    page,
-                    LocatorReader.get("myLeavePage.searchButton")
-            );
 
-            WaitUtil.waitForPageLoad(page);
+        WaitUtil.clickWhenReady(
+                page,
+                LocatorReader.get("myLeavePage.searchButton")
+        );
 
-            try {
-                Thread.sleep(1500);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to click Search button", e);
-        }
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+
+        WaitUtil.waitForVisible(
+                page,
+                LocatorReader.get("myLeavePage.leaveTableRows")
+        );
     }
 
     public boolean isLeaveRecordDisplayed() {
-        try {
-            String rows = LocatorReader.get("myLeavePage.leaveTableRows");
 
-            WaitUtil.waitForVisible(page, rows);
+        String rows =
+                LocatorReader.get("myLeavePage.leaveTableRows");
 
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
+        WaitUtil.waitForVisible(page, rows);
 
-            return page.locator(rows).count() > 0;
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to verify leave record display", e);
-        }
+        return page.locator(rows).count() > 0;
     }
 }
