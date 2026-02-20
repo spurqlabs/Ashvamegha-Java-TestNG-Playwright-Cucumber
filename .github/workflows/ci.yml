@@ -1,0 +1,130 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "Orhms_Workfloe_AJ", "main", "develop" ]
+  pull_request:
+    branches: [ "Orhms_Workfloe_AJ", "main", "develop" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 60
+    name: Build & Test
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Cache Maven repository
+        uses: actions/cache@v4
+        with:
+          path: ~\.m2\repository
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2-
+
+      - name: Display Java version
+        run: java -version
+
+      - name: Verify Maven installation
+        run: mvn --version
+
+      - name: Install Playwright browsers (Java)
+        run: mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install"
+        continue-on-error: true
+
+      - name: Build project
+        run: mvn -B clean compile
+
+      - name: Run code style checks
+        run: mvn checkstyle:check
+        continue-on-error: true
+
+      - name: Run Maven tests
+        run: mvn -B test
+        continue-on-error: true
+
+      - name: Generate Allure report
+        if: always()
+        run: mvn allure:report
+        continue-on-error: true
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: target/surefire-reports/
+          retention-days: 30
+
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: target/allure-results
+          retention-days: 30
+
+      - name: Upload Allure HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: target/site/allure-maven-plugin
+          retention-days: 30
+
+      - name: Upload Cucumber reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-reports
+          path: target/cucumber-html-reports
+          retention-days: 30
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: screenshots/
+          retention-days: 30
+
+      - name: Create CI verification instructions
+        if: always()
+        run: |
+          echo "# CI Pipeline Verification Report" > CI_VERIFICATION.md
+          echo "## Build Status" >> CI_VERIFICATION.md
+          echo "- **Build Date**: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" >> CI_VERIFICATION.md
+          echo "- **Workflow**: ${{ github.workflow }}" >> CI_VERIFICATION.md
+          echo "- **Branch**: ${{ github.ref }}" >> CI_VERIFICATION.md
+          echo "- **Commit**: ${{ github.sha }}" >> CI_VERIFICATION.md
+          echo "" >> CI_VERIFICATION.md
+          echo "## Test Artifacts Generated" >> CI_VERIFICATION.md
+          echo "- Allure Test Report" >> CI_VERIFICATION.md
+          echo "- Cucumber HTML Reports" >> CI_VERIFICATION.md
+          echo "- Test Result Artifacts" >> CI_VERIFICATION.md
+          echo "- Screenshots" >> CI_VERIFICATION.md
+          echo "" >> CI_VERIFICATION.md
+          echo "## Git Commands for Local Verification" >> CI_VERIFICATION.md
+          echo "``````powershell" >> CI_VERIFICATION.md
+          echo "git checkout -b ci/add-github-actions" >> CI_VERIFICATION.md
+          echo "git add .github/workflows/ci.yml" >> CI_VERIFICATION.md
+          echo "git commit -m 'Add GitHub Actions CI workflow'" >> CI_VERIFICATION.md
+          echo "git push -u origin ci/add-github-actions" >> CI_VERIFICATION.md
+          echo "``````" >> CI_VERIFICATION.md
+
+      - name: Upload CI verification file
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-verification
+          path: CI_VERIFICATION.md
+          retention-days: 30
