@@ -6,11 +6,11 @@ on:
     branches: [ "Orhms_Workflow_AJ", "main", "develop" ]
   pull_request:
     branches: [ "Orhms_Workflow_AJ", "main", "develop" ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 60
-    name: Build & Test
 
     steps:
       - name: Checkout Repository
@@ -29,55 +29,18 @@ jobs:
       - name: Verify Maven
         run: mvn -version
 
-      # Install Playwright Browsers
       - name: Install Playwright Browsers
-        run: mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install"
+        run: mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps"
 
-      # Build
       - name: Build Project
         run: mvn -B clean compile
 
-      # Run Tests (STOP PIPELINE IF FAILS)
       - name: Run Tests
-        run: mvn -B test
+        run: mvn -B test -Dheadless=true
 
-      # Generate Allure Report
-      - name: Generate Allure Report
-        if: always()
-        run: mvn allure:report
-
-      # Upload Reports
       - name: Upload Surefire Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: surefire-reports
           path: target/surefire-reports/
-
-      - name: Upload Allure Results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-results
-          path: target/allure-results/
-
-      - name: Upload Allure HTML Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: target/site/allure-maven-plugin/
-
-      - name: Upload Cucumber Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: cucumber-report
-          path: target/cucumber-report.html
-
-      - name: Upload Screenshots
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: screenshots
-          path: screenshots/

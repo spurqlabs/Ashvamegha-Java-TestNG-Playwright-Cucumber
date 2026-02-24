@@ -1,6 +1,7 @@
 package Driver;
 
 import com.microsoft.playwright.*;
+import java.util.List;
 
 public class PlaywrightFactory {
 
@@ -8,8 +9,6 @@ public class PlaywrightFactory {
     private static final ThreadLocal<Browser> browser = new ThreadLocal<>();
     private static final ThreadLocal<BrowserContext> context = new ThreadLocal<>();
     private static final ThreadLocal<Page> page = new ThreadLocal<>();
-
-    // ================= INIT =================
 
     public static void initBrowser(String browserName) {
 
@@ -28,9 +27,17 @@ public class PlaywrightFactory {
                 browserType = playwright.get().chromium();
         }
 
+        // 🔥 Headless control via system property (CI safe)
+        boolean headless = Boolean.parseBoolean(
+                System.getProperty("headless", "false")
+        );
+
+        System.out.println("Running in HEADLESS mode: " + headless);
+
         browser.set(browserType.launch(
                 new BrowserType.LaunchOptions()
-                        .setHeadless(false)
+                        .setHeadless(headless)
+                        .setArgs(List.of("--no-sandbox", "--disable-dev-shm-usage"))
         ));
 
         context.set(browser.get().newContext());
@@ -40,13 +47,9 @@ public class PlaywrightFactory {
                 + Thread.currentThread().getName());
     }
 
-    // ================= GET PAGE =================
-
     public static Page getPage() {
         return page.get();
     }
-
-    // ================= CLOSE =================
 
     public static void closeBrowser() {
 

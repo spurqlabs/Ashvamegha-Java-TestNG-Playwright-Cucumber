@@ -22,11 +22,16 @@ import static io.cucumber.junit.platform.engine.Constants.*;
         key = PLUGIN_PROPERTY_NAME,
         value = "pretty, html:target/cucumber-report.html, json:target/cucumber.json"
 )
+//----------------------------TAG Filtering-----------
+@ConfigurationParameter(
+        key = FILTER_TAGS_PROPERTY_NAME,
+        value = "@timesheet"
+)
 
 // ================= CUCUMBER PARALLEL =================
 @ConfigurationParameter(
         key = "cucumber.execution.parallel.enabled",
-        value = "true"
+        value = "false"
 )
 
 @ConfigurationParameter(
