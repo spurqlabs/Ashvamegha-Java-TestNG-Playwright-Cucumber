@@ -1,0 +1,30 @@
+{
+  "timesheet": {
+    "project": "ACME Ltd - ACME Ltd",
+    "activity": "Administration",
+
+    "hours": {
+      "mon": "8",
+      "tue": "8",
+      "wed": "8",
+      "thu": "8",
+      "fri": "8",
+      "sat": "0",
+      "sun": "0"
+    },
+
+    "updatedHours": {
+      "mon": "6",
+      "tue": "6",
+      "wed": "6",
+      "thu": "6",
+      "fri": "6",
+      "sat": "0",
+      "sun": "0"
+    },
+
+    "expectedTotal": "40",
+    "updatedTotal": "30"
+  }
+}
+

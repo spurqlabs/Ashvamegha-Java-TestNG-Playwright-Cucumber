@@ -1,0 +1,2031 @@
+2026-02-16 12:48:50 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 12:49:15 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 12:49:20 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 12:49:20 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 12:49:20 INFO  Pages.LoginPage - Entering password
+2026-02-16 12:49:20 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 12:49:21 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 12:49:29 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 12:49:35 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 12:49:50 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 12:50:03 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 12:52:20 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 12:52:21 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 12:52:37 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 12:52:45 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 12:52:45 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 12:52:45 INFO  Pages.LoginPage - Entering password
+2026-02-16 12:52:45 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 12:52:46 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 12:52:53 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 12:52:58 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 12:53:04 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 12:53:17 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 12:53:18 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 12:55:03 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 12:55:04 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 12:55:17 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 12:55:27 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 12:55:27 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 12:55:27 INFO  Pages.LoginPage - Entering password
+2026-02-16 12:55:27 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 12:55:27 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 12:55:36 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 12:55:42 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 12:55:53 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 12:56:07 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 12:56:18 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 12:56:21 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 12:56:28 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: PASSED =====
+2026-02-16 14:03:59 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 14:04:15 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:04:18 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:04:18 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:04:18 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:04:18 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:04:18 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:04:20 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:04:22 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:04:24 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 14:04:28 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 14:04:58 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 14:04:59 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 14:05:06 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:05:09 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:05:09 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:05:09 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:05:09 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:05:09 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:05:11 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:05:13 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:05:16 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 14:05:20 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 14:05:21 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 14:05:52 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 14:05:53 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 14:05:59 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:06:03 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:06:03 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:06:03 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:06:03 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:06:03 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:06:05 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:06:08 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:06:10 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 14:06:15 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 14:06:18 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 14:06:19 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 14:06:23 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: PASSED =====
+2026-02-16 14:11:19 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 14:11:36 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:11:40 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:11:40 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:11:40 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:11:40 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:11:40 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:11:42 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:11:44 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:11:52 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 14:12:37 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 14:12:38 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 14:12:45 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:12:48 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:12:48 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:12:48 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:12:48 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:12:48 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:12:51 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:12:53 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:13:00 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 14:13:04 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 14:13:04 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 14:17:25 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 14:17:45 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:17:48 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:17:48 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:17:48 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:17:48 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:17:48 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:17:50 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:17:53 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:18:01 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 14:18:01 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 14:18:46 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 14:18:48 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 14:18:56 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:19:02 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:19:02 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:19:02 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:19:02 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:19:02 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:19:02 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:19:12 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:19:29 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 14:19:41 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 14:19:41 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 14:23:17 INFO  Hooks.Hooks - ===== Starting Scenario: Add and search candidate successfully =====
+2026-02-16 14:23:38 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:23:42 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:23:42 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:23:42 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:23:42 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:23:42 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:23:44 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:23:51 INFO  Pages.AddCandidatePage - Clicking Add Candidate button
+2026-02-16 14:23:54 INFO  Pages.AddCandidatePage - Add Candidate form opened
+2026-02-16 14:23:55 INFO  Pages.AddCandidatePage - Entered first name: Rocky
+2026-02-16 14:23:55 INFO  Pages.AddCandidatePage - Entered last name: Sharma
+2026-02-16 14:23:55 INFO  Pages.AddCandidatePage - Entered email: rocky.sharma@testmail.com
+2026-02-16 14:23:55 INFO  Pages.AddCandidatePage - Entered phone: 9876543210
+2026-02-16 14:23:55 INFO  Pages.AddCandidatePage - Opening vacancy dropdown
+2026-02-16 14:23:56 INFO  Pages.AddCandidatePage - Trying primary vacancy locator: div[role='option']:has-text('Payroll Administrator')
+2026-02-16 14:23:56 INFO  Pages.AddCandidatePage - Vacancy selected using primary locator: Payroll Administrator
+2026-02-16 14:23:56 INFO  Pages.AddCandidatePage - Entering keywords: Automation
+2026-02-16 14:23:56 INFO  Pages.AddCandidatePage - Keywords entered successfully
+2026-02-16 14:23:57 INFO  Pages.AddCandidatePage - Uploading resume from: C:/Users/Ashvamegha/Downloads/Demofile.pdf
+2026-02-16 14:23:57 INFO  Pages.AddCandidatePage - Resume uploaded successfully
+2026-02-16 14:23:57 INFO  Pages.AddCandidatePage - Clicking Save button
+2026-02-16 14:24:01 INFO  Pages.AddCandidatePage - Success toast displayed
+2026-02-16 14:24:01 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 14:24:36 INFO  Hooks.Hooks - ===== Finished Scenario: Add and search candidate successfully | Status: FAILED =====
+2026-02-16 14:24:37 INFO  Hooks.Hooks - ===== Starting Scenario: Shortlist candidate and schedule interview =====
+2026-02-16 14:24:46 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:24:52 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:24:52 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:24:52 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:24:52 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:24:52 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:24:56 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:25:10 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 14:25:29 INFO  Pages.CandidatesPage - Candidate search completed successfully
+2026-02-16 14:25:30 INFO  Pages.CandidatesPage - Candidate found in table: Rocky Sharma
+2026-02-16 14:25:30 INFO  Pages.CandidatesPage - Clicking View button for candidate: Rocky Sharma
+2026-02-16 14:25:40 INFO  Pages.CandidatesPage - Navigated to Candidate Details page successfully
+2026-02-16 14:26:45 INFO  Hooks.Hooks - ===== Finished Scenario: Shortlist candidate and schedule interview | Status: FAILED =====
+2026-02-16 14:26:45 INFO  Hooks.Hooks - ===== Starting Scenario: Logout and session validation =====
+2026-02-16 14:26:53 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:26:59 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:26:59 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:26:59 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:26:59 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:26:59 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:27:08 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:27:30 INFO  Hooks.Hooks - ===== Finished Scenario: Logout and session validation | Status: PASSED =====
+2026-02-16 14:27:31 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 14:27:39 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:27:44 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:27:44 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:27:44 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:27:44 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:27:44 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:27:55 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:27:59 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:28:21 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 14:28:22 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 14:29:07 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 14:29:08 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 14:29:20 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:29:27 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:29:27 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:29:27 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:29:27 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:29:27 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:29:36 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:29:39 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:29:58 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 14:30:12 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 14:30:12 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 14:30:57 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 14:30:58 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 14:31:06 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:34:47 INFO  Hooks.Hooks - ===== Starting Scenario: Add and search candidate successfully =====
+2026-02-16 14:35:06 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:35:09 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:35:09 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:35:09 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:35:09 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:35:09 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:35:12 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:35:22 INFO  Pages.AddCandidatePage - Clicking Add Candidate button
+2026-02-16 14:35:25 INFO  Pages.AddCandidatePage - Add Candidate form opened
+2026-02-16 14:35:25 INFO  Pages.AddCandidatePage - Entered first name: Rocky
+2026-02-16 14:35:25 INFO  Pages.AddCandidatePage - Entered last name: Sharma
+2026-02-16 14:35:25 INFO  Pages.AddCandidatePage - Entered email: rocky.sharma@testmail.com
+2026-02-16 14:35:25 INFO  Pages.AddCandidatePage - Entered phone: 9876543210
+2026-02-16 14:35:25 INFO  Pages.AddCandidatePage - Opening vacancy dropdown
+2026-02-16 14:35:26 INFO  Pages.AddCandidatePage - Trying primary vacancy locator: div[role='option']:has-text('Payroll Administrator')
+2026-02-16 14:35:26 INFO  Pages.AddCandidatePage - Vacancy selected using primary locator: Payroll Administrator
+2026-02-16 14:35:26 INFO  Pages.AddCandidatePage - Entering keywords: Automation
+2026-02-16 14:35:26 INFO  Pages.AddCandidatePage - Keywords entered successfully
+2026-02-16 14:35:26 INFO  Pages.AddCandidatePage - Uploading resume from: C:/Users/Ashvamegha/Downloads/Demofile.pdf
+2026-02-16 14:35:26 INFO  Pages.AddCandidatePage - Resume uploaded successfully
+2026-02-16 14:35:27 INFO  Pages.AddCandidatePage - Clicking Save button
+2026-02-16 14:35:29 INFO  Pages.AddCandidatePage - Success toast displayed
+2026-02-16 14:35:30 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 14:36:03 INFO  Hooks.Hooks - ===== Finished Scenario: Add and search candidate successfully | Status: FAILED =====
+2026-02-16 14:36:04 INFO  Hooks.Hooks - ===== Starting Scenario: Shortlist candidate and schedule interview =====
+2026-02-16 14:36:11 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:36:15 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:36:15 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:36:15 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:36:15 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:36:15 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:36:17 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:36:25 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 14:36:36 INFO  Pages.CandidatesPage - Candidate search completed successfully
+2026-02-16 14:36:36 INFO  Pages.CandidatesPage - Candidate found in table: Rocky Sharma
+2026-02-16 14:36:36 INFO  Pages.CandidatesPage - Clicking View button for candidate: Rocky Sharma
+2026-02-16 14:36:43 INFO  Pages.CandidatesPage - Navigated to Candidate Details page successfully
+2026-02-16 14:37:29 INFO  Hooks.Hooks - ===== Finished Scenario: Shortlist candidate and schedule interview | Status: FAILED =====
+2026-02-16 14:37:30 INFO  Hooks.Hooks - ===== Starting Scenario: Logout and session validation =====
+2026-02-16 14:41:27 INFO  Hooks.Hooks - ===== Starting Scenario: Add and search candidate successfully =====
+2026-02-16 14:41:45 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:41:52 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:41:52 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:41:52 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:41:52 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:41:53 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:42:01 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:42:14 INFO  Pages.AddCandidatePage - Clicking Add Candidate button
+2026-02-16 14:42:19 INFO  Pages.AddCandidatePage - Add Candidate form opened
+2026-02-16 14:42:19 INFO  Pages.AddCandidatePage - Entered first name: Rocky
+2026-02-16 14:42:19 INFO  Pages.AddCandidatePage - Entered last name: Sharma
+2026-02-16 14:42:19 INFO  Pages.AddCandidatePage - Entered email: rocky.sharma@testmail.com
+2026-02-16 14:42:19 INFO  Pages.AddCandidatePage - Entered phone: 9876543210
+2026-02-16 14:42:19 INFO  Pages.AddCandidatePage - Opening vacancy dropdown
+2026-02-16 14:42:22 INFO  Pages.AddCandidatePage - Trying primary vacancy locator: div[role='option']:has-text('Payroll Administrator')
+2026-02-16 14:42:22 INFO  Pages.AddCandidatePage - Vacancy selected using primary locator: Payroll Administrator
+2026-02-16 14:42:22 INFO  Pages.AddCandidatePage - Entering keywords: Automation
+2026-02-16 14:42:22 INFO  Pages.AddCandidatePage - Keywords entered successfully
+2026-02-16 14:42:22 INFO  Pages.AddCandidatePage - Uploading resume from: C:/Users/Ashvamegha/Downloads/Demofile.pdf
+2026-02-16 14:42:22 INFO  Pages.AddCandidatePage - Resume uploaded successfully
+2026-02-16 14:42:23 INFO  Pages.AddCandidatePage - Clicking Save button
+2026-02-16 14:42:26 INFO  Pages.AddCandidatePage - Success toast displayed
+2026-02-16 14:42:26 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 14:43:00 INFO  Hooks.Hooks - ===== Finished Scenario: Add and search candidate successfully | Status: FAILED =====
+2026-02-16 14:43:01 INFO  Hooks.Hooks - ===== Starting Scenario: Shortlist candidate and schedule interview =====
+2026-02-16 14:43:12 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:43:17 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:43:17 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:43:17 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:43:17 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:43:17 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:43:19 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:43:28 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 14:43:34 INFO  Pages.CandidatesPage - Candidate search completed successfully
+2026-02-16 14:43:35 INFO  Hooks.Hooks - ===== Finished Scenario: Shortlist candidate and schedule interview | Status: FAILED =====
+2026-02-16 14:43:37 INFO  Hooks.Hooks - ===== Starting Scenario: Logout and session validation =====
+2026-02-16 14:43:44 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:43:48 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:43:48 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:43:48 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:43:48 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:43:48 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:43:50 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:43:58 INFO  Hooks.Hooks - ===== Finished Scenario: Logout and session validation | Status: PASSED =====
+2026-02-16 14:43:59 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 14:44:06 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:44:11 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:44:11 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:44:11 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:44:11 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:44:12 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:44:15 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:44:20 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:44:25 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 14:44:31 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 14:44:38 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 14:44:39 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 14:45:09 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 14:45:10 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 14:45:18 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:45:21 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:45:21 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:45:21 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:45:21 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:45:21 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:45:23 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:45:26 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:45:32 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 14:45:38 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 14:45:38 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 14:46:39 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 14:46:39 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 14:46:46 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:46:50 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:46:50 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:46:50 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:46:50 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:46:51 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:46:53 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:46:56 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 14:47:02 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 14:47:09 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 14:47:12 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 14:47:13 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 14:47:16 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: PASSED =====
+2026-02-16 14:47:17 INFO  Hooks.Hooks - ===== Starting Scenario: Add new timesheet entry and validate total hours =====
+2026-02-16 14:47:24 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:47:27 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:47:27 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:47:27 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:47:27 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:47:27 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:47:29 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:47:31 INFO  StepDefinitions.TimesheetSteps - Navigating to Time module
+2026-02-16 14:47:39 INFO  StepDefinitions.TimesheetSteps - Navigating to My Timesheets page
+2026-02-16 14:47:43 INFO  StepDefinitions.TimesheetSteps - Verifying My Timesheet page display
+2026-02-16 14:47:44 INFO  StepDefinitions.TimesheetSteps - Clicking Edit button
+2026-02-16 14:47:48 INFO  StepDefinitions.TimesheetSteps - Adding new timesheet entry from JSON
+2026-02-16 14:47:48 INFO  StepDefinitions.TimesheetSteps - Saving timesheet
+2026-02-16 14:47:50 INFO  StepDefinitions.TimesheetSteps - Verifying success toast for timesheet
+2026-02-16 14:47:50 INFO  StepDefinitions.TimesheetSteps - Validating total hours
+2026-02-16 14:47:56 INFO  StepDefinitions.TimesheetSteps - Total validated successfully. Expected: 30, Actual: 30
+2026-02-16 14:47:56 INFO  Hooks.Hooks - ===== Finished Scenario: Add new timesheet entry and validate total hours | Status: PASSED =====
+2026-02-16 14:47:56 INFO  Hooks.Hooks - ===== Starting Scenario: Edit existing timesheet entry and validate updated totals =====
+2026-02-16 14:48:03 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:48:06 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:48:06 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:48:06 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:48:06 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:48:07 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:48:10 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:48:13 INFO  StepDefinitions.TimesheetSteps - Navigating to Time module
+2026-02-16 14:48:22 INFO  StepDefinitions.TimesheetSteps - Navigating to My Timesheets page
+2026-02-16 14:48:32 INFO  StepDefinitions.TimesheetSteps - Verifying My Timesheet page display
+2026-02-16 14:48:32 INFO  StepDefinitions.TimesheetSteps - Clicking Edit button
+2026-02-16 14:48:50 INFO  StepDefinitions.TimesheetSteps - Updating existing timesheet entry from JSON
+2026-02-16 14:48:50 INFO  StepDefinitions.TimesheetSteps - Saving timesheet
+2026-02-16 14:48:58 INFO  StepDefinitions.TimesheetSteps - Verifying success toast for timesheet
+2026-02-16 14:48:59 INFO  StepDefinitions.TimesheetSteps - Validating updated total hours
+2026-02-16 14:49:13 INFO  StepDefinitions.TimesheetSteps - Updated hours validated successfully. Expected: 30, Actual: 30
+2026-02-16 14:49:14 INFO  StepDefinitions.TimesheetSteps - Validating recalculated total hours
+2026-02-16 14:49:14 INFO  StepDefinitions.TimesheetSteps - Recalculated total validated successfully. Expected: 30, Actual: 30
+2026-02-16 14:49:14 INFO  Hooks.Hooks - ===== Finished Scenario: Edit existing timesheet entry and validate updated totals | Status: PASSED =====
+2026-02-16 14:49:14 INFO  Hooks.Hooks - ===== Starting Scenario: Logout and session validation =====
+2026-02-16 14:49:23 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:49:30 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:49:30 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:49:30 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:49:30 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:49:30 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:49:37 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:50:02 INFO  Hooks.Hooks - ===== Finished Scenario: Logout and session validation | Status: PASSED =====
+2026-02-16 14:53:02 INFO  Hooks.Hooks - ===== Starting Scenario: Add and search candidate successfully =====
+2026-02-16 14:53:41 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:53:55 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:53:55 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:53:55 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:53:55 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:53:55 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:54:05 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:54:28 INFO  Pages.AddCandidatePage - Clicking Add Candidate button
+2026-02-16 14:54:40 INFO  Pages.AddCandidatePage - Add Candidate form opened
+2026-02-16 14:54:41 INFO  Pages.AddCandidatePage - Entered first name: Rocky
+2026-02-16 14:54:41 INFO  Pages.AddCandidatePage - Entered last name: Sharma
+2026-02-16 14:54:41 INFO  Pages.AddCandidatePage - Entered email: rocky.sharma@testmail.com
+2026-02-16 14:54:41 INFO  Pages.AddCandidatePage - Entered phone: 9876543210
+2026-02-16 14:54:41 INFO  Pages.AddCandidatePage - Opening vacancy dropdown
+2026-02-16 14:54:46 INFO  Pages.AddCandidatePage - Trying primary vacancy locator: div[role='option']:has-text('Payroll Administrator')
+2026-02-16 14:54:46 INFO  Pages.AddCandidatePage - Vacancy selected using primary locator: Payroll Administrator
+2026-02-16 14:54:46 INFO  Pages.AddCandidatePage - Entering keywords: Automation
+2026-02-16 14:54:46 INFO  Pages.AddCandidatePage - Keywords entered successfully
+2026-02-16 14:54:46 INFO  Pages.AddCandidatePage - Uploading resume from: C:/Users/Ashvamegha/Downloads/Demofile.pdf
+2026-02-16 14:54:46 INFO  Pages.AddCandidatePage - Resume uploaded successfully
+2026-02-16 14:54:46 INFO  Pages.AddCandidatePage - Clicking Save button
+2026-02-16 14:54:54 INFO  Pages.AddCandidatePage - Success toast displayed
+2026-02-16 14:54:55 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 14:55:31 INFO  Hooks.Hooks - ===== Finished Scenario: Add and search candidate successfully | Status: FAILED =====
+2026-02-16 14:55:31 INFO  Hooks.Hooks - ===== Starting Scenario: Shortlist candidate and schedule interview =====
+2026-02-16 14:55:40 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:55:44 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:55:44 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:55:44 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:55:44 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:55:45 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:55:50 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:56:05 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 14:56:24 INFO  Pages.CandidatesPage - Candidate search completed successfully
+2026-02-16 14:56:24 INFO  Pages.CandidatesPage - Candidate found in table: Rocky Sharma
+2026-02-16 14:56:25 INFO  Pages.CandidatesPage - Clicking View button for candidate: Rocky Sharma
+2026-02-16 14:56:32 INFO  Pages.CandidatesPage - Navigated to Candidate Details page successfully
+2026-02-16 14:57:33 INFO  Hooks.Hooks - ===== Finished Scenario: Shortlist candidate and schedule interview | Status: FAILED =====
+2026-02-16 14:57:34 INFO  Hooks.Hooks - ===== Starting Scenario: Logout and session validation =====
+2026-02-16 14:57:43 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 14:57:48 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 14:57:48 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 14:57:48 INFO  Pages.LoginPage - Entering password
+2026-02-16 14:57:48 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 14:57:49 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 14:57:53 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 14:58:13 INFO  Hooks.Hooks - ===== Finished Scenario: Logout and session validation | Status: PASSED =====
+2026-02-16 14:58:14 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 15:00:33 INFO  Hooks.Hooks - ===== Starting Scenario: Add and search candidate successfully =====
+2026-02-16 15:00:50 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:00:56 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:00:56 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:00:56 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:00:56 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:00:57 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:01:06 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:01:21 INFO  Pages.AddCandidatePage - Clicking Add Candidate button
+2026-02-16 15:01:32 INFO  Pages.AddCandidatePage - Add Candidate form opened
+2026-02-16 15:01:33 INFO  Pages.AddCandidatePage - Entered first name: Rocky
+2026-02-16 15:01:33 INFO  Pages.AddCandidatePage - Entered last name: Sharma
+2026-02-16 15:01:33 INFO  Pages.AddCandidatePage - Entered email: rocky.sharma@testmail.com
+2026-02-16 15:01:33 INFO  Pages.AddCandidatePage - Entered phone: 9876543210
+2026-02-16 15:01:33 INFO  Pages.AddCandidatePage - Opening vacancy dropdown
+2026-02-16 15:01:36 INFO  Pages.AddCandidatePage - Trying primary vacancy locator: div[role='option']:has-text('Payroll Administrator')
+2026-02-16 15:01:36 INFO  Pages.AddCandidatePage - Vacancy selected using primary locator: Payroll Administrator
+2026-02-16 15:01:36 INFO  Pages.AddCandidatePage - Entering keywords: Automation
+2026-02-16 15:01:36 INFO  Pages.AddCandidatePage - Keywords entered successfully
+2026-02-16 15:01:37 INFO  Pages.AddCandidatePage - Uploading resume from: C:/Users/Ashvamegha/Downloads/Demofile.pdf
+2026-02-16 15:01:37 INFO  Pages.AddCandidatePage - Resume uploaded successfully
+2026-02-16 15:01:37 INFO  Pages.AddCandidatePage - Clicking Save button
+2026-02-16 15:01:42 INFO  Pages.AddCandidatePage - Success toast displayed
+2026-02-16 15:01:43 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 15:02:17 INFO  Hooks.Hooks - ===== Finished Scenario: Add and search candidate successfully | Status: FAILED =====
+2026-02-16 15:02:18 INFO  Hooks.Hooks - ===== Starting Scenario: Shortlist candidate and schedule interview =====
+2026-02-16 15:02:35 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:02:52 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:02:52 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:02:52 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:02:52 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:02:52 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:03:00 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:03:14 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 15:03:25 INFO  Pages.CandidatesPage - Candidate search completed successfully
+2026-02-16 15:03:25 INFO  Pages.CandidatesPage - Candidate found in table: Rocky Sharma
+2026-02-16 15:03:26 INFO  Pages.CandidatesPage - Clicking View button for candidate: Rocky Sharma
+2026-02-16 15:03:31 INFO  Pages.CandidatesPage - Navigated to Candidate Details page successfully
+2026-02-16 15:10:12 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 15:10:30 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:10:36 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:10:36 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:10:36 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:10:36 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:10:36 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:10:40 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:10:42 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:10:52 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 15:12:28 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 15:12:28 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 15:12:36 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:12:40 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:12:40 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:12:40 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:12:40 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:12:40 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:12:44 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:12:46 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:12:52 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 15:14:26 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 15:14:27 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 15:14:35 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:14:42 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:14:42 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:14:42 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:14:42 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:14:42 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:14:42 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:14:50 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:15:00 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 15:16:44 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 15:19:34 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 15:20:52 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:21:02 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:21:02 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:21:02 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:21:02 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:21:02 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:21:18 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:21:26 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:21:50 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 15:23:37 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 15:23:38 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 15:23:49 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:24:00 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:24:00 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:24:00 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:24:00 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:24:00 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:24:00 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:24:26 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:24:49 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 15:26:41 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 15:26:42 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 15:26:53 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:27:01 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:27:01 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:27:01 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:27:01 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:27:01 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:27:11 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:27:19 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:27:50 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 15:29:32 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 15:35:33 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 15:35:48 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:35:53 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:35:53 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:35:53 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:35:53 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:35:53 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:35:55 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:35:58 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:36:06 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 15:36:17 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 15:39:49 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 15:40:08 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:40:18 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:40:18 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:40:18 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:40:18 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:40:18 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:40:24 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:40:28 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:40:43 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 15:40:59 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 15:41:11 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 15:41:12 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 15:42:42 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 15:42:43 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 15:42:52 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:42:57 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:42:57 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:42:57 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:42:57 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:42:57 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:43:04 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:43:07 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:43:15 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 15:44:59 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 15:44:59 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 15:45:07 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:45:10 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:45:10 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:45:10 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:45:10 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:45:10 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:45:13 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:45:15 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:45:18 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 15:46:50 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 15:52:37 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 15:53:10 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:53:37 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:53:37 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:53:37 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:53:37 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:53:37 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:53:59 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:54:06 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:54:25 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 15:54:39 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 15:56:09 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 15:56:10 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 15:56:19 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 15:56:25 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 15:56:25 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 15:56:25 INFO  Pages.LoginPage - Entering password
+2026-02-16 15:56:25 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 15:56:25 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 15:56:33 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 15:56:37 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 15:56:50 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 15:57:12 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 15:57:12 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 16:10:31 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 16:10:50 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:10:54 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:10:54 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:10:54 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:10:54 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:10:54 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:10:58 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:11:01 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:11:08 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 16:11:08 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 16:15:52 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 16:16:09 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:16:13 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:16:13 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:16:13 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:16:13 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:16:14 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:16:18 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:16:20 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:16:33 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 16:16:33 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 16:18:03 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 16:18:04 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 16:18:11 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:18:14 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:18:14 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:18:14 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:18:14 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:18:14 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:18:16 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:18:19 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:18:26 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 16:18:30 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 16:18:30 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 16:20:19 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 16:20:34 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:20:38 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:20:38 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:20:38 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:20:38 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:20:38 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:20:40 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:20:42 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:20:47 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 16:20:48 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 16:20:51 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 16:20:51 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 16:20:53 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 16:20:53 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 16:20:53 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 16:20:54 INFO  StepDefinitions.LeaveSteps - Update Entitlement popup displayed successfully
+2026-02-16 16:20:54 INFO  StepDefinitions.LeaveSteps - Confirming entitlement update
+2026-02-16 16:21:00 INFO  StepDefinitions.LeaveSteps - Entitlement record displayed successfully
+2026-02-16 16:21:00 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: PASSED =====
+2026-02-16 16:21:01 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 16:21:08 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:21:11 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:21:11 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:21:11 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:21:11 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:21:11 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:21:13 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:21:15 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:21:21 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 16:21:26 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 16:21:26 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 16:21:27 INFO  StepDefinitions.LeaveSteps - Selecting dates from JSON
+2026-02-16 16:21:28 INFO  StepDefinitions.LeaveSteps - Clicking Apply button
+2026-02-16 16:23:45 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 16:23:46 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 16:23:54 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:23:59 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:23:59 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:23:59 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:23:59 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:23:59 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:24:03 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:24:05 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:24:17 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 16:24:19 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 16:24:25 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 16:24:26 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 16:24:33 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: PASSED =====
+2026-02-16 16:30:38 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 16:30:53 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:30:57 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:30:57 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:30:57 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:30:57 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:30:57 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:30:59 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:31:01 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:31:07 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 16:31:07 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 16:32:37 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 16:32:39 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 16:32:47 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:32:53 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:32:53 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:32:53 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:32:53 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:32:53 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:32:57 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:32:59 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:33:10 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 16:33:18 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 16:33:18 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 16:33:19 INFO  StepDefinitions.LeaveSteps - Selecting dates from JSON
+2026-02-16 16:33:20 INFO  StepDefinitions.LeaveSteps - Clicking Apply button
+2026-02-16 16:35:38 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 16:35:38 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 16:35:45 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:35:51 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:35:51 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:35:51 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:35:51 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:35:51 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:35:51 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:35:58 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:36:11 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 16:36:12 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 16:36:18 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 16:36:19 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 16:36:24 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: PASSED =====
+2026-02-16 16:44:26 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 16:44:45 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:44:51 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:44:51 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:44:51 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:44:51 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:44:51 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:44:55 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:44:58 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:45:01 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 16:45:03 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 16:46:33 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 16:46:34 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 16:46:41 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:46:44 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:46:44 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:46:44 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:46:44 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:46:44 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:46:46 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:46:49 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:46:51 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 16:46:54 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 16:46:54 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 16:46:55 INFO  StepDefinitions.LeaveSteps - Selecting dates from JSON
+2026-02-16 16:46:55 INFO  StepDefinitions.LeaveSteps - Clicking Apply button
+2026-02-16 16:47:26 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 16:47:26 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 16:47:33 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 16:47:36 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 16:47:36 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 16:47:36 INFO  Pages.LoginPage - Entering password
+2026-02-16 16:47:36 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 16:47:36 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 16:47:38 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 16:47:40 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 16:47:42 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 16:47:44 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 16:47:45 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 16:47:46 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 16:47:48 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 17:13:27 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 17:13:43 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:13:46 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:13:46 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:13:46 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:13:46 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:13:47 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:13:48 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:13:51 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:13:53 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 17:13:54 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 17:14:55 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 17:14:56 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:14:56 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 17:15:03 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:15:08 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:15:08 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:15:08 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:15:08 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:15:09 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:15:10 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:15:13 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:15:14 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 17:15:18 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 17:15:19 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 17:15:19 INFO  StepDefinitions.LeaveSteps - Selecting dates from JSON
+2026-02-16 17:15:20 INFO  StepDefinitions.LeaveSteps - Clicking Apply button
+2026-02-16 17:15:51 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 17:15:51 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:15:51 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 17:15:59 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:16:04 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:16:04 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:16:04 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:16:04 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:16:04 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:16:06 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:16:10 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:16:13 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 17:16:15 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 17:16:17 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 17:16:17 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 17:16:20 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 17:16:20 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:20:03 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 17:20:19 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:20:23 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:20:23 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:20:23 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:20:23 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:20:24 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:20:25 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:20:28 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:20:32 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 17:20:34 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 17:21:19 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 17:21:19 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 17:21:21 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 17:21:22 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 17:21:23 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 17:21:23 INFO  StepDefinitions.LeaveSteps - Update Entitlement popup displayed successfully
+2026-02-16 17:21:24 INFO  StepDefinitions.LeaveSteps - Confirming entitlement update
+2026-02-16 17:21:29 INFO  StepDefinitions.LeaveSteps - Entitlement record displayed successfully
+2026-02-16 17:21:29 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: PASSED =====
+2026-02-16 17:21:30 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:21:30 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 17:21:38 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:21:43 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:21:43 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:21:43 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:21:43 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:21:43 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:21:47 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:21:49 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:21:56 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 17:22:02 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 17:22:03 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 17:22:04 INFO  StepDefinitions.LeaveSteps - Selecting dates from JSON
+2026-02-16 17:22:04 INFO  StepDefinitions.LeaveSteps - Clicking Apply button
+2026-02-16 17:42:07 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 17:42:25 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:42:28 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:42:28 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:42:28 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:42:28 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:42:28 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:42:30 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:42:34 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:42:35 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 17:42:37 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:42:37 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 17:42:44 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:42:47 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:42:47 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:42:47 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:42:47 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:42:47 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:42:48 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:42:50 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:42:51 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 17:42:51 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:42:52 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 17:42:58 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:43:01 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:43:01 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:43:01 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:43:01 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:43:01 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:43:03 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:43:05 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:43:06 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 17:43:07 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:44:50 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 17:45:07 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:45:11 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:45:11 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:45:11 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:45:11 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:45:12 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:45:14 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:45:19 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:45:25 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 17:45:26 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 17:45:57 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 17:45:58 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:45:58 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 17:46:08 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:46:11 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:46:11 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:46:11 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:46:11 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:46:12 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:46:17 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:46:21 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:46:26 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 17:46:32 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 17:46:33 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 17:47:35 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 17:47:50 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:47:54 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:47:54 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:47:54 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:47:54 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:47:54 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:47:56 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:47:59 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:48:01 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 17:48:03 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 17:48:33 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 17:48:34 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:48:34 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 17:48:43 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:48:50 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:48:50 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:48:50 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:48:50 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:48:50 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:48:58 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:49:02 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:49:10 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 17:49:19 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 17:49:20 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 17:50:20 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 17:50:21 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:50:21 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 17:50:40 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 17:50:59 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:51:10 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:51:10 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:51:10 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:51:10 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:51:10 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:51:19 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:51:23 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:51:32 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 17:51:35 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 17:52:05 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 17:52:06 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:52:06 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 17:52:13 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:52:21 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:52:21 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:52:21 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:52:21 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:52:22 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:52:28 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:52:32 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:52:39 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 17:52:46 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 17:52:46 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 17:53:09 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 17:53:26 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:53:32 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:53:32 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:53:32 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:53:32 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:53:32 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:53:40 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:53:43 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:53:49 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 17:53:51 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 17:54:22 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 17:54:22 INFO  Driver.PlaywrightFactory - Browser closed successfully in thread: main
+2026-02-16 17:54:23 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 17:54:30 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:54:35 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:54:35 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:54:35 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:54:35 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:54:35 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:54:39 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:54:42 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:54:49 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 17:54:57 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 17:54:58 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 17:56:05 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 17:56:23 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:56:26 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:56:26 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:56:26 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:56:26 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:56:27 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:56:28 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:56:30 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:56:32 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 17:56:33 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 17:57:03 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 17:57:06 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 17:57:13 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:57:17 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:57:17 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:57:17 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:57:17 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:57:17 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:57:20 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:57:22 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:57:25 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 17:57:28 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 17:57:28 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 17:58:13 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 17:58:27 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:58:30 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:58:30 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:58:30 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:58:30 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:58:31 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:58:32 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:58:35 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:58:35 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 17:58:36 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 17:58:43 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:58:48 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:58:48 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:58:48 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:58:48 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:58:48 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:58:53 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:58:56 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:58:57 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 17:58:58 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 17:59:06 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 17:59:11 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 17:59:11 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 17:59:11 INFO  Pages.LoginPage - Entering password
+2026-02-16 17:59:11 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 17:59:11 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 17:59:16 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 17:59:19 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 17:59:20 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 18:04:48 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 18:05:02 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 18:05:07 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 18:05:07 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 18:05:07 INFO  Pages.LoginPage - Entering password
+2026-02-16 18:05:07 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 18:05:07 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 18:05:12 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 18:05:15 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 18:05:24 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 18:05:28 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 18:05:58 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 18:05:59 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 18:06:06 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 18:06:12 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 18:06:12 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 18:06:12 INFO  Pages.LoginPage - Entering password
+2026-02-16 18:06:12 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 18:06:12 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 18:06:19 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 18:06:22 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 18:06:30 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 18:06:40 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 18:06:40 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 18:07:11 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 18:07:11 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 18:07:18 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 18:07:22 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 18:07:23 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 18:07:23 INFO  Pages.LoginPage - Entering password
+2026-02-16 18:07:23 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 18:07:23 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 18:07:27 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 18:07:30 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 18:07:33 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 18:07:39 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 18:07:41 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 18:07:43 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 18:07:47 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 18:08:33 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 18:08:54 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 18:09:00 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 18:09:00 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 18:09:00 INFO  Pages.LoginPage - Entering password
+2026-02-16 18:09:00 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 18:09:00 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 18:09:07 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 18:09:10 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 18:09:18 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 18:09:50 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 18:09:52 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 18:10:04 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 19:51:49 WARN  Hooks.Hooks - Step screenshot failed: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\ASHVAM~1\AppData\Local\Temp\playwright-java-17185817687603577205\package\lib\server\progress.js:68:28)
+    at PageDispatcher._runCommand (C:\Users\ASHVAM~1\AppData\Local\Temp\playwright-java-17185817687603577205\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\ASHVAM~1\AppData\Local\Temp\playwright-java-17185817687603577205\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - taking page screenshot
+-   - waiting for fonts to load...
+-   - fonts loaded
+
+2026-02-16 19:51:49 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 19:52:21 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 19:52:41 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 19:52:45 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 19:52:45 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 19:52:45 INFO  Pages.LoginPage - Entering password
+2026-02-16 19:52:45 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 19:52:45 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 19:52:45 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 19:52:48 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 19:52:50 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 19:52:53 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 19:52:54 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 19:52:57 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 19:52:59 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 19:53:56 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 19:54:11 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 19:54:15 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 19:54:15 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 19:54:15 INFO  Pages.LoginPage - Entering password
+2026-02-16 19:54:15 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 19:54:15 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 19:54:17 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 19:54:19 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 19:54:21 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 19:54:52 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 19:54:53 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 19:55:02 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 19:55:05 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 19:55:06 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 19:55:06 INFO  Pages.LoginPage - Entering password
+2026-02-16 19:55:06 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 19:55:06 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 19:55:07 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 19:55:10 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 19:55:11 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 19:55:14 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 19:55:14 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 19:55:45 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 19:55:45 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 19:55:53 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 19:55:57 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 19:55:57 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 19:55:57 INFO  Pages.LoginPage - Entering password
+2026-02-16 19:55:57 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 19:55:57 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 19:55:59 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 19:56:01 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 19:56:03 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 19:56:06 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 19:56:07 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 19:56:09 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 19:56:12 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 20:01:39 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:01:55 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:01:59 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:01:59 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:01:59 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:01:59 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:01:59 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:02:01 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:02:03 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:02:05 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:02:06 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:02:37 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 20:02:38 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:02:44 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:02:48 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:02:49 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:02:49 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:02:49 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:02:49 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:02:51 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:02:54 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:02:55 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 20:02:59 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 20:02:59 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 20:03:29 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 20:03:30 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 20:03:36 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:03:43 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:03:44 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:03:44 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:03:44 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:03:46 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:03:48 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:03:57 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:04:05 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 20:04:12 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 20:04:15 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 20:04:21 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 20:04:28 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: PASSED =====
+2026-02-16 20:10:35 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:10:51 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:10:54 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:10:54 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:10:54 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:10:54 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:10:54 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:10:57 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:10:59 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:11:01 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:11:04 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:11:21 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 20:11:21 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 20:11:52 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 20:11:54 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:12:01 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:12:06 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:12:06 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:12:06 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:12:06 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:12:06 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:12:09 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:12:12 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:12:14 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 20:12:19 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 20:12:19 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 20:12:50 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 20:12:50 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 20:12:58 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:13:01 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:13:01 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:13:01 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:13:01 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:13:01 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:13:03 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:13:06 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:13:09 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 20:13:12 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 20:13:13 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 20:13:16 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 20:13:19 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 20:13:37 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:13:54 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:13:57 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:13:57 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:13:57 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:13:57 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:13:58 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:13:59 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:14:02 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:14:04 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:14:06 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:14:09 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 20:14:09 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 20:14:39 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 20:14:41 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:14:48 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:14:52 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:14:52 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:14:52 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:14:52 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:14:52 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:14:52 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:14:56 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:14:58 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 20:15:01 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 20:15:01 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 20:15:31 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 20:15:32 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 20:15:39 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:15:42 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:15:42 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:15:42 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:15:42 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:15:42 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:15:42 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:15:46 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:15:48 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 20:15:51 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 20:15:52 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 20:15:55 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 20:15:57 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 20:19:28 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:19:44 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:19:50 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:19:50 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:19:50 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:19:50 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:19:50 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:19:50 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:19:58 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:20:02 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:20:05 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:20:08 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 20:20:09 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 20:20:09 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 20:20:10 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 20:20:11 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 20:20:41 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 20:20:42 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:20:51 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:20:55 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:20:55 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:20:55 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:20:55 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:20:55 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:20:57 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:21:00 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:21:03 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 20:21:07 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 20:21:08 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 20:21:39 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 20:21:40 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 20:21:47 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:21:50 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:21:50 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:21:50 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:21:50 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:21:50 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:21:52 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:21:54 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:21:56 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 20:21:59 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 20:22:01 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 20:22:06 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 20:22:10 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: PASSED =====
+2026-02-16 20:22:42 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:23:00 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:23:04 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:23:04 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:23:04 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:23:04 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:23:04 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:23:06 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:23:08 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:23:10 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:23:12 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:23:15 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 20:23:15 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 20:23:19 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 20:23:19 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 20:23:19 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 20:23:50 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 20:23:51 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:23:58 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:24:02 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:24:02 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:24:02 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:24:02 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:24:02 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:24:04 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:24:07 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:24:09 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 20:24:12 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 20:24:12 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 20:24:42 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 20:24:43 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 20:24:51 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:24:54 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:24:54 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:24:54 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:24:54 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:24:54 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:24:56 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:24:58 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:25:00 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 20:25:04 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 20:25:06 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 20:25:08 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 20:25:11 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 20:27:26 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:27:42 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:27:46 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:27:46 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:27:46 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:27:46 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:27:47 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:27:49 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:27:51 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:27:53 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:27:55 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:28:50 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:29:06 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:29:17 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:29:17 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:29:17 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:29:17 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:29:17 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:29:25 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:29:28 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:29:40 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:29:43 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:29:50 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 20:29:50 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 20:29:53 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 20:29:53 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 20:29:53 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 20:30:24 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 20:30:24 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:30:32 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:30:38 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:30:38 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:30:38 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:30:38 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:30:39 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:30:42 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:30:47 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:30:49 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 20:30:53 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 20:30:53 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 20:31:23 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 20:31:24 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 20:31:28 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 20:31:28 WARN  Hooks.Hooks - Final screenshot failed: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\ASHVAM~1\AppData\Local\Temp\playwright-java-8154714463291432285\package\lib\server\dispatchers\dispatcher.js:260:69)
+    at transport.onmessage (C:\Users\ASHVAM~1\AppData\Local\Temp\playwright-java-8154714463291432285\package\lib\cli\driver.js:53:59)
+    at Immediate._onImmediate (C:\Users\ASHVAM~1\AppData\Local\Temp\playwright-java-8154714463291432285\package\lib\server\utils\pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
+}
+2026-02-16 20:33:00 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:33:15 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:33:19 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:33:19 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:33:19 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:33:19 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:33:19 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:33:21 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:33:24 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:33:26 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:33:28 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:33:30 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 20:33:31 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 20:33:33 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 20:33:33 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 20:33:33 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 20:34:04 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 20:34:05 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:34:12 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:34:16 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:34:16 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:34:16 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:34:16 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:34:16 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:34:18 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:34:20 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:34:22 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 20:34:25 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 20:34:25 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 20:35:26 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 20:35:26 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 20:35:38 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:35:42 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:35:42 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:35:42 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:35:42 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:35:42 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:35:44 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:35:46 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:35:48 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 20:35:52 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 20:35:53 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 20:35:56 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 20:35:59 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 20:36:14 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:36:29 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:36:33 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:36:33 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:36:33 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:36:33 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:36:33 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:36:35 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:36:37 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:36:39 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:36:41 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:36:44 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 20:36:44 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 20:36:47 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 20:36:47 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 20:36:48 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 20:37:18 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 20:37:19 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:37:26 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:37:33 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:37:33 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:37:33 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:37:34 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:37:38 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:37:40 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:38:04 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:38:19 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:38:22 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:38:22 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:38:22 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:38:22 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:38:23 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:38:25 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:38:27 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:38:30 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:38:32 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:39:29 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:39:44 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:39:51 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:39:51 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:39:51 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:39:51 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:39:51 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:39:58 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:40:01 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:40:07 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:40:09 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:40:12 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 20:40:12 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 20:40:16 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 20:40:16 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 20:40:16 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 20:40:47 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: FAILED =====
+2026-02-16 20:40:48 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:40:56 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:41:00 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:41:00 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:41:00 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:41:00 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:41:00 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:41:03 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:41:06 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:41:08 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 20:41:13 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 20:41:13 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 20:45:43 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:45:59 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:46:03 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:46:03 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:46:03 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:46:03 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:46:03 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:46:05 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:46:07 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:46:10 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:46:12 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:46:15 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 20:46:15 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 20:46:21 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 20:46:21 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 20:46:22 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 20:46:24 INFO  StepDefinitions.LeaveSteps - Update Entitlement popup displayed successfully
+2026-02-16 20:46:25 INFO  StepDefinitions.LeaveSteps - Confirming entitlement update
+2026-02-16 20:46:30 INFO  StepDefinitions.LeaveSteps - Entitlement record displayed successfully
+2026-02-16 20:46:30 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: PASSED =====
+2026-02-16 20:46:31 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:46:39 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:46:42 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:46:42 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:46:42 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:46:42 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:46:42 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:46:45 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:46:48 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:46:50 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 20:46:55 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 20:46:55 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 20:46:56 INFO  StepDefinitions.LeaveSteps - Selecting dates from JSON
+2026-02-16 20:46:56 INFO  StepDefinitions.LeaveSteps - Clicking Apply button
+2026-02-16 20:46:58 INFO  StepDefinitions.LeaveSteps - Leave application submitted successfully
+2026-02-16 20:46:59 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: PASSED =====
+2026-02-16 20:47:00 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 20:47:06 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:47:10 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:47:10 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:47:10 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:47:10 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:47:10 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:47:13 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:47:15 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:47:17 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 20:47:20 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 20:47:22 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 20:47:24 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 20:47:27 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: FAILED =====
+2026-02-16 20:52:28 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:52:45 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:52:48 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:52:48 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:52:48 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:52:48 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:52:49 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:52:50 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:52:53 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:52:54 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:52:57 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:52:59 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 20:52:59 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 20:53:05 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 20:53:06 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 20:53:06 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 20:53:09 INFO  StepDefinitions.LeaveSteps - Update Entitlement popup displayed successfully
+2026-02-16 20:53:09 INFO  StepDefinitions.LeaveSteps - Confirming entitlement update
+2026-02-16 20:53:15 INFO  StepDefinitions.LeaveSteps - Entitlement record displayed successfully
+2026-02-16 20:53:15 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: PASSED =====
+2026-02-16 20:53:16 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:53:23 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:53:26 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:53:26 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:53:26 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:53:26 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:53:26 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:53:29 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:53:31 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:53:33 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 20:53:36 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 20:53:36 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 20:53:37 INFO  StepDefinitions.LeaveSteps - Selecting dates from JSON
+2026-02-16 20:53:38 INFO  StepDefinitions.LeaveSteps - Clicking Apply button
+2026-02-16 20:54:08 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 20:54:09 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 20:54:16 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:54:20 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:54:20 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:54:20 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:54:20 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:54:20 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:54:22 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:54:25 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:54:27 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 20:54:31 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 20:54:32 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 20:54:35 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 20:54:38 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: PASSED =====
+2026-02-16 20:57:30 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 20:57:47 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:57:54 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:57:54 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:57:54 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:57:54 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:57:54 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:57:56 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:57:59 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:58:01 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 20:58:03 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 20:58:06 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 20:58:06 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 20:58:11 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 20:58:12 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 20:58:12 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 20:58:15 INFO  StepDefinitions.LeaveSteps - Update Entitlement popup displayed successfully
+2026-02-16 20:58:15 INFO  StepDefinitions.LeaveSteps - Confirming entitlement update
+2026-02-16 20:58:21 INFO  StepDefinitions.LeaveSteps - Entitlement record displayed successfully
+2026-02-16 20:58:21 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: PASSED =====
+2026-02-16 20:58:22 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 20:58:31 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 20:58:34 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 20:58:34 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 20:58:34 INFO  Pages.LoginPage - Entering password
+2026-02-16 20:58:34 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 20:58:34 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 20:58:36 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 20:58:39 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 20:58:41 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 20:58:47 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 20:58:47 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 20:58:48 INFO  StepDefinitions.LeaveSteps - Selecting dates from JSON
+2026-02-16 20:58:49 INFO  StepDefinitions.LeaveSteps - Clicking Apply button
+2026-02-16 20:59:52 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: FAILED =====
+2026-02-16 20:59:52 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 21:00:01 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:00:06 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:00:06 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:00:06 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:00:06 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:00:07 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:00:09 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:00:12 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 21:00:15 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 21:00:19 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 21:00:21 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 21:00:23 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 21:00:28 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: PASSED =====
+2026-02-16 21:01:37 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 21:01:54 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:01:57 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:01:58 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:01:58 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:01:58 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:01:58 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:01:59 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:02:02 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 21:02:04 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 21:02:06 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 21:02:10 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 21:02:10 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 21:02:16 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 21:02:16 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 21:02:17 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 21:02:20 INFO  StepDefinitions.LeaveSteps - Update Entitlement popup displayed successfully
+2026-02-16 21:02:20 INFO  StepDefinitions.LeaveSteps - Confirming entitlement update
+2026-02-16 21:02:25 INFO  StepDefinitions.LeaveSteps - Entitlement record displayed successfully
+2026-02-16 21:02:26 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: PASSED =====
+2026-02-16 21:02:26 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 21:02:34 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:02:37 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:02:37 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:02:37 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:02:37 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:02:38 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:02:39 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:02:42 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 21:02:44 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 21:02:47 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 21:02:47 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 21:02:48 INFO  StepDefinitions.LeaveSteps - Selecting dates from JSON
+2026-02-16 21:02:48 INFO  StepDefinitions.LeaveSteps - Clicking Apply button
+2026-02-16 21:02:51 INFO  StepDefinitions.LeaveSteps - Leave application submitted successfully
+2026-02-16 21:02:51 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: PASSED =====
+2026-02-16 21:02:52 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 21:02:58 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:03:02 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:03:02 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:03:02 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:03:02 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:03:02 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:03:04 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:03:07 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 21:03:09 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 21:03:14 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 21:03:15 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 21:03:17 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 21:03:21 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: PASSED =====
+2026-02-16 21:03:36 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 21:03:49 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:03:53 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:03:53 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:03:53 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:03:53 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:03:53 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:03:55 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:03:57 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 21:03:59 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 21:04:01 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 21:04:04 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 21:04:04 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 21:04:10 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 21:04:10 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 21:04:10 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 21:04:13 INFO  StepDefinitions.LeaveSteps - Update Entitlement popup displayed successfully
+2026-02-16 21:04:13 INFO  StepDefinitions.LeaveSteps - Confirming entitlement update
+2026-02-16 21:04:19 INFO  StepDefinitions.LeaveSteps - Entitlement record displayed successfully
+2026-02-16 21:04:19 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: PASSED =====
+2026-02-16 21:04:20 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 21:04:27 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:04:30 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:04:30 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:04:30 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:04:30 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:04:30 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:04:32 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:04:34 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 21:04:36 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 21:04:39 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 21:04:39 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 21:04:40 INFO  StepDefinitions.LeaveSteps - Selecting dates from JSON
+2026-02-16 21:04:40 INFO  StepDefinitions.LeaveSteps - Clicking Apply button
+2026-02-16 21:05:38 INFO  Hooks.Hooks - ===== Starting Scenario: Add leave entitlement successfully =====
+2026-02-16 21:05:55 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:05:59 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:05:59 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:05:59 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:05:59 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:05:59 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:06:00 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:06:04 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 21:06:06 INFO  StepDefinitions.LeaveSteps - Clicking on Entitlements tab
+2026-02-16 21:06:08 INFO  StepDefinitions.LeaveSteps - Selecting Add Entitlements option
+2026-02-16 21:06:10 INFO  StepDefinitions.LeaveSteps - Add Leave Entitlement page displayed successfully
+2026-02-16 21:06:11 INFO  StepDefinitions.LeaveSteps - Selecting logged-in employee name
+2026-02-16 21:06:16 INFO  StepDefinitions.LeaveSteps - Selecting leave type: CAN - FMLA
+2026-02-16 21:06:16 INFO  StepDefinitions.LeaveSteps - Entering entitlement days: 5
+2026-02-16 21:06:17 INFO  StepDefinitions.LeaveSteps - Clicking Save entitlement button
+2026-02-16 21:06:20 INFO  StepDefinitions.LeaveSteps - Update Entitlement popup displayed successfully
+2026-02-16 21:06:20 INFO  StepDefinitions.LeaveSteps - Confirming entitlement update
+2026-02-16 21:06:26 INFO  StepDefinitions.LeaveSteps - Entitlement record displayed successfully
+2026-02-16 21:06:26 INFO  Hooks.Hooks - ===== Finished Scenario: Add leave entitlement successfully | Status: PASSED =====
+2026-02-16 21:06:27 INFO  Hooks.Hooks - ===== Starting Scenario: Apply leave successfully =====
+2026-02-16 21:06:34 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:06:37 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:06:38 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:06:38 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:06:38 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:06:38 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:06:39 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:06:42 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 21:06:43 INFO  StepDefinitions.LeaveSteps - Navigating to Apply Leave page
+2026-02-16 21:06:47 INFO  StepDefinitions.LeaveSteps - Apply Leave page displayed successfully
+2026-02-16 21:06:47 INFO  StepDefinitions.LeaveSteps - Selecting leave type from JSON
+2026-02-16 21:06:47 INFO  StepDefinitions.LeaveSteps - Selecting dates from JSON
+2026-02-16 21:06:48 INFO  StepDefinitions.LeaveSteps - Clicking Apply button
+2026-02-16 21:06:51 INFO  StepDefinitions.LeaveSteps - Leave application submitted successfully
+2026-02-16 21:06:52 INFO  Hooks.Hooks - ===== Finished Scenario: Apply leave successfully | Status: PASSED =====
+2026-02-16 21:06:52 INFO  Hooks.Hooks - ===== Starting Scenario: Verify applied leave in My Leave page =====
+2026-02-16 21:07:01 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:07:05 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:07:05 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:07:05 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:07:05 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:07:05 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:07:07 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:07:09 INFO  StepDefinitions.LeaveSteps - Navigating to Leave module
+2026-02-16 21:07:11 INFO  StepDefinitions.LeaveSteps - Navigating to My Leave page
+2026-02-16 21:07:14 INFO  StepDefinitions.LeaveSteps - Filtering leave by date range from JSON
+2026-02-16 21:07:15 INFO  StepDefinitions.LeaveSteps - Clicking Search button
+2026-02-16 21:07:18 INFO  StepDefinitions.LeaveSteps - Applied leave record displayed successfully
+2026-02-16 21:07:21 INFO  Hooks.Hooks - ===== Finished Scenario: Verify applied leave in My Leave page | Status: PASSED =====
+2026-02-16 21:08:13 INFO  Hooks.Hooks - ===== Starting Scenario: Add new timesheet entry and validate total hours =====
+2026-02-16 21:08:29 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:08:33 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:08:33 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:08:33 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:08:33 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:08:33 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:08:35 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:08:37 INFO  StepDefinitions.TimesheetSteps - Navigating to Time module
+2026-02-16 21:08:39 INFO  StepDefinitions.TimesheetSteps - Navigating to My Timesheets page
+2026-02-16 21:08:43 INFO  StepDefinitions.TimesheetSteps - Verifying My Timesheet page display
+2026-02-16 21:08:44 INFO  StepDefinitions.TimesheetSteps - Clicking Edit button
+2026-02-16 21:08:51 INFO  StepDefinitions.TimesheetSteps - Adding new timesheet entry from JSON
+2026-02-16 21:08:55 INFO  StepDefinitions.TimesheetSteps - Saving timesheet
+2026-02-16 21:08:58 INFO  StepDefinitions.TimesheetSteps - Verifying success toast for timesheet
+2026-02-16 21:08:58 INFO  StepDefinitions.TimesheetSteps - Validating total hours
+2026-02-16 21:09:09 INFO  StepDefinitions.TimesheetSteps - Total validated successfully. Expected: 40, Actual: 40
+2026-02-16 21:09:09 INFO  Hooks.Hooks - ===== Finished Scenario: Add new timesheet entry and validate total hours | Status: PASSED =====
+2026-02-16 21:09:10 INFO  Hooks.Hooks - ===== Starting Scenario: Edit existing timesheet entry and validate updated totals =====
+2026-02-16 21:09:34 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:09:39 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:09:39 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:09:39 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:09:39 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:09:39 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:09:41 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:09:44 INFO  StepDefinitions.TimesheetSteps - Navigating to Time module
+2026-02-16 21:09:45 INFO  StepDefinitions.TimesheetSteps - Navigating to My Timesheets page
+2026-02-16 21:09:48 INFO  StepDefinitions.TimesheetSteps - Verifying My Timesheet page display
+2026-02-16 21:09:49 INFO  StepDefinitions.TimesheetSteps - Clicking Edit button
+2026-02-16 21:09:52 INFO  StepDefinitions.TimesheetSteps - Updating existing timesheet entry from JSON
+2026-02-16 21:09:53 INFO  StepDefinitions.TimesheetSteps - Saving timesheet
+2026-02-16 21:09:54 INFO  StepDefinitions.TimesheetSteps - Verifying success toast for timesheet
+2026-02-16 21:09:55 INFO  StepDefinitions.TimesheetSteps - Validating updated total hours
+2026-02-16 21:10:00 INFO  StepDefinitions.TimesheetSteps - Updated hours validated successfully. Expected: 30, Actual: 30
+2026-02-16 21:10:01 INFO  StepDefinitions.TimesheetSteps - Validating recalculated total hours
+2026-02-16 21:10:01 INFO  StepDefinitions.TimesheetSteps - Recalculated total validated successfully. Expected: 30, Actual: 30
+2026-02-16 21:10:01 INFO  Hooks.Hooks - ===== Finished Scenario: Edit existing timesheet entry and validate updated totals | Status: PASSED =====
+2026-02-16 21:10:02 INFO  Hooks.Hooks - ===== Starting Scenario: Logout and session validation =====
+2026-02-16 21:10:26 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:10:32 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:10:32 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:10:32 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:10:32 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:10:32 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:10:34 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:10:41 INFO  Hooks.Hooks - ===== Finished Scenario: Logout and session validation | Status: PASSED =====
+2026-02-16 21:10:56 INFO  Hooks.Hooks - ===== Starting Scenario: Add new timesheet entry and validate total hours =====
+2026-02-16 21:11:32 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:11:36 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:11:36 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:11:36 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:11:36 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:11:36 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:11:38 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:11:40 INFO  StepDefinitions.TimesheetSteps - Navigating to Time module
+2026-02-16 21:11:42 INFO  StepDefinitions.TimesheetSteps - Navigating to My Timesheets page
+2026-02-16 21:11:45 INFO  StepDefinitions.TimesheetSteps - Verifying My Timesheet page display
+2026-02-16 21:11:46 INFO  StepDefinitions.TimesheetSteps - Clicking Edit button
+2026-02-16 21:11:49 INFO  StepDefinitions.TimesheetSteps - Adding new timesheet entry from JSON
+2026-02-16 21:11:50 INFO  StepDefinitions.TimesheetSteps - Saving timesheet
+2026-02-16 21:11:51 INFO  StepDefinitions.TimesheetSteps - Verifying success toast for timesheet
+2026-02-16 21:11:51 INFO  StepDefinitions.TimesheetSteps - Validating total hours
+2026-02-16 21:11:56 INFO  StepDefinitions.TimesheetSteps - Total validated successfully. Expected: 30, Actual: 30
+2026-02-16 21:11:56 INFO  Hooks.Hooks - ===== Finished Scenario: Add new timesheet entry and validate total hours | Status: PASSED =====
+2026-02-16 21:11:58 INFO  Hooks.Hooks - ===== Starting Scenario: Edit existing timesheet entry and validate updated totals =====
+2026-02-16 21:12:14 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:12:21 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:12:21 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:12:21 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:12:21 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:12:21 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:12:23 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:12:26 INFO  StepDefinitions.TimesheetSteps - Navigating to Time module
+2026-02-16 21:12:28 INFO  StepDefinitions.TimesheetSteps - Navigating to My Timesheets page
+2026-02-16 21:12:30 INFO  StepDefinitions.TimesheetSteps - Verifying My Timesheet page display
+2026-02-16 21:12:31 INFO  StepDefinitions.TimesheetSteps - Clicking Edit button
+2026-02-16 21:12:36 INFO  StepDefinitions.TimesheetSteps - Updating existing timesheet entry from JSON
+2026-02-16 21:12:37 INFO  StepDefinitions.TimesheetSteps - Saving timesheet
+2026-02-16 21:12:38 INFO  StepDefinitions.TimesheetSteps - Verifying success toast for timesheet
+2026-02-16 21:12:39 INFO  StepDefinitions.TimesheetSteps - Validating updated total hours
+2026-02-16 21:12:43 INFO  StepDefinitions.TimesheetSteps - Updated hours validated successfully. Expected: 30, Actual: 30
+2026-02-16 21:12:44 INFO  StepDefinitions.TimesheetSteps - Validating recalculated total hours
+2026-02-16 21:12:44 INFO  StepDefinitions.TimesheetSteps - Recalculated total validated successfully. Expected: 30, Actual: 30
+2026-02-16 21:12:44 INFO  Hooks.Hooks - ===== Finished Scenario: Edit existing timesheet entry and validate updated totals | Status: PASSED =====
+2026-02-16 21:12:45 INFO  Hooks.Hooks - ===== Starting Scenario: Logout and session validation =====
+2026-02-16 21:13:10 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:13:15 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:13:15 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:13:15 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:13:15 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:13:15 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:13:17 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:13:23 INFO  Hooks.Hooks - ===== Finished Scenario: Logout and session validation | Status: PASSED =====
+2026-02-16 21:32:34 INFO  Hooks.Hooks - ===== Starting Scenario: Add and search candidate successfully =====
+2026-02-16 21:33:13 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:33:18 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:33:18 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:33:18 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:33:18 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:33:18 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:33:20 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:33:21 INFO  Hooks.Hooks - ===== Finished Scenario: Add and search candidate successfully | Status: FAILED =====
+2026-02-16 21:33:24 INFO  Hooks.Hooks - ===== Starting Scenario: Shortlist candidate and schedule interview =====
+2026-02-16 21:33:49 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:33:54 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:33:54 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:33:54 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:33:54 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:33:54 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:33:56 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:33:57 INFO  Hooks.Hooks - ===== Finished Scenario: Shortlist candidate and schedule interview | Status: FAILED =====
+2026-02-16 21:33:58 INFO  Hooks.Hooks - ===== Starting Scenario: Logout and session validation =====
+2026-02-16 21:34:24 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:34:31 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:34:31 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:34:31 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:34:32 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:34:32 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:34:33 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:34:34 INFO  Hooks.Hooks - ===== Finished Scenario: Logout and session validation | Status: FAILED =====
+2026-02-16 21:38:16 INFO  Hooks.Hooks - ===== Starting Scenario: Add and search candidate successfully =====
+2026-02-16 21:38:51 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:38:59 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:38:59 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:38:59 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:38:59 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:38:59 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:39:03 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:39:34 INFO  Hooks.Hooks - ===== Finished Scenario: Add and search candidate successfully | Status: FAILED =====
+2026-02-16 21:39:36 INFO  Hooks.Hooks - ===== Starting Scenario: Shortlist candidate and schedule interview =====
+2026-02-16 21:46:57 INFO  Hooks.Hooks - ===== Starting Scenario: Add and search candidate successfully =====
+2026-02-16 21:47:21 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:47:25 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:47:25 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:47:25 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:47:25 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:47:25 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:47:27 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:47:38 INFO  Pages.AddCandidatePage - Clicking Add Candidate button
+2026-02-16 21:47:42 INFO  Pages.AddCandidatePage - Add Candidate form opened
+2026-02-16 21:47:42 INFO  Pages.AddCandidatePage - Entered first name: Rocky
+2026-02-16 21:47:42 INFO  Pages.AddCandidatePage - Entered last name: Sharma
+2026-02-16 21:47:42 INFO  Pages.AddCandidatePage - Entered email: rocky.sharma@testmail.com
+2026-02-16 21:47:42 INFO  Pages.AddCandidatePage - Entered phone: 9876543210
+2026-02-16 21:47:42 INFO  Pages.AddCandidatePage - Opening vacancy dropdown
+2026-02-16 21:47:43 INFO  Pages.AddCandidatePage - Trying primary vacancy locator: div[role='option']:has-text('Payroll Administrator')
+2026-02-16 21:47:43 INFO  Pages.AddCandidatePage - Vacancy selected using primary locator: Payroll Administrator
+2026-02-16 21:47:43 INFO  Pages.AddCandidatePage - Entering keywords: Automation
+2026-02-16 21:47:43 INFO  Pages.AddCandidatePage - Keywords entered successfully
+2026-02-16 21:47:43 INFO  Pages.AddCandidatePage - Uploading resume from: C:/Users/Ashvamegha/Downloads/Demofile.pdf
+2026-02-16 21:47:43 INFO  Pages.AddCandidatePage - Resume uploaded successfully
+2026-02-16 21:47:44 INFO  Pages.AddCandidatePage - Clicking Save button
+2026-02-16 21:47:47 INFO  Pages.AddCandidatePage - Success toast displayed
+2026-02-16 21:47:48 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 21:48:22 INFO  Hooks.Hooks - ===== Finished Scenario: Add and search candidate successfully | Status: FAILED =====
+2026-02-16 21:48:23 INFO  Hooks.Hooks - ===== Starting Scenario: Shortlist candidate and schedule interview =====
+2026-02-16 21:48:49 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:48:55 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:48:55 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:48:55 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:48:55 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:48:55 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:49:01 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:49:18 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 21:49:33 INFO  Pages.CandidatesPage - Candidate search completed successfully
+2026-02-16 21:49:33 INFO  Pages.CandidatesPage - Candidate found in table: Rocky Sharma
+2026-02-16 21:49:34 INFO  Pages.CandidatesPage - Clicking View button for candidate: Rocky Sharma
+2026-02-16 21:49:44 INFO  Pages.CandidatesPage - Navigated to Candidate Details page successfully
+2026-02-16 21:50:15 INFO  Hooks.Hooks - ===== Finished Scenario: Shortlist candidate and schedule interview | Status: FAILED =====
+2026-02-16 21:50:16 INFO  Hooks.Hooks - ===== Starting Scenario: Logout and session validation =====
+2026-02-16 21:50:39 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 21:50:46 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 21:50:46 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 21:50:46 INFO  Pages.LoginPage - Entering password
+2026-02-16 21:50:46 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 21:50:47 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 21:50:51 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 21:51:23 INFO  Hooks.Hooks - ===== Finished Scenario: Logout and session validation | Status: FAILED =====
+2026-02-16 22:01:32 INFO  Hooks.Hooks - ===== Starting Scenario: Add and search candidate successfully =====
+2026-02-16 22:02:13 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 22:02:19 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 22:02:19 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 22:02:19 INFO  Pages.LoginPage - Entering password
+2026-02-16 22:02:19 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 22:02:19 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 22:02:21 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 22:02:28 INFO  Pages.AddCandidatePage - Clicking Add Candidate button
+2026-02-16 22:02:30 INFO  Pages.AddCandidatePage - Add Candidate form opened
+2026-02-16 22:02:31 INFO  Pages.AddCandidatePage - Entered first name: Rocky
+2026-02-16 22:02:31 INFO  Pages.AddCandidatePage - Entered last name: Sharma
+2026-02-16 22:02:31 INFO  Pages.AddCandidatePage - Entered email: rocky.sharma@testmail.com
+2026-02-16 22:02:31 INFO  Pages.AddCandidatePage - Entered phone: 9876543210
+2026-02-16 22:02:31 INFO  Pages.AddCandidatePage - Opening vacancy dropdown
+2026-02-16 22:02:31 INFO  Pages.AddCandidatePage - Trying primary vacancy locator: div[role='option']:has-text('Payroll Administrator')
+2026-02-16 22:02:31 INFO  Pages.AddCandidatePage - Vacancy selected using primary locator: Payroll Administrator
+2026-02-16 22:02:31 INFO  Pages.AddCandidatePage - Entering keywords: Automation
+2026-02-16 22:02:31 INFO  Pages.AddCandidatePage - Keywords entered successfully
+2026-02-16 22:02:32 INFO  Pages.AddCandidatePage - Uploading resume from: C:/Users/Ashvamegha/Downloads/Demofile.pdf
+2026-02-16 22:02:32 INFO  Pages.AddCandidatePage - Resume uploaded successfully
+2026-02-16 22:02:32 INFO  Pages.AddCandidatePage - Clicking Save button
+2026-02-16 22:02:36 INFO  Pages.AddCandidatePage - Success toast displayed
+2026-02-16 22:02:37 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 22:02:42 INFO  Pages.CandidatesPage - Candidate search completed successfully
+2026-02-16 22:02:42 INFO  Pages.CandidatesPage - Candidate found in table: Rocky Sharma
+2026-02-16 22:02:43 INFO  Hooks.Hooks - ===== Finished Scenario: Add and search candidate successfully | Status: PASSED =====
+2026-02-16 22:02:44 INFO  Hooks.Hooks - ===== Starting Scenario: Shortlist candidate and schedule interview =====
+2026-02-16 22:03:07 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 22:03:12 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 22:03:12 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 22:03:12 INFO  Pages.LoginPage - Entering password
+2026-02-16 22:03:12 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 22:03:13 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 22:03:15 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 22:03:21 INFO  Pages.CandidatesPage - Searching candidate: Rocky Sharma
+2026-02-16 22:03:26 INFO  Pages.CandidatesPage - Candidate search completed successfully
+2026-02-16 22:03:26 INFO  Pages.CandidatesPage - Candidate found in table: Rocky Sharma
+2026-02-16 22:03:27 INFO  Pages.CandidatesPage - Clicking View button for candidate: Rocky Sharma
+2026-02-16 22:03:30 INFO  Pages.CandidatesPage - Navigated to Candidate Details page successfully
+2026-02-16 22:03:56 INFO  Hooks.Hooks - ===== Finished Scenario: Shortlist candidate and schedule interview | Status: PASSED =====
+2026-02-16 22:03:57 INFO  Hooks.Hooks - ===== Starting Scenario: Logout and session validation =====
+2026-02-16 22:04:22 INFO  Driver.PlaywrightFactory - Browser launched successfully in thread: main
+2026-02-16 22:04:27 INFO  Pages.LoginPage - Entering username: Admin
+2026-02-16 22:04:27 INFO  Pages.LoginPage - Username entered successfully
+2026-02-16 22:04:27 INFO  Pages.LoginPage - Entering password
+2026-02-16 22:04:27 INFO  Pages.LoginPage - Password entered successfully
+2026-02-16 22:04:28 INFO  Pages.LoginPage - Clicking login button
+2026-02-16 22:04:29 INFO  Pages.LoginPage - Login button clicked successfully
+2026-02-16 22:04:36 INFO  Hooks.Hooks - ===== Finished Scenario: Logout and session validation | Status: PASSED =====

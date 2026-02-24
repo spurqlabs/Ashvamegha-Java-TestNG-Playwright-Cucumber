@@ -1,0 +1,24 @@
+{
+  "candidate": {
+
+    "firstName": "Rocky",
+    "lastName": "Sharma",
+    "email": "rocky.sharma@testmail.com",
+    "phone": "9876543210",
+    "vacancy": "Payroll Administrator",
+    "resumePath": "C:/Users/Ashvamegha/Downloads/Demofile.pdf",
+    "keywords": "Automation",
+
+    "shortlist": {
+      "notes": "Shortlisted profile"
+    },
+
+    "interview": {
+      "title": "HR Interview",
+      "interviewer": "Rahul Das",
+      "date": "2026-13-03"
+    }
+
+  }
+}
+

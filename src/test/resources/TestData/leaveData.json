@@ -1,0 +1,13 @@
+{
+  "leave": {
+    "apply": {
+      "leaveType": "CAN - FMLA",
+      "fromDate": "2026-26-03",
+      "toDate": "2026-27-03"
+    },
+    "verify": {
+      "fromDate": "2026-01-01",
+      "toDate": "2026-12-31"
+    }
+  }
+}

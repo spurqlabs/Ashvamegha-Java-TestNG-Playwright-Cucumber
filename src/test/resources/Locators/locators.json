@@ -1,0 +1,145 @@
+{
+  "login": {
+    "username": "input[name='username']",
+    "password": "input[name='password']",
+    "loginBtn": "button[type='submit']"
+  },
+
+  "dashboardPage": {
+    "dashboardHeader": "//h6[text()='Dashboard']"
+  },
+
+  "recruitmentPage": {
+    "recruitmentMenu": "a[href='/web/index.php/recruitment/viewRecruitmentModule']",
+    "candidatesHeader": "h5:has-text('Candidates')",
+    "addCandidateBtn": "button:has-text('Add')"
+  },
+
+  "searchPage": {
+    "candidateNameInput": "//label[text()='Candidate Name']/following::input[1]",
+    "candidateSuggestions": "//div[@role='listbox']//span",
+    "searchButton": "//button[normalize-space()='Search']"
+  },
+
+  "candidatesPage": {
+    "tableRows": "//div[contains(@class,'oxd-table-row')]",
+    "rowByCandidateName": "//div[contains(@class,'oxd-table-row')]//div[contains(normalize-space(),'{CANDIDATE_NAME}')]/ancestor::div[contains(@class,'oxd-table-row')]",
+    "viewButtonInRow": "button"
+  },
+
+  "addCandidatePage": {
+    "addButton": "button:has-text('Add')",
+    "addCandidateHeader": "h6:has-text('Add Candidate')",
+    "firstName": "input[name='firstName']",
+    "lastName": "input[name='lastName']",
+    "email": "input[placeholder='Type here'] >> nth=0",
+    "phone": "input[placeholder='Type here'] >> nth=1",
+    "vacancyDropdown": "div.oxd-select-text",
+    "vacancyOption": "div[role='option']:has-text('{VACANCY}')",
+    "resumeUpload": "input[type='file']",
+    "keywords": "input[placeholder*='comma']",
+    "saveButton": "button[type='submit'].oxd-button",
+    "successToast": ".oxd-toast--success"
+  },
+
+  "candidateDetailsPage": {
+    "candidateNameHeader": "h6:has-text('Candidate Profile')",
+    "candidateStatus": "//p[contains(normalize-space(),'Status')]",
+
+    "shortlistButton": "button:has-text('Shortlist')",
+    "scheduleInterviewButton": "button:has-text('Schedule Interview')"
+  },
+
+  "shortlistPage": {
+    "shortlistNotes": "textarea[placeholder='Type here']",
+    "saveButton": "button[type='submit']"
+  },
+
+  "scheduleInterviewPage": {
+    "interviewTitle": "//label[text()='Interview Title']/following::input[1]",
+    "interviewerInput": "//label[text()='Interviewer']/following::input[1]",
+    "interviewerSuggestion": "div[role='option']",
+    "interviewDate": "//label[text()='Date']/following::input[1]",
+    "saveButton": "button[type='submit']"
+  },
+
+  "logout": {
+    "userDropdown": "span.oxd-userdropdown-tab",
+    "logoutButton": "a:has-text('Logout')"
+  },
+
+  "timePage": {
+    "timeMenu": "a[href='/web/index.php/time/viewTimeModule']",
+    "timesheetsDropdown": "span.oxd-topbar-body-nav-tab-item",
+    "myTimesheetsOption": "ul[role='menu'] a.oxd-topbar-body-nav-tab-link:has-text('My Timesheets')"
+  },
+
+  "myTimesheetPage": {
+    "pageHeader": "h6:has-text('My Timesheet')",
+    "editButton": "//button[normalize-space()='Edit']",
+    "statusLabel": "p:has-text('Status')",
+    "tableRows": "div.oxd-table-row"
+  },
+
+  "timesheetPage": {
+    "projectInput": "input[placeholder='Type for hints...']",
+    "projectSuggestion": "div[role='option']",
+    "activityDropdown": "div.oxd-select-text",
+    "activityOption": "div[role='option']:has-text('{ACTIVITY}')",
+
+    "mondayInput": "//table//tbody/tr[1]/td[3]//input",
+    "tuesdayInput": "//table//tbody/tr[1]/td[4]//input",
+    "wednesdayInput": "//table//tbody/tr[1]/td[5]//input",
+    "thursdayInput": "//table//tbody/tr[1]/td[6]//input",
+    "fridayInput": "//table//tbody/tr[1]/td[7]//input",
+    "saturdayInput": "//table//tbody/tr[1]/td[8]//input",
+    "sundayInput": "//table//tbody/tr[1]/td[9]//input",
+
+    "saveButton": "button:has-text('Save')",
+    "successToast": ".oxd-toast--success",
+    "totalCell": "//table//tbody/tr[last()]/td[last()]"
+  },
+
+  "leavePage": {
+    "leaveMenu": "a[href='/web/index.php/leave/viewLeaveModule']",
+    "applyTab": "a:has-text('Apply')",
+    "myLeaveTab": "a:has-text('My Leave')",
+    "entitlementsTab": "span.oxd-topbar-body-nav-tab-item:has-text('Entitlements')",
+    "addEntitlementOption": "//a[normalize-space()='Add Entitlements']",
+    "addLeaveEntitlementHeader": "text=Add Leave Entitlement",
+    "employeeNameInput": "input[placeholder='Type for hints...']",
+    "employeeSuggestion": "div[role='option']",
+    "leaveTypeDropdown": "div.oxd-select-text",
+    "leaveTypeOption": "div[role='option']:has-text('{LEAVE_TYPE}')",
+    "entitlementInput": "//label[normalize-space()='Entitlement']/following::input[1]",
+    "saveEntitlementButton": "button:has-text('Save')",
+    "updatePopup": "div.oxd-dialog-container-default",
+    "confirmButton": "button:has-text('Confirm')",
+    "recordTableRows": "div.oxd-table-row"
+  },
+
+  "applyLeavePage": {
+    "applyHeader": "h6:has-text('Apply Leave')",
+    "leaveTypeDropdown": "div.oxd-select-text",
+    "leaveTypeOption": "div[role='option']:has-text('{LEAVE_TYPE}')",
+    "fromDateInput": "//label[normalize-space()='From Date']/following::input[1]",
+    "toDateInput":"//label[normalize-space()='To Date']/following::input[1]",
+    "applyButton": "button:has-text('Apply')",
+    "successToast": ".oxd-toast--success"
+  },
+
+
+  "myLeavePage": {
+    "myLeaveHeader": "h5:has-text('Leave List')",
+    "fromDateInput":"//label[normalize-space()='From Date']/following::input[1]",
+    "toDateInput": "//label[normalize-space()='To Date']/following::input[1]",
+    "searchButton": "button:has-text('Search')",
+    "leaveTableRows": "div.oxd-table-row"
+  },
+  "sidebar": {
+    "body": "body",
+    "toggleButton": "button.oxd-main-menu-button"
+  }
+}
+
+
